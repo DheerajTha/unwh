@@ -1,0 +1,94 @@
+[
+  {
+    "id": 1,
+    "title": "Top 10 Tips for Online Learning Success",
+    "category": "Online",
+    "author": "Jeswal",
+    "date": "12 May, 24",
+    "image": "assets/images/thumbs/blog-img1.png",
+    "description": "This blog post provides practical tips and strategies to help students succeed in their online learning journey.",
+    "highlightTitle": "Create a Dedicated Study Space",
+    "points": [
+      "Ensure your study area is quiet and distraction-free.",
+      "Follow a regular daily study schedule.",
+      "Use planners or apps to stay organized.",
+      "Participate in forums and online discussions.",
+      "Take short, regular breaks to avoid fatigue.",
+      "Stay connected with teachers and classmates.",
+      "Use digital resources and tools effectively.",
+      "Manage your time by setting small goals.",
+      "Reward yourself for small accomplishments.",
+      "Seek and implement feedback actively."
+    ],
+    "content": "Online learning offers flexibility and accessibility but demands self-discipline and planning. Begin by creating a peaceful, distraction-free study space. Following a consistent routine helps build a learning habit. Engage with content by participating in forums, completing assignments on time, and asking questions. Don't forget to take care of your health—take breaks, eat well, and sleep on time. Most importantly, keep tracking your progress and stay motivated by celebrating your wins."
+  },
+  {
+    "id": 2,
+    "title": "Why Time Management is Crucial for Students",
+    "category": "Productivity",
+    "author": "Jeswal",
+    "date": "15 May, 24",
+    "image": "assets/images/thumbs/blog-img2.png",
+    "description": "Learn how time management can transform student productivity, reduce stress, and improve academic performance.",
+    "highlightTitle": "Master the Clock",
+    "points": [
+      "Create a weekly plan with priorities.",
+      "Use the Pomodoro technique to boost focus.",
+      "Avoid multitasking during deep work.",
+      "Break tasks into smaller manageable steps.",
+      "Use a planner or digital calendar daily.",
+      "Set deadlines even when none exist.",
+      "Eliminate distractions like phone alerts.",
+      "Track where your time actually goes.",
+      "Schedule time for rest and exercise.",
+      "Review your time usage weekly."
+    ],
+    "content": "Managing time well is one of the most powerful skills a student can develop. It reduces anxiety, improves focus, and leads to higher academic achievement. Begin by knowing your priorities and mapping out your week. Use techniques like Pomodoro for focus bursts and take regular breaks. Tools like Trello, Notion, or a simple calendar can make a big difference. Analyze your time leaks weekly and improve continuously. Time, once lost, can't be regained—use it wisely."
+  },
+  {
+    "id": 3,
+    "title": "How to Stay Motivated During Online Courses",
+    "category": "Self-Development",
+    "author": "Jeswal",
+    "date": "20 May, 24",
+    "image": "assets/images/thumbs/blog-img3.png",
+    "description": "Staying motivated in online education is tough. Here are methods to keep going, even when you feel like quitting.",
+    "highlightTitle": "Find Your Purpose",
+    "points": [
+      "Set clear short-term goals weekly.",
+      "Visualize long-term benefits of your studies.",
+      "Keep a motivation journal.",
+      "Surround yourself with positive learners.",
+      "Track and celebrate milestones.",
+      "Don’t chase perfection—focus on progress.",
+      "Talk to mentors or peers regularly.",
+      "Limit your social media distractions.",
+      "Listen to motivational podcasts or audiobooks.",
+      "Remind yourself of the ‘why’ behind your learning."
+    ],
+    "content": "Motivation fluctuates, especially when studying remotely. Start by clearly understanding why you are taking the course. Break goals into smaller, achievable steps and celebrate wins. A motivation journal, positive learning environment, and regular interaction with peers can keep your energy high. Also, consume positive content—videos, books, and speakers that inspire you. Remember: discipline will carry you when motivation fades. Stay consistent and always focus on the bigger picture."
+  },
+  {
+    "id": 4,
+    "title": "5 Common Mistakes to Avoid in Online Learning",
+    "category": "Awareness",
+    "author": "Jeswal",
+    "date": "25 May, 24",
+    "image": "assets/images/thumbs/blog-img3.png",
+    "description": "Online learning offers flexibility but also traps. Learn the mistakes that slow down your progress—and how to fix them.",
+    "highlightTitle": "Learn Smart, Not Hard",
+    "points": [
+      "Not setting a fixed study routine.",
+      "Passive video watching without note-taking.",
+      "Ignoring interaction in group activities.",
+      "Leaving assignments till the last minute.",
+      "Neglecting physical & mental health.",
+      "Relying only on course material.",
+      "Skipping self-assessment and revision.",
+      "Lack of accountability partners.",
+      "Multitasking while attending classes.",
+      "Not asking for help when confused."
+    ],
+    "content": "The convenience of online learning can sometimes lead to careless habits. Students often skip routines, delay work, or underestimate participation. The key is structure. Build a timetable, take notes actively, and engage with classmates. Don’t ignore your health—breaks, hydration, and sleep matter. Ask questions and revisit concepts for retention. Online learning works best when treated like real classroom learning—with even more responsibility. Avoid these mistakes to achieve meaningful results."
+  }
+]
