@@ -9433,7 +9433,7 @@ button:focus {
   }
 }
 .logo img {
-  max-width: 230px;
+  max-width: 200px;
 }
 
 .toggle-mobileMenu {
@@ -11564,7 +11564,7 @@ body::after {
   }
 
   .logo img {
-    max-height: 45px;
+    max-height: 52px;
   }
 }
 
@@ -11961,6 +11961,8 @@ body::after {
   z-index: 1000;
 }
 
+ 
+
 .container {
   width: 100%;
   max-width: 1200px;
@@ -11998,10 +12000,7 @@ body::after {
 }
 
 /* Logo Styles */
-.logo img {
-  height: 50px;
-  width: auto;
-}
+ 
 
 /* Main Navigation */
 .header-menu {

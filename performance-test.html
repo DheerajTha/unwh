@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Performance Test Dashboard</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+        }
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .metric-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #007bff;
+        }
+        .metric-card.warning {
+            border-left-color: #ffc107;
+        }
+        .metric-card.danger {
+            border-left-color: #dc3545;
+        }
+        .metric-card.success {
+            border-left-color: #28a745;
+        }
+        .metric-title {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 5px;
+        }
+        .metric-value {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+        .test-section {
+            margin-bottom: 30px;
+        }
+        .test-button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+        .test-button:hover {
+            background: #0056b3;
+        }
+        .results {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 4px;
+            margin-top: 15px;
+            font-family: monospace;
+            white-space: pre-wrap;
+        }
+        .recommendations {
+            background: #e7f3ff;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #007bff;
+        }
+        .recommendation-item {
+            margin-bottom: 10px;
+            padding: 10px;
+            background: white;
+            border-radius: 4px;
+        }
+        .priority-high { border-left: 3px solid #dc3545; }
+        .priority-medium { border-left: 3px solid #ffc107; }
+        .priority-low { border-left: 3px solid #28a745; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚀 Website Performance Dashboard</h1>
+            <p>Comprehensive performance analysis for UNWH website</p>
+        </div>
+
+        <div class="metrics-grid" id="metricsGrid">
+            <!-- Metrics will be populated by JavaScript -->
+        </div>
+
+        <div class="test-section">
+            <h2>Performance Tests</h2>
+            <button class="test-button" onclick="runPageSpeedTest()">📊 Page Speed Analysis</button>
+            <button class="test-button" onclick="runImageAnalysis()">🖼️ Image Analysis</button>
+            <button class="test-button" onclick="runJSAnalysis()">⚡ JavaScript Analysis</button>
+            <button class="test-button" onclick="runCSSAnalysis()">🎨 CSS Analysis</button>
+            <button class="test-button" onclick="runNetworkAnalysis()">🌐 Network Analysis</button>
+            <button class="test-button" onclick="runMobileTest()">📱 Mobile Performance</button>
+            <div id="testResults" class="results" style="display: none;"></div>
+        </div>
+
+        <div class="recommendations">
+            <h2>🎯 Performance Recommendations</h2>
+            <div id="recommendationsList">
+                <!-- Recommendations will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Performance metrics collection
+        let performanceData = {};
+
+        // Initialize dashboard
+        document.addEventListener('DOMContentLoaded', function() {
+            collectMetrics();
+            generateRecommendations();
+        });
+
+        function collectMetrics() {
+            const metrics = {
+                'Page Load Time': {
+                    value: performance.timing ? (performance.timing.loadEventEnd - performance.timing.navigationStart) + 'ms' : 'N/A',
+                    status: 'info'
+                },
+                'DOM Content Loaded': {
+                    value: performance.timing ? (performance.timing.domContentLoadedEventEnd - performance.timing.navigationStart) + 'ms' : 'N/A',
+                    status: 'info'
+                },
+                'First Paint': {
+                    value: getFirstPaint() + 'ms',
+                    status: 'info'
+                },
+                'Resources Count': {
+                    value: performance.getEntriesByType ? performance.getEntriesByType('resource').length : 'N/A',
+                    status: 'info'
+                }
+            };
+
+            const metricsGrid = document.getElementById('metricsGrid');
+            metricsGrid.innerHTML = '';
+
+            Object.entries(metrics).forEach(([title, data]) => {
+                const card = document.createElement('div');
+                card.className = `metric-card ${data.status}`;
+                card.innerHTML = `
+                    <div class="metric-title">${title}</div>
+                    <div class="metric-value">${data.value}</div>
+                `;
+                metricsGrid.appendChild(card);
+            });
+        }
+
+        function getFirstPaint() {
+            if (performance.getEntriesByType) {
+                const paintEntries = performance.getEntriesByType('paint');
+                const firstPaint = paintEntries.find(entry => entry.name === 'first-paint');
+                return firstPaint ? Math.round(firstPaint.startTime) : 'N/A';
+            }
+            return 'N/A';
+        }
+
+        function showResults(content) {
+            const resultsDiv = document.getElementById('testResults');
+            resultsDiv.style.display = 'block';
+            resultsDiv.textContent = content;
+        }
+
+        function runPageSpeedTest() {
+            showResults('Running page speed analysis...\n\n');
+            
+            setTimeout(() => {
+                let results = 'PAGE SPEED ANALYSIS RESULTS:\n';
+                results += '================================\n\n';
+                
+                // Analyze loading times
+                if (performance.timing) {
+                    const timing = performance.timing;
+                    const loadTime = timing.loadEventEnd - timing.navigationStart;
+                    const domTime = timing.domContentLoadedEventEnd - timing.navigationStart;
+                    
+                    results += `Total Load Time: ${loadTime}ms\n`;
+                    results += `DOM Content Loaded: ${domTime}ms\n`;
+                    results += `DNS Lookup: ${timing.domainLookupEnd - timing.domainLookupStart}ms\n`;
+                    results += `Server Response: ${timing.responseEnd - timing.requestStart}ms\n\n`;
+                    
+                    // Performance assessment
+                    if (loadTime > 3000) {
+                        results += '❌ SLOW: Page load time exceeds 3 seconds\n';
+                    } else if (loadTime > 1500) {
+                        results += '⚠️ MODERATE: Page load time is acceptable but could be improved\n';
+                    } else {
+                        results += '✅ FAST: Page load time is good\n';
+                    }
+                }
+                
+                showResults(results);
+            }, 1000);
+        }
+
+        function runImageAnalysis() {
+            showResults('Analyzing images...\n\n');
+            
+            setTimeout(() => {
+                let results = 'IMAGE ANALYSIS RESULTS:\n';
+                results += '========================\n\n';
+                
+                const images = document.querySelectorAll('img');
+                let totalImages = images.length;
+                let lazyImages = document.querySelectorAll('img[data-src]').length;
+                let largeImages = 0;
+                let unoptimizedImages = 0;
+                
+                images.forEach(img => {
+                    if (img.naturalWidth > 1920 || img.naturalHeight > 1080) {
+                        largeImages++;
+                    }
+                    if (!img.src.includes('.webp') && !img.src.includes('optimized')) {
+                        unoptimizedImages++;
+                    }
+                });
+                
+                results += `Total Images: ${totalImages}\n`;
+                results += `Lazy Loaded Images: ${lazyImages}\n`;
+                results += `Large Images (>1920px): ${largeImages}\n`;
+                results += `Unoptimized Images: ${unoptimizedImages}\n\n`;
+                
+                // Recommendations
+                if (lazyImages < totalImages * 0.5) {
+                    results += '⚠️ Consider implementing lazy loading for more images\n';
+                }
+                if (largeImages > 0) {
+                    results += '❌ Large images detected - consider resizing\n';
+                }
+                if (unoptimizedImages > totalImages * 0.3) {
+                    results += '❌ Many unoptimized images - consider WebP format\n';
+                }
+                
+                showResults(results);
+            }, 1000);
+        }
+
+        function runJSAnalysis() {
+            showResults('Analyzing JavaScript performance...\n\n');
+            
+            setTimeout(() => {
+                let results = 'JAVASCRIPT ANALYSIS RESULTS:\n';
+                results += '=============================\n\n';
+                
+                if (performance.getEntriesByType) {
+                    const resources = performance.getEntriesByType('resource');
+                    const jsFiles = resources.filter(r => r.name.includes('.js'));
+                    
+                    results += `JavaScript Files Loaded: ${jsFiles.length}\n`;
+                    
+                    let totalJSSize = 0;
+                    let slowJSFiles = [];
+                    
+                    jsFiles.forEach(js => {
+                        if (js.transferSize) totalJSSize += js.transferSize;
+                        if (js.duration > 500) {
+                            slowJSFiles.push({
+                                name: js.name.split('/').pop(),
+                                duration: Math.round(js.duration)
+                            });
+                        }
+                    });
+                    
+                    results += `Total JS Size: ${Math.round(totalJSSize / 1024)}KB\n`;
+                    results += `Slow Loading JS Files: ${slowJSFiles.length}\n\n`;
+                    
+                    if (slowJSFiles.length > 0) {
+                        results += 'Slow JS Files (>500ms):\n';
+                        slowJSFiles.forEach(file => {
+                            results += `- ${file.name}: ${file.duration}ms\n`;
+                        });
+                        results += '\n';
+                    }
+                    
+                    // Recommendations
+                    if (totalJSSize > 500000) {
+                        results += '❌ Large JavaScript bundle size (>500KB)\n';
+                    }
+                    if (slowJSFiles.length > 0) {
+                        results += '⚠️ Some JavaScript files are loading slowly\n';
+                    }
+                }
+                
+                showResults(results);
+            }, 1000);
+        }
+
+        function runCSSAnalysis() {
+            showResults('Analyzing CSS performance...\n\n');
+            
+            setTimeout(() => {
+                let results = 'CSS ANALYSIS RESULTS:\n';
+                results += '=====================\n\n';
+                
+                if (performance.getEntriesByType) {
+                    const resources = performance.getEntriesByType('resource');
+                    const cssFiles = resources.filter(r => r.name.includes('.css'));
+                    
+                    results += `CSS Files Loaded: ${cssFiles.length}\n`;
+                    
+                    let totalCSSSize = 0;
+                    let slowCSSFiles = [];
+                    
+                    cssFiles.forEach(css => {
+                        if (css.transferSize) totalCSSSize += css.transferSize;
+                        if (css.duration > 300) {
+                            slowCSSFiles.push({
+                                name: css.name.split('/').pop(),
+                                duration: Math.round(css.duration),
+                                size: Math.round(css.transferSize / 1024)
+                            });
+                        }
+                    });
+                    
+                    results += `Total CSS Size: ${Math.round(totalCSSSize / 1024)}KB\n`;
+                    results += `Slow Loading CSS Files: ${slowCSSFiles.length}\n\n`;
+                    
+                    if (slowCSSFiles.length > 0) {
+                        results += 'Slow CSS Files (>300ms):\n';
+                        slowCSSFiles.forEach(file => {
+                            results += `- ${file.name}: ${file.duration}ms (${file.size}KB)\n`;
+                        });
+                        results += '\n';
+                    }
+                    
+                    // Check for unused CSS
+                    const stylesheets = document.styleSheets;
+                    results += `Total Stylesheets: ${stylesheets.length}\n\n`;
+                    
+                    // Recommendations
+                    if (totalCSSSize > 200000) {
+                        results += '❌ Large CSS bundle size (>200KB)\n';
+                    }
+                    if (slowCSSFiles.length > 0) {
+                        results += '⚠️ Some CSS files are loading slowly\n';
+                    }
+                }
+                
+                showResults(results);
+            }, 1000);
+        }
+
+        function runNetworkAnalysis() {
+            showResults('Analyzing network performance...\n\n');
+            
+            setTimeout(() => {
+                let results = 'NETWORK ANALYSIS RESULTS:\n';
+                results += '==========================\n\n';
+                
+                if (performance.getEntriesByType) {
+                    const resources = performance.getEntriesByType('resource');
+                    
+                    let totalSize = 0;
+                    let totalRequests = resources.length;
+                    let slowRequests = 0;
+                    let largeRequests = [];
+                    
+                    resources.forEach(resource => {
+                        if (resource.transferSize) {
+                            totalSize += resource.transferSize;
+                            if (resource.transferSize > 1000000) { // >1MB
+                                largeRequests.push({
+                                    name: resource.name.split('/').pop(),
+                                    size: Math.round(resource.transferSize / 1024 / 1024 * 100) / 100
+                                });
+                            }
+                        }
+                        if (resource.duration > 1000) {
+                            slowRequests++;
+                        }
+                    });
+                    
+                    results += `Total Requests: ${totalRequests}\n`;
+                    results += `Total Transfer Size: ${Math.round(totalSize / 1024 / 1024 * 100) / 100}MB\n`;
+                    results += `Slow Requests (>1s): ${slowRequests}\n`;
+                    results += `Large Resources (>1MB): ${largeRequests.length}\n\n`;
+                    
+                    if (largeRequests.length > 0) {
+                        results += 'Large Resources:\n';
+                        largeRequests.forEach(resource => {
+                            results += `- ${resource.name}: ${resource.size}MB\n`;
+                        });
+                        results += '\n';
+                    }
+                    
+                    // Connection info
+                    if (navigator.connection) {
+                        const conn = navigator.connection;
+                        results += `Connection Type: ${conn.effectiveType || 'Unknown'}\n`;
+                        results += `Downlink Speed: ${conn.downlink || 'Unknown'}Mbps\n`;
+                        results += `Save Data Mode: ${conn.saveData ? 'Enabled' : 'Disabled'}\n\n`;
+                    }
+                    
+                    // Recommendations
+                    if (totalSize > 5000000) { // >5MB
+                        results += '❌ Very large page size (>5MB)\n';
+                    }
+                    if (slowRequests > 5) {
+                        results += '⚠️ Many slow network requests\n';
+                    }
+                    if (largeRequests.length > 0) {
+                        results += '❌ Large resources detected - consider optimization\n';
+                    }
+                }
+                
+                showResults(results);
+            }, 1000);
+        }
+
+        function runMobileTest() {
+            showResults('Running mobile performance test...\n\n');
+            
+            setTimeout(() => {
+                let results = 'MOBILE PERFORMANCE RESULTS:\n';
+                results += '============================\n\n';
+                
+                // Viewport analysis
+                const viewport = document.querySelector('meta[name="viewport"]');
+                results += `Viewport Meta Tag: ${viewport ? '✅ Present' : '❌ Missing'}\n`;
+                
+                // Touch targets
+                const buttons = document.querySelectorAll('button, a, input[type="button"], input[type="submit"]');
+                let smallTouchTargets = 0;
+                buttons.forEach(btn => {
+                    const rect = btn.getBoundingClientRect();
+                    if (rect.width < 44 || rect.height < 44) {
+                        smallTouchTargets++;
+                    }
+                });
+                
+                results += `Small Touch Targets (<44px): ${smallTouchTargets}\n`;
+                
+                // Mobile-specific CSS
+                const mobileCSS = document.querySelectorAll('link[media*="max-width"], style').length;
+                results += `Mobile CSS Rules: ${mobileCSS > 0 ? '✅ Present' : '⚠️ Limited'}\n`;
+                
+                // Text readability
+                const textElements = document.querySelectorAll('p, span, div, h1, h2, h3, h4, h5, h6');
+                let smallText = 0;
+                textElements.forEach(el => {
+                    const fontSize = window.getComputedStyle(el).fontSize;
+                    if (parseInt(fontSize) < 16) {
+                        smallText++;
+                    }
+                });
+                
+                results += `Small Text Elements (<16px): ${smallText}\n\n`;
+                
+                // Performance on mobile
+                if (navigator.connection && navigator.connection.effectiveType) {
+                    const connectionType = navigator.connection.effectiveType;
+                    results += `Connection Type: ${connectionType}\n`;
+                    
+                    if (connectionType === 'slow-2g' || connectionType === '2g') {
+                        results += '⚠️ Slow connection detected - optimize for mobile\n';
+                    }
+                }
+                
+                // Recommendations
+                if (smallTouchTargets > 0) {
+                    results += '❌ Some touch targets are too small for mobile\n';
+                }
+                if (smallText > textElements.length * 0.3) {
+                    results += '⚠️ Many text elements may be too small on mobile\n';
+                }
+                
+                showResults(results);
+            }, 1000);
+        }
+
+        function generateRecommendations() {
+            const recommendations = [
+                {
+                    priority: 'high',
+                    title: 'Optimize Large Images',
+                    description: 'Convert large PNG images to WebP format and implement responsive images. Current images are 3+ MB each.'
+                },
+                {
+                    priority: 'high',
+                    title: 'Implement Lazy Loading',
+                    description: 'Add lazy loading to all images below the fold to improve initial page load time.'
+                },
+                {
+                    priority: 'medium',
+                    title: 'Minify CSS and JavaScript',
+                    description: 'Reduce file sizes by minifying CSS (230KB) and JavaScript files.'
+                },
+                {
+                    priority: 'medium',
+                    title: 'Optimize Font Loading',
+                    description: 'Use font-display: swap and preload critical fonts to prevent FOIT.'
+                },
+                {
+                    priority: 'low',
+                    title: 'Enable Gzip Compression',
+                    description: 'Configure server to enable Gzip compression for text-based resources.'
+                },
+                {
+                    priority: 'low',
+                    title: 'Add Service Worker',
+                    description: 'Implement service worker for caching and offline functionality.'
+                }
+            ];
+
+            const recommendationsList = document.getElementById('recommendationsList');
+            recommendationsList.innerHTML = '';
+
+            recommendations.forEach(rec => {
+                const item = document.createElement('div');
+                item.className = `recommendation-item priority-${rec.priority}`;
+                item.innerHTML = `
+                    <strong>${rec.title}</strong> 
+                    <span style="background: ${rec.priority === 'high' ? '#dc3545' : rec.priority === 'medium' ? '#ffc107' : '#28a745'}; color: white; padding: 2px 6px; border-radius: 3px; font-size: 12px; margin-left: 10px;">${rec.priority.toUpperCase()}</span>
+                    <p style="margin: 5px 0 0 0; color: #666;">${rec.description}</p>
+                `;
+                recommendationsList.appendChild(item);
+            });
+        }
+    </script>
+</body>
+</html>
