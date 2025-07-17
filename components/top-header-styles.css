@@ -1,0 +1,57 @@
+/* animation for button  */
+.blink {
+  animation: blink-animation 1s steps(5, start) infinite;
+  -webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .mobile-hide {
+    display: none !important;
+  }
+
+  /* You can keep these styles in case you want to show it again with different styling */
+  .top-bar-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .top-left div,
+  .top-right div {
+    flex-wrap: wrap;
+    row-gap: 10px;
+    margin: 0px 40px;
+  }
+
+  .top-left span,
+  .top-left a,
+  .top-right a:not(:last-child) {
+    border-right: none !important;
+    padding-right: 0 !important;
+  }
+
+  .has-submenu {
+    margin-left: 0 !important;
+  }
+}
+
+.has-submenu:hover .nav-submenu {
+  display: block !important;
+}
+
+.nav-submenu__link:hover {
+  background-color: #f0f0f0 !important;
+}

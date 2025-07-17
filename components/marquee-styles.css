@@ -1,0 +1,40 @@
+.marquee-container {
+  width: 100%;
+  background: #000000;
+  color: white;
+  padding: 8px 0;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.marquee-content {
+  display: inline-block;
+  white-space: nowrap;
+  padding-left: 100%;
+  animation: marquee 55s linear infinite;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.unwh-highlight {
+  color: #d4af37;
+  font-weight: 600;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@media (max-width: 768px) {
+  .marquee-content {
+    font-size: 12px;
+    animation-duration: 20s;
+  }
+}

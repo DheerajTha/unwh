@@ -1,0 +1,31 @@
+<!-- Include Mobile Menu -->
+<div id="mobile-menu-container"></div>
+
+<!-- Include Top Header -->
+<div id="top-header-container"></div>
+
+<!-- Include Marquee -->
+<div id="marquee-container"></div>
+
+<!-- Include Main Header -->
+<div id="main-header-container"></div>
+
+<script>
+// Function to load component
+function loadComponent(containerId, componentPath) {
+  fetch(componentPath)
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById(containerId).innerHTML = data;
+    })
+    .catch(error => console.error('Error loading component:', error));
+}
+
+// Load all header components
+document.addEventListener('DOMContentLoaded', function() {
+  loadComponent('mobile-menu-container', 'components/mobile-menu.html');
+  loadComponent('top-header-container', 'components/top-header.html');
+  loadComponent('marquee-container', 'components/marquee.html');
+  loadComponent('main-header-container', 'components/main-header.html');
+});
+</script>
