@@ -1,0 +1,1243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Title -->
+    <title>Blog Details</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/images/thumbs/favicin.jpg" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <!-- select2 -->
+    <link rel="stylesheet" href="assets/css/select2.min.css" />
+    <!-- Slick -->
+    <link rel="stylesheet" href="assets/css/slick.css" />
+    <!-- Slick -->
+    <link rel="stylesheet" href="assets/css/magnific-popup.css" />
+    <!-- jquery-ui -->
+    <link rel="stylesheet" href="assets/css/jquery-ui.css" />
+    <!-- plyr Css -->
+    <link rel="stylesheet" href="assets/css/plyr.css" />
+    <!-- animate -->
+    <link rel="stylesheet" href="assets/css/animate.css" />
+
+    <link rel="stylesheet" href="assets/css/aos.css" />
+    <!-- Main css -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body>
+    <!--==================== Preloader Start ====================-->
+    <div class="preloader">
+        <img src="assets/images/icons/preload.gif" alt="" width="200px" />
+    </div>
+    <!--==================== Preloader End ====================-->
+
+    <!--==================== Overlay Start ====================-->
+    <div class="overlay"></div>
+    <!--==================== Overlay End ====================-->
+
+    <!--==================== Sidebar Overlay End ====================-->
+    <div class="side-overlay"></div>
+    <!--==================== Sidebar Overlay End ====================-->
+
+    <!-- ==================== Scroll to Top End Here ==================== -->
+    <div class="progress-wrap">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+    <!-- ==================== Scroll to Top End Here ==================== -->
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu-overlay"></div>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <div class="mobile-menu-header">
+      <div class="logo">
+        <a href="index.html" class="link">
+          <img src="assets/images/thumbs/headerLogo.png" alt="Logo" />
+        </a>
+      </div>
+      <button class="mobile-menu-close">
+        <i class="ph ph-x"></i>
+      </button>
+    </div>
+
+    <div class="mobile-menu-content">
+      <ul class="mobile-nav">
+        <li class="mobile-nav-item">
+          <a href="/" class="mobile-nav-link">Home</a>
+        </li>
+
+        <!-- About Us Dropdown -->
+        <li class="mobile-nav-item has-dropdown">
+          <div class="mobile-nav-link toggle-dropdown">
+            About Us <i class="ph ph-caret-down"></i>
+          </div>
+          <ul class="mobile-dropdown-menu">
+            <li><a href="university_profile.html">About UNWH</a></li>
+            <li><a href="leadership.html">Messages from Chancellor & VC</a></li>
+            <li><a href="values.html">Vision, Mission & Core Values</a></li>
+            <li><a href="accreditations-rankings.html">Our Achievements</a></li>
+          </ul>
+        </li>
+        <!-- Programs Mega Menu -->
+        <!-- <li class="mobile-nav-item has-dropdown">
+          <div class="mobile-nav-link toggle-dropdown">
+            Programs <i class="ph ph-caret-down"></i>
+          </div>
+          <ul class="mobile-dropdown-menu">
+          
+            <li class="mobile-dropdown-header">Management & Commerce</li>
+            <li><a href="#">B.Com (Hons) CA Preparation with Computerized Accounting</a></li>
+            <li><a href="#">M.Com with Financial Technology</a></li>
+            <li><a href="#">BBA (Hons) with Foreign Language & IELTS</a></li>
+            <li><a href="#">BBA Digital Marketing & Data Analytics</a></li>
+            <li><a href="#">MBA (HR/Marketing/Finance)</a></li>
+            <li><a href="#">Specialization in Logistics Supply Chain Management</a></li>
+            <li><a href="#">MBA Business Analytics/Data Science</a></li>
+            <li><a href="#">MBA Finance & Technology</a></li>
+
+          
+            <li class="mobile-dropdown-header">Science & Engineering</li>
+            <li><a href="#">BCA with Specialisation in AIML</a></li>
+            <li><a href="#">BCA with Specialisation in Cyber Security</a></li>
+            <li><a href="#">B.Tech - CS with Pilot Training</a></li>
+            <li><a href="#">B.Tech - IT with Pilot Training</a></li>
+            <li><a href="#">B.Tech - Data Science with IOT</a></li>
+            <li><a href="#">B.Tech - AI-ML</a></li>
+            <li><a href="#">MCA - Cyber Security/Data Science</a></li>
+
+          
+            <li class="mobile-dropdown-header">Hospitality Management</li>
+            <li><a href="#">Certificate in Hotel Management (CHM)</a></li>
+            <li><a href="#">Advance Certificate in Hotel Management (ACHM)</a></li>
+            <li><a href="#">Diploma in Hotel Management (DHM)</a></li>
+            <li><a href="#">Bachelor of Hotel Management (BHM)</a></li>
+            <li><a href="#">Bachelor of Hotel Management & Catering Technology (BHMCT)</a></li>
+            <li><a href="#">BBA with specialisation in Travel and Tourism</a></li>
+            <li><a href="#">BBA - Hospital Administration</a></li>
+            <li><a href="#">BBA with specialisation in Hospitality & Management</a></li>
+            <li><a href="#">MBA with specialisation in Travel and Tourism</a></li>
+            <li><a href="#">MBA with Hospitality</a></li>
+            <li><a href="#">PGDM</a></li>
+
+            <li class="mobile-dropdown-header"> Social Sciences & Humanities </li>
+            <li><a href="#">B.A. Economics Hons. with Civil Services Preparation</a></li>
+            <li><a href="#">M.A. Economics with IES preparation</a></li>
+            <li><a href="#">B.A. English Hons</a></li>
+            <li><a href="#">M.A. English</a></li>
+            <li><a href="#">B.A. Political Science Hons</a></li>
+            <li><a href="#">B.A. Psychology Hons</a></li>
+            <li><a href="#">M.A. Psychology</a></li>
+            <li><a href="#">B.A. Education Hons</a></li>
+            <li><a href="#">B.A. History Hons with Civil Service preparation</a></li>
+            <li><a href="#">B.A. Fine Arts Hons</a></li>
+            <li><a href="#">Certificate Library Science</a></li>
+            <li><a href="#">Diploma in Library Science</a></li>
+            <li><a href="#">B.Lib</a></li>
+            <li><a href="#">M.Lib</a></li>
+
+            <li class="mobile-dropdown-header"> Yogic Sciences </li>
+            <li><a href="#">Certificate Yogic Science</a></li>
+            <li><a href="#">Diploma In Yogic Science with Naturopathy</a></li>
+            <li><a href="#">B.A Yoga Hons</a></li>
+            <li><a href="#">B.Sc. Yoga Hons</a></li>
+
+            <li class="mobile-dropdown-header"> Earth Science </li>
+            <li><a href="#">B.Sc. (Hons.) Geography</a></li>
+            <li><a href="#">M.Sc. Geography</a></li>
+            <li><a href="#">M.Sc. Remote Sensing and GIS</a></li>
+            <li><a href="#">Diploma in Remote Sensing and GIS</a></li>
+            <li><a href="#">Certificate Remote Sensing and GIS</a></li>
+
+
+          </ul>
+        </li> -->
+
+        <li class="mobile-nav-item has-dropdown">
+          <div class="mobile-nav-link toggle-dropdown">
+            Schools <i class="ph ph-caret-down"></i>
+          </div>
+          <ul class="mobile-dropdown-menu">
+            <li><a href="school-commerce-business-studies.html">Commerce & Business Studies</a></li>
+            <li><a href="school-computer-science-engineering.html">Computer Science & Engineering</a></li>
+            <li><a href="school-hotel-hospitality-management.html">Hotel & Hospitality Management</a></li>
+            <li><a href="school-yogic-science.html">Yogic Sciences</a></li>
+            <li><a href="school-applied-social-sciences.html">Applied Social Sciences & Humanities</a></li>
+            <li><a href="school-skill-development.html">Skill Development & Vocational Studies</a></li>
+            <li><a href="school-earth-science.html">Earth Science</a></li>
+            <li><a href="school-of-health-sciences-and-technology.html">School of Health Sciences and Technology</a>
+            </li>
+
+
+          </ul>
+        </li>
+
+        <li class="mobile-nav-item">
+          <a href="all-programs.html" class="mobile-nav-link">Programs</a>
+        </li>
+
+        <li class="mobile-nav-item has-dropdown">
+          <div class="mobile-nav-link toggle-dropdown">
+            Admission <i class="ph ph-caret-down"></i>
+          </div>
+          <ul class="mobile-dropdown-menu">
+            <li><a href="admissions-procedure.html">Admission Procedure</a></li>
+            <li><a href="bank-details.html">Bank Details</a></li>
+            <li><a href="fees-Structure-2025-26.html">Fee Structure</a></li>
+            <li><a href="scholarship.html">Scholarship</a></li>
+
+          </ul>
+        </li>
+
+        <li class="mobile-nav-item">
+          <a href="academics.html" class="mobile-nav-link">Academics</a>
+        </li>
+
+        <!-- Campus Life Dropdown -->
+        <li class="mobile-nav-item has-dropdown">
+          <div class="mobile-nav-link toggle-dropdown">
+            Campus Life <i class="ph ph-caret-down"></i>
+          </div>
+          <ul class="mobile-dropdown-menu">
+            <li><a href="infrastructure.html">Infrastructure</a></li>
+            <li><a href="virtual-tour.html">Virtual Tour</a></li>
+            <li><a href="student-life.html">Student Life</a></li>
+          </ul>
+        </li>
+
+        <li class="mobile-nav-item">
+          <a href="research.html" class="mobile-nav-link">Research</a>
+        </li>
+
+        <li class="mobile-nav-item">
+          <a href="sports.html" class="mobile-nav-link">Sports</a>
+        </li>
+        <li class="mobile-nav-item">
+          <a href="placements.html" class="mobile-nav-link">Placements</a>
+        </li>
+
+        <li class="mobile-nav-item">
+          <a href="contact.html" class="mobile-nav-link">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <style>
+    .mobile-menu-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .mobile-menu-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .mobile-menu {
+      position: fixed;
+      top: 0;
+      left: -100%;
+      width: 85%;
+      max-width: 350px;
+      height: 100vh;
+      background: #fff;
+      z-index: 1001;
+      overflow-y: auto;
+      transition: all 0.4s ease;
+      box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .mobile-menu.active {
+      left: 0;
+    }
+
+    .mobile-menu-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .mobile-menu-header .logo img {
+      max-height: 60px;
+    }
+
+    .mobile-menu-close {
+      background: none;
+      border: none;
+      font-size: 24px;
+      color: #333;
+      cursor: pointer;
+    }
+
+    .mobile-menu-content {
+      padding: 15px;
+    }
+
+    .mobile-nav {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .mobile-nav-item {
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    .mobile-nav-link {
+      display: block;
+      padding: 12px 0;
+      color: #333;
+      text-decoration: none;
+      font-weight: 500;
+      position: relative;
+    }
+
+    .mobile-nav-link i {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: transform 0.3s ease;
+    }
+
+    .toggle-dropdown.active i {
+      transform: translateY(-50%) rotate(180deg);
+    }
+
+    .has-dropdown .mobile-nav-link {
+      padding-right: 25px;
+    }
+
+    .mobile-dropdown-menu {
+      list-style: none;
+      padding: 0 0 0 15px;
+      margin: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+
+    .mobile-dropdown-menu.active {
+      max-height: 3000px;
+    }
+
+    .mobile-dropdown-menu li {
+      padding: 8px 0;
+    }
+
+    .mobile-dropdown-menu a {
+      color: #555;
+      text-decoration: none;
+      display: block;
+      transition: all 0.2s;
+    }
+
+    .mobile-dropdown-menu a:hover {
+      color: #1a4b8e;
+    }
+
+    .mobile-dropdown-header {
+      font-weight: 600;
+      color: #1a4b8e;
+      margin-top: 10px;
+      padding: 8px 0;
+    }
+
+    /* Toggle button styles */
+    .toggle-mobileMenu {
+      background: none;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+      color: #333;
+      transition: all 0.2s ease;
+    }
+
+    .toggle-mobileMenu:hover {
+      color: #0066cc;
+      transform: scale(1.1);
+    }
+
+    /* Responsive adjustments */
+    @media (min-width: 992px) {
+
+      .mobile-menu,
+      .mobile-menu-overlay {
+        display: none;
+      }
+    }
+  </style>
+
+  <!-- ==================== Mobile Menu End Here ==================== -->
+
+  <!-- Top Header Start -->
+
+  <div class="py-8 mobile-hide" style="background-color: #232d69;  ">
+    <div class="container" style="margin: 0 auto; padding: 0 15px;">
+      <div class="top-bar-content"
+        style="display: flex; justify-content: space-between; flex-wrap: wrap; align-items: center; gap: 10px; color: white; font-size: 14px;">
+
+        <!-- Left Part -->
+        <div class="top-left">
+          <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px;">
+            <span
+              style="display: flex; align-items: center; gap: 5px; border-right: 1px solid rgba(255,255,255,0.5); padding-right: 10px;">
+              <i class="ph ph-phone"></i> <a href="tel:+919927999506"
+                class="text-white d-block hover-text-main-600 mb-0">+919927999506</a>
+            </span>
+            <span
+              style="display: flex; align-items: center; gap: 5px; border-right: 1px solid rgba(255,255,255,0.5); padding-right: 10px;">
+              <i class="ph ph-envelope"></i> <a href="mailto:info1UNWH@gmail.com"
+                class="text-white d-block hover-text-main-600 mb-4">info1UNWH@gmail.com</a>
+            </span>
+            <a href="career.html"
+              style="color: white; text-decoration: none; border-right: 1px solid rgba(255,255,255,0.5); padding-right: 10px;">Career</a>
+            <a href="gallery.html"
+              style="color: white; text-decoration: none; border-right: 1px solid rgba(255,255,255,0.5); padding-right: 10px;">Gallery</a>
+            <a href="sports.html"
+              style="color: white; text-decoration: none; border-right: 1px solid rgba(255,255,255,0.5); padding-right: 10px;">Sports</a>
+          </div>
+        </div>
+
+        <!-- Right Part -->
+        <div class="top-right">
+          <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px;">
+            <a href="fees-Structure-2025-26.html" target="_blank"
+              style="color: white; text-decoration: none; border-right: 1px solid rgba(255,255,255,0.5); padding-right: 10px;">Fees</a>
+
+            <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px;">
+              <a href="#"
+                style="color: white; text-decoration: none; border-right: 1px solid rgba(255,255,255,0.5); padding-right: 10px;">News</a>
+
+            </div>
+            <!-- Added Registration Button -->
+            <a class="blink" href="https://admission.unwhdoon.com/FreshApplication/register.aspx" target="_blank"
+              style="background-color: #ff6b00; color: white; text-decoration: none; padding: 5px 15px; border-radius: 4px; font-weight: bold; white-space: nowrap; cursor: pointer;">
+              Registration Open for 2025-26
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <style>
+    /* animation for button  */
+
+    .blink {
+      animation: blink-animation 1s steps(5, start) infinite;
+      -webkit-animation: blink-animation 1s steps(5, start) infinite;
+    }
+
+    @keyframes blink-animation {
+      to {
+        visibility: hidden;
+      }
+    }
+
+    @-webkit-keyframes blink-animation {
+      to {
+        visibility: hidden;
+      }
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .mobile-hide {
+        display: none !important;
+      }
+
+      /* You can keep these styles in case you want to show it again with different styling */
+      .top-bar-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+      }
+
+      .top-left div,
+      .top-right div {
+        flex-wrap: wrap;
+        row-gap: 10px;
+        margin: 0px 40px;
+      }
+
+      .top-left span,
+      .top-left a,
+      .top-right a:not(:last-child) {
+        border-right: none !important;
+        padding-right: 0 !important;
+      }
+
+      .has-submenu {
+        margin-left: 0 !important;
+      }
+    }
+
+    .has-submenu:hover .nav-submenu {
+      display: block !important;
+    }
+
+    .nav-submenu__link:hover {
+      background-color: #f0f0f0 !important;
+    }
+  </style>
+
+  <!-- Top Header End -->
+
+  <!-- Marquee -->
+
+  <style>
+    .marquee-container {
+      width: 100%;
+      background: #000000;
+      color: white;
+      padding: 0px 0;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .marquee-content {
+      display: inline-block;
+      white-space: nowrap;
+      padding-left: 100%;
+      animation: marquee 69s linear infinite;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .unwh-highlight {
+      color: #d4af37;
+      font-weight: 600;
+    }
+
+    @keyframes marquee {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .marquee-content {
+        font-size: 12px;
+        animation-duration: 20s;
+      }
+    }
+  </style>
+
+  <div class="marquee-container">
+    <div class="marquee-content">
+      Welcome to The University of North West Himalayas (UNwH), Dehradun, Admission Open for 2025-26 Session.
+    </div>
+  </div>
+
+  <!-- ==================== Header Start Here ==================== -->
+
+  <header class="header">
+    <div class="container container--xl">
+      <nav class="header-inner flex-between gap-8">
+        <div class="header-content-wrapper flex-align flex-grow-1">
+          <!-- Logo Start -->
+          <div class="logo">
+            <a href="index.html" class="link">
+              <img src="assets/images/thumbs/headerLogo.png" alt="Logo" />
+            </a>
+          </div>
+          <!-- Logo End  -->
+          <!-- Menu Start  -->
+          <div class="d-lg-block d-none ">
+            <ul class="nav-menu">
+              <li class="nav-item ">
+                <a href="/" class="nav-menu__link">Home</a>
+              </li>
+              <li class="nav-menu__item has-submenu">
+                <a href="javascript:void(0)" class="nav-menu__link">About Us</a>
+                <ul class="nav-submenu scroll-sm">
+                  <li class="nav-submenu__item">
+                    <a href="university_profile.html" class="nav-submenu__link hover-bg-neutral-30">About UNWH</a>
+                  </li>
+                  <li class="nav-submenu__item">
+                    <a href="leadership.html" class="nav-submenu__link hover-bg-neutral-30">Messages from Chancellor &
+                      VC</a>
+                  </li>
+                  <li class="nav-submenu__item">
+                    <a href="values.html" class="nav-submenu__link hover-bg-neutral-30">Vision, Mission & Core
+                      Values</a>
+                  </li>
+                  <li class="nav-submenu__item">
+                    <a href="accreditations-rankings.html" class="nav-submenu__link hover-bg-neutral-30">Our
+                      Achievements</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-menu__item">
+                <a href="all-programs.html" class="nav-menu__link">Programs</a>
+              </li>
+
+              <!-- mega menu 
+              <li class="nav-menu__item has-submenu mega-menu-item">
+                <a href="javascript:void(0)" class="nav-menu__link">Programs</a>
+                <div class="mega-menu">
+                  <div class="mega-row">
+                    <div class="mega-column">
+                      <h3 class="section-title">Management & Commerce</h3>
+                      <ul class="mega-submenu">
+                        <li><a href="#">B.Com (Hons) CA Preparation with Computerized Accounting</a></li>
+                        <li><a href="#">M.Com with Financial Technology</a></li>
+                        <li><a href="#">BBA (Hons) with Foreign Language & IELTS</a></li>
+                        <li><a href="#">BBA Digital Marketing & Data Analytics</a></li>
+                        <li><a href="#">MBA (HR/Marketing/Finance)</a></li>
+                        <li><a href="#">Specialization in Logistics Supply Chain Management</a></li>
+                        <li><a href="#">MBA Business Analytics/Data Science</a></li>
+                        <li><a href="#">MBA Finance & Technology</a></li>
+                      </ul>
+                    </div>
+                    <div class="mega-column">
+                      <h3 class="section-title">Science & Engineering</h3>
+                      <ul class="mega-submenu">
+                        <li><a href="#">BCA with Specialisation in AIML</a></li>
+                        <li><a href="#">BCA with Specialisation in Cyber Security</a></li>
+                        <li><a href="#">B.Tech - CS with Pilot Training</a></li>
+                        <li><a href="#">B.Tech - IT with Pilot Training</a></li>
+                        <li><a href="#">B.Tech - Data Science with IOT</a></li>
+                        <li><a href="#">B.Tech - AI-ML</a></li>
+                        <li><a href="#">MCA - Cyber Security/Data Science</a></li>
+                      </ul>
+                    </div>
+                    <div class="mega-column">
+                      <h3 class="section-title">Hospitality Management</h3>
+                      <ul class="mega-submenu">
+                        <li><a href="#">Certificate in Hotel Management (CHM)</a></li>
+                        <li><a href="#">Advance Certificate in Hotel Management (ACHM)</a></li>
+                        <li><a href="#">Diploma in Hotel Management (DHM)</a></li>
+                        <li><a href="#">Bachelor of Hotel Management (BHM)</a></li>
+                        <li><a href="#">Bachelor of Hotel Management & Catering Technology (BHMCT)</a></li>
+                        <li><a href="#">BBA with specialisation in Travel and Tourism</a></li>
+                        <li><a href="#">BBA - Hospital Administration</a></li>
+                        <li><a href="#">BBA with specialisation in Hospitality & Management</a></li>
+                        <li><a href="#">MBA with specialisation in Travel and Tourism</a></li>
+                        <li><a href="#">MBA with Hospitality</a></li>
+                        <li><a href="#">PGDM</a></li>
+                      </ul>
+                    </div>
+                    <div class="mega-column">
+                      <h3 class="section-title">Social Sciences & Humanities</h3>
+                      <ul class="mega-submenu">
+                        <li><a href="#">B.A. Economics Hons. with Civil Services Preparation</a></li>
+                        <li><a href="#">M.A. Economics with IES preparation</a></li>
+                        <li><a href="#">B.A. English Hons</a></li>
+                        <li><a href="#">M.A. English</a></li>
+                        <li><a href="#">B.A. Political Science Hons</a></li>
+                        <li><a href="#">B.A. Psychology Hons</a></li>
+                        <li><a href="#">M.A. Psychology</a></li>
+                        <li><a href="#">B.A. Education Hons</a></li>
+                        <li><a href="#">B.A. History Hons with Civil Service preparation</a></li>
+                        <li><a href="#">B.A. Fine Arts Hons</a></li>
+                        <li><a href="#">Certificate Library Science</a></li>
+                        <li><a href="#">Diploma in Library Science</a></li>
+                        <li><a href="#">B.Lib</a></li>
+                        <li><a href="#">M.Lib</a></li>
+                      </ul>
+                    </div>
+                    <div class="mega-column">
+                      <h3 class="section-title">Yogic Sciences</h3>
+                      <ul class="mega-submenu">
+                        <li><a href="#">Certificate Yogic Science</a></li>
+                        <li><a href="#">Diploma In Yogic Science with Naturopathy</a></li>
+                        <li><a href="#">B.A Yoga Hons</a></li>
+                        <li><a href="#">B.Sc. Yoga Hons</a></li>
+                      </ul>
+                    </div>
+                    <div class="mega-column">
+                      <h3 class="section-title">Earth Science</h3>
+                      <ul class="mega-submenu">
+                        <li><a href="#">B.Sc. (Hons.) Geography</a></li>
+                        <li><a href="#">M.Sc. Geography</a></li>
+                        <li><a href="#">M.Sc. Remote Sensing and GIS</a></li>
+                        <li><a href="#">Diploma in Remote Sensing and GIS</a></li>
+                        <li><a href="#">Certificate Remote Sensing and GIS</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              mega end   -->
+
+              <li class="nav-menu__item has-submenu">
+                <a href="javascript:void(0)" class="nav-menu__link">Schools</a>
+                <ul class="nav-submenu scroll-sm">
+                  <li class="nav-submenu__item">
+                    <a href="school-commerce-business-studies.html"
+                      class="nav-submenu__link hover-bg-neutral-30">Commerce & Business Studies</a>
+                  </li>
+                  <li class="nav-submenu__item">
+                    <a href="school-computer-science-engineering.html"
+                      class="nav-submenu__link hover-bg-neutral-30">Computer Science & Engineering</a>
+                  </li>
+                  <li class="nav-submenu__item">
+                    <a href="school-hotel-hospitality-management.html"
+                      class="nav-submenu__link hover-bg-neutral-30">Hotel & Hospitality Management</a>
+                  </li>
+                  <li class="nav-submenu__item">
+                    <a href="school-yogic-science.html" class="nav-submenu__link hover-bg-neutral-30">Yogic Sciences</a>
+                  </li>
+
+                  <li class="nav-submenu__item">
+                    <a href="school-applied-social-sciences.html" class="nav-submenu__link hover-bg-neutral-30">Applied
+                      Social Sciences & Humanities</a>
+                  </li>
+
+                  <li class="nav-submenu__item">
+                    <a href="school-skill-development.html" class="nav-submenu__link hover-bg-neutral-30">Skill
+                      Development & Vocational Studies</a>
+                  </li>
+                  <li class="nav-submenu__item">
+                    <a href="school-earth-science.html" class="nav-submenu__link hover-bg-neutral-30">Earth Science</a>
+                  </li>
+                  <li class="nav-submenu__item">
+                    <a href="school-of-health-sciences-and-technology.html"
+                      class="nav-submenu__link hover-bg-neutral-30">School of Health Sciences and Technology</a>
+                  </li>
+
+
+                </ul>
+              </li>
+
+
+
+
+              <li class="nav-menu__item has-submenu">
+                <a href="javascript:void(0)" class="nav-menu__link">Admission</a>
+                <ul class="nav-submenu scroll-sm">
+                  <li class="nav-submenu__item">
+                    <a href="admissions-procedure.html" class="nav-submenu__link hover-bg-neutral-30">Admission
+                      Procedure</a>
+                  </li>
+                  <li class="nav-submenu__item">
+                    <a href="bank-details.html" class="nav-submenu__link hover-bg-neutral-30">Bank Details</a>
+                  </li>
+                  <li class="nav-submenu__item">
+                    <a href="fees-Structure-2025-26.html" class="nav-submenu__link hover-bg-neutral-30">Fee
+                      Structure</a>
+                  </li>
+                  <li class="nav-submenu__item">
+                    <a href="scholarship.html" class="nav-submenu__link hover-bg-neutral-30"> Scholarship </a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-menu__item">
+                <a href="academics.html" class="nav-menu__link">Academics</a>
+              </li>
+
+              <!-- dropdown menu  -->
+              <li class="nav-menu__item has-submenu">
+                <a href="javascript:void(0)" class="nav-menu__link">Campus Life</a>
+                <ul class="nav-submenu scroll-sm">
+                  <li class="nav-submenu__item">
+                    <a href="infrastructure.html" class="nav-submenu__link hover-bg-neutral-30">Infrastructure</a>
+                  </li>
+                  <li class="nav-submenu__item">
+                    <a href="virtual-tour.html" class="nav-submenu__link hover-bg-neutral-30">Virtual Tour</a>
+                  </li>
+                  <li class="nav-submenu__item">
+                    <a href="student-life.html" class="nav-submenu__link hover-bg-neutral-30">Student Life</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-menu__item">
+                <a href="research.html" class="nav-menu__link">Research</a>
+              </li>
+
+
+              <li class="nav-menu__item">
+                <a href="placements.html" class="nav-menu__link">Placements</a>
+              </li>
+
+              <li class="nav-menu__item">
+                <a href="contact.html" class="nav-menu__link">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <!-- Menu End  -->
+        </div>
+        <!-- Header Right start -->
+        <div class="header-right flex-align">
+          <button type="button" class="toggle-mobileMenu d-lg-none text-neutral-200 flex-center"
+            style="margin-left: auto; padding: 10px; font-size: 28px;">
+            <i class="ph ph-list"></i>
+          </button>
+        </div>
+        <!-- Header Right End  -->
+      </nav>
+    </div>
+  </header>
+
+  <style>
+    /* Fixed Main Navigation Header Styles */
+
+
+    /* Ensure header content stays properly aligned */
+    .header .container {
+      max-width: 100% !important;
+    }
+
+    /* Make sure dropdowns appear above other content */
+    .nav-submenu {
+      z-index: 1000 !important;
+    }
+
+    /* Smooth transition for header */
+    .header {
+      transition: all 0.3s ease !important;
+    }
+  </style>
+
+  <!-- ==================== Header End Here ==================== -->
+
+    <!-- ================================== Banner Three Start =============================== -->
+
+    <section class="banner-three position-relative responsive-arrow overflow-hidden" style="overflow-x: hidden;">
+
+        <section class="breadcrumb py-160 position-relative z-1 overflow-hidden mb-0"
+            style="background: url('assets/images/thumbs/Fee\ BAnner.png') center center / cover no-repeat;">
+
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="breadcrumb__wrapper text-center">
+                            <h1 class="breadcrumb__title display-4 fw-semibold text-white">Blogs</h1>
+
+                            <ul class="breadcrumb__list d-flex align-items-center justify-content-center gap-3 mt-3">
+                                <li class="breadcrumb__item">
+                                    <a href="index.html" class="breadcrumb__link text-white fw-medium">Home</a>
+                                </li>
+                                <li class="breadcrumb__item text-white">/</li>
+                                <li class="breadcrumb__item text-white"> Blogs </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <div class="border-top border-white border-solid  border-2"></div>
+
+         
+
+
+        </div>
+    </section>
+
+   
+
+    <!-- pop up  -->
+
+    <!-- <div id="popup1" class="overlay" >
+    <div class="popup" id="popupBox">
+      <span class="close" onclick="closePopup()">&times;</span>
+       <a href="index.html">
+                <img src="assets/images/thumbs/headerLogo.png" alt="" />
+      </a>
+          
+      
+      <div class="content">
+        <div style="text-align: center; padding: 20px; font-family: 'Segoe UI', sans-serif; border: 1px solid #ccc;">
+          <h4> Welcome to UNWH!</h4>
+          
+          <h4 style="margin-top: 0; font-weight: 600;">Admission Open 2025–26</h4>
+
+          <a href="#" style=" display: inline-block;background-color: #28a745; color: white; font-weight: bold; padding: 10px 20px; border-radius: 5px; text-decoration: none;margin-bottom: 10px;  "> Apply Now </a>
+        </div>
+
+      </div>
+    </div>
+  </div> -->
+
+    <!-- Fixed Left Side Button -->
+    <div class="fixed-left-button" overflow-x: hidden;>
+        <button class="left-side-button" title="ERP" style="background-color: #ff6b00;">Apply Now</button>
+        <button class="left-side-button" title="Enquiry">Enquire Now</button>
+    </div>
+
+    <div class="fixed-social">
+        <div class="social-links">
+            <div class="d-flex flex-column align-items-center">
+
+                <a href="https://www.facebook.com/unwhdehradun" class="social-icon bg-facebook" title="Facebook"><i
+                        class="ph ph-facebook-logo"></i></a>
+                <a href="https://x.com/unwhdehradun" class="social-icon bg-twitter" title="Twitter"><i
+                        class="ph ph-x-logo"></i></a>
+                <a href="https://www.instagram.com/unwhdehradun/" class="social-icon bg-instagram" title="Instagram"><i
+                        class="ph ph-instagram-logo"></i></a>
+                <a href="https://wa.me/919837213369" target="_blank" class="social-icon bg-whatsapp" title="WhatsApp"><i
+            class="ph ph-whatsapp-logo"></i></a>
+                <!-- <a href="#" class="social-icon bg-linkedin" title="LinkedIn"><i class="ph ph-linkedin-logo"></i></a> -->
+                <!-- <a href="#" class="social-icon bg-youtube" title="YouTube"><i class="ph ph-youtube-logo"></i></a> -->
+            </div>
+        </div>
+    </div>
+
+     
+        </div>
+     </div>
+
+
+     <!-- Blogs -->
+
+<div class="container py-120">
+    <div id="blog-detail"></div>
+</div>
+
+   
+ 
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const id = params.get("id");
+
+  fetch('assets/data/blogs.json')
+    .then(res => res.json())
+    .then(blogs => {
+      const blog = blogs.find(b => b.id == id);
+      const blogDetail = document.getElementById("blog-detail");
+
+      if (!blog) {
+        blogDetail.innerHTML = "<h2>Blog Not Found</h2>";
+        return;
+      }
+
+      blogDetail.innerHTML = `
+        <div class="rounded-12 overflow-hidden position-relative mb-32">
+          <img src="${blog.image}" class="rounded-12 cover-img transition-2 w-100" alt="${blog.title}" />
+        </div>
+        <div class="pt-32 pb-24 px-16 position-relative">
+           
+          <h2 class="mb-24">${blog.title}</h2>
+          <p class="text-neutral-500 mb-20">By ${blog.author} on ${blog.date}</p>
+          <p class="text-neutral-500 mb-32">${blog.description}</p>
+
+          ${blog.points?.length ? `
+            <h6 class="mb-16 text-neutral-500 text-lg">Key Points:</h6>
+            <ul class="list-dotted d-flex flex-column gap-8 mb-32">
+              ${blog.points.map(point => `<li>${point}</li>`).join("")}
+            </ul>
+          ` : ''}
+
+          <span class="d-block border border-neutral-30 my-32 border-dashed"></span>
+          <h3 class="mb-16 text-neutral-500 text-lg">${blog.highlightTitle || ''}</h3>
+          <p>${blog.content}</p>
+        </div>
+      `;
+    });
+</script>  
+
+<!-- ====================  Start Here ==================== -->
+
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <!-- Column 1 - Details (Distinct Background) -->
+      <div class="footer-column details-column">
+        <div class=" ">
+          <a href="index.html">
+            <img src="assets/images/thumbs/footernew.png" alt="" width="300px" /></a>
+        </div>
+        <p style="color: white;"><strong>The University of North West Himalayas (UNwH)</strong></p>
+        <div class="contact-col">
+          <div class="icon-circle">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <div style="color: white;">
+            Village- Sangaon <br> Bhagwanpur, Dharkot Road,   Thano Dehradun – 248143,   Uttarakhand, India
+          </div>
+        </div>
+
+        <div class="contact-col">
+          <div class="icon-circle">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div style="color: white;">
+            <a style="color: white;" href="mailto:info1UNWH@gmail.com">info1UNWH@gmail.com</a>
+          </div>
+        </div>
+        <div class="footer-social-links">
+          <a href="https://www.facebook.com/unwhdehradun"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://x.com/unwhdehradun"><i class="fab fa-x"></i></a>
+          <a href="https://www.instagram.com/unwhdehradun/"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/919927999506"><i class="ph ph-whatsapp-logo"></i></a>
+          <a href="https://www.youtube.com/@unwhdehradun/"><i class="fab fa-youtube"></i></a>
+        </div>
+
+      </div>
+
+      <!-- Column 2 - Quick Links -->
+      <div class="footer-column">
+        <h4>About</h4>
+        <ul>
+          <li><a href="university_profile.html">About UNwH</a></li>
+          <li><a href="Leadership.html">Messages from Chancellor & VC</a></li>
+          <li><a href="values.html">Vision, Mission & Core</a></li>
+          <li><a href="accreditations-rankings.html">Our Achievements</a></li>
+          <li><a href="all-programs.html">All Programs</a></li>
+          <li><a href="fees-Structure-2025-26.html">Fees Structure 2025-26</a></li>
+
+        </ul>
+      </div>
+
+      <!-- Column 3 - Services -->
+      <div class="footer-column">
+        <h4>Academic</h4>
+        <ul>
+          <li><a href="school-commerce-business-studies.html">Commerce & Business Studies</a></li>
+          <li><a href="school-computer-science-engineering.html">Computer Science & Engineering</a></li>
+          <li><a href="school-hotel-hospitality-management.html">Hotel & Hospitality Management</a></li>
+          <li><a href="school-yogic-science.html">Yogic Sciences</a></li>
+          <li><a href="school-applied-social-sciences.html">Applied Social Sciences & Humanities</a></li>
+          <li><a href="school-skill-development.html">Skill Development & Vocational Studies</a></li>
+          <li><a href="school-earth-science.html">Earth Science</a></li>
+          <li><a href="school-of-health-sciences-and-technology.html">Health Sciences and Technology</a></li>
+        </ul>
+      </div>
+      <!-- Column 4 - Resources -->
+      <div class="footer-column">
+        <h4>Quick Link</h4>
+        <ul>
+          <li><a href="infrastructure.html">Infrastructure</a></li>
+          <li><a href="virtual-tour.html">Virtual Tour</a></li>
+          <li><a href="student-life.html">Students Life</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="placements.html">Placement</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="career.html">Career</a></li>
+
+        </ul>
+      </div>
+      <!-- Column 5 - Newsletter -->
+      <div class="footer-column">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="https://www.aicte.gov.in/">AICTE</a></li>
+          <li><a href="https://ugcnet.nta.ac.in/">UGC</a></li>
+          <li><a href="#">Downloads</a></li>
+
+
+        </ul>
+      </div>
+    </div>
+    <!-- copyright section start here -->
+
+
+    <div class="footer-row">
+
+      <!-- Left Side: Copyright -->
+      <div class="footer-left">
+        Copyright &copy; 2025
+        <span class="fw-semibold">UNWH</span> |
+        ERP & Website By:
+        <a href="https://uniedgesolutions.in/" target="_blank">UniEdge Solutions</a>
+      </div>
+
+      <!-- Right Side: Contact -->
+      <div class="footer-right">
+        <div class="contact-col">
+          <div class="icon-circle">
+            <i class="fas fa-phone-alt"></i>
+          </div>
+          <div>
+            <a style="color: white;" href="tel:919927999509">+919927999509</a>
+            <a style="color: white;" href="tel:919927999506">+919927999506</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  
+
+  <!-- ==================== Footer End Here ==================== -->
+
+  <script>
+    // JavaScript to handle scroll behavior for fixed header
+    window.addEventListener('scroll', function () {
+      const header = document.querySelector('.header');
+      const topHeader = document.querySelector('.py-8.mobile-hide');
+      const marquee = document.querySelector('.marquee-container');
+
+      // Calculate the height of top header and marquee
+      let offsetHeight = 0;
+      if (topHeader) offsetHeight += topHeader.offsetHeight;
+      if (marquee) offsetHeight += marquee.offsetHeight;
+
+      if (window.scrollY > offsetHeight) {
+        header.classList.add('scrolled');
+        // Add padding to body to prevent content jump
+        document.body.style.paddingTop = header.offsetHeight + 'px';
+      } else {
+        header.classList.remove('scrolled');
+        // Remove padding when header is not fixed
+        document.body.style.paddingTop = '0px';
+      }
+    });
+  </script>
+
+
+    <!-- Mobile menu -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Mobile menu toggle
+      const mobileMenuBtn = document.querySelector('.toggle-mobileMenu');
+      const mobileMenu = document.querySelector('.mobile-menu');
+      const mobileOverlay = document.querySelector('.mobile-menu-overlay');
+      const mobileCloseBtn = document.querySelector('.mobile-menu-close');
+
+      mobileMenuBtn.addEventListener('click', function () {
+        mobileMenu.classList.add('active');
+        mobileOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      });
+
+      mobileCloseBtn.addEventListener('click', function () {
+        mobileMenu.classList.remove('active');
+        mobileOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+
+      mobileOverlay.addEventListener('click', function () {
+        mobileMenu.classList.remove('active');
+        mobileOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+
+      // Dropdown toggles
+      const dropdownToggles = document.querySelectorAll('.toggle-dropdown');
+
+      dropdownToggles.forEach(toggle => {
+        toggle.addEventListener('click', function () {
+          const dropdown = this.parentElement.querySelector('.mobile-dropdown-menu');
+          dropdown.classList.toggle('active');
+          this.classList.toggle('active');
+          const icon = this.querySelector('i');
+
+          if (dropdown.classList.contains('active')) {
+            icon.classList.remove('ph-caret-down');
+            icon.classList.add('ph-caret-up');
+          } else {
+            icon.classList.remove('ph-caret-up');
+            icon.classList.add('ph-caret-down');
+          }
+        });
+      });
+    });
+    </script>
+
+     
+    <!-- clear cahce  -->
+    <script src="cache-buster.js"></script>
+
+    <!-- Jquery js -->
+
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+
+    <!-- Bootstrap Bundle Js -->
+
+    <script src="assets/js/boostrap.bundle.min.js"></script>
+
+    <!-- select2 Js -->
+
+    <!-- <script src="assets/js/select2.min.js"></script> -->
+
+    <!-- Phosphor Icon Js -->
+
+    <script src="assets/js/phosphor-icon.js"></script>
+
+    <!-- Slick js -->
+
+    <script src="assets/js/slick.min.js"></script>
+
+    <!-- Slick js -->
+
+    <script src="assets/js/counter.min.js"></script>
+
+    <!-- magnific popup -->
+
+    <script src="assets/js/magnific-popup.min.js"></script>
+
+    <!-- Jquery Ui js -->
+
+    <script src="assets/js/jquery-ui.js"></script>
+
+    <!-- plyr Js -->
+
+    <script src="assets/js/plyr.js"></script>
+
+    <!-- vanilla Tilt -->
+
+    <!-- <script src="assets/js/vanilla-tilt.min.js"></script> -->
+
+    <!-- wow -->
+
+    <script src="assets/js/wow.min.js"></script>
+
+    <script src="assets/js/aos.js"></script>
+
+    <!-- main js -->
+
+    <script src="assets/js/main.js"></script>
+
+    <script>
+        window.onload = function () {
+            const overlay = document.getElementById('popup1');
+            const popupBox = document.getElementById('popupBox');
+
+            // Show overlay
+            overlay.classList.add('active');
+
+            // Delay animation slightly to allow CSS transition to apply
+            setTimeout(() => {
+                popupBox.classList.add('show');
+            }, 100);
+        };
+
+        function closePopup() {
+            const overlay = document.getElementById('popup1');
+            const popupBox = document.getElementById('popupBox');
+
+            overlay.classList.remove('active');
+            popupBox.classList.remove('show');
+        }
+    </script>
+
+</body>
+
+</html>
+
+ 

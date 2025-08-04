@@ -1,0 +1,2374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Title -->
+  <title>School of Earth Science-UNwH</title>
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="assets/images/thumbs/favicin.jpg" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+  <!-- select2 -->
+  <link rel="stylesheet" href="assets/css/select2.min.css" />
+  <!-- Slick -->
+  <link rel="stylesheet" href="assets/css/slick.css" />
+  <!-- Slick -->
+  <link rel="stylesheet" href="assets/css/magnific-popup.css" />
+  <!-- jquery-ui -->
+  <link rel="stylesheet" href="assets/css/jquery-ui.css" />
+  <!-- plyr Css -->
+  <link rel="stylesheet" href="assets/css/plyr.css" />
+  <!-- animate -->
+  <link rel="stylesheet" href="assets/css/animate.css" />
+
+  <link rel="stylesheet" href="assets/css/aos.css" />
+  <!-- Main css -->
+  <link rel="stylesheet" href="assets/css/main.css" />
+
+  <style>
+    h3 {
+      margin-top: 5px;
+    }
+    p{
+      color: black;
+    }
+
+    .programs-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .program-card {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 25px;
+      width: calc(50% - 30px);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .program-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .program-title {
+      color: #000000;
+      font-size: 1.2em;
+      margin-bottom: 15px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 10px;
+    }
+
+    .program-description {
+      color: #555;
+      font-size: 1em;
+    }
+
+    @media (max-width: 768px) {
+      .program-card {
+        width: 100%;
+      }
+    }
+
+    .qualification-section {
+
+      margin: 0 auto;
+      background: #fff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .qualification-section h2 {
+      font-size: 26px;
+      margin-bottom: 20px;
+      color: #003366;
+      border-bottom: 2px solid #003366;
+      padding-bottom: 8px;
+    }
+
+    .qualification {
+      margin-bottom: 25px;
+    }
+
+    .degree {
+      font-weight: bold;
+      font-size: 18px;
+      color: #222;
+    }
+
+    .institute {
+      font-style: italic;
+      color: #555;
+      margin-bottom: 5px;
+    }
+
+    .thesis {
+      margin-top: 5px;
+      color: #444;
+    }
+
+    @media (max-width: 600px) {
+      .qualification-section {
+        padding: 15px;
+      }
+
+      .qualification-section h2 {
+        font-size: 22px;
+      }
+
+      .degree {
+        font-size: 16px;
+      }
+    }
+
+
+    .tabs {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      padding: 20px;
+    }
+
+    .tab-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      background: #111;
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+
+    .tab-btn {
+      flex: 1;
+      min-width: 150px;
+      padding: 12px 16px;
+      background: transparent;
+      color: #fff;
+      border: none;
+      border-right: 1px solid rgba(255, 255, 255, 0.2);
+      cursor: pointer;
+      transition: background 0.3s ease;
+      font-weight: 500;
+    }
+
+    .tab-btn:last-child {
+      border-right: none;
+    }
+
+    .tab-btn:hover,
+    .tab-btn.active {
+      background: #4f46e5;
+    }
+
+    .tab-content {
+      display: none;
+      animation: fadeIn 0.4s ease;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Nested Tabs */
+    .nested-tabs {
+      margin-top: 20px;
+    }
+
+    .nested-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      border-bottom: 2px solid #ddd;
+      margin-bottom: 10px;
+    }
+
+    .nested-btn {
+      flex: 1;
+      min-width: 120px;
+      padding: 10px;
+      background: #f1f1f1;
+      border: none;
+      font-size: 13px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      font-weight: 500;
+    }
+
+    .nested-btn.active {
+      background: #e0e7ff;
+    }
+
+    .nested-content {
+      display: none;
+      padding: 10px 0;
+      animation: fadeIn 0.3s ease;
+    }
+
+    .nested-content.active {
+      display: block;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+
+      .tab-btn,
+      .nested-btn {
+        flex: 100%;
+        min-width: 100%;
+        text-align: left;
+      }
+    }
+
+
+    .leadership-section {
+      padding: 60px 20px;
+      background: #f9f9f9;
+    }
+
+    .leadership-card {
+      display: flex;
+      gap: 30px;
+      align-items: start;
+      margin-bottom: 60px;
+      flex-wrap: wrap;
+    }
+
+    .leadership-image {
+      flex: 1 1 300px;
+    }
+
+    .leadership-image img {
+      width: 100%;
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .leadership-content {
+      flex: 1 1 500px;
+    }
+
+    .leadership-content h2 {
+      font-size: 28px;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .leadership-content h4 {
+      font-size: 18px;
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    .leadership-content p {
+      font-size: 16px;
+      color: #444;
+      line-height: 1.7;
+      margin-bottom: 15px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+
+      .leadership-card,
+      .leadership-card.reverse {
+        flex-direction: column;
+      }
+
+      .leadership-image,
+      .leadership-content {
+        flex: 1 1 100%;
+      }
+    }
+ 
+
+    .Faculty-header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 1.5rem;
+      color: white;
+      border-radius: 8px;
+     }
+
+    h1 {
+      font-size: clamp(1.8rem, 4vw, 2.2rem);
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    .Faculty-section {
+      background-color: white;
+      border-radius: 8px;
+      margin-bottom: 30px;
+      overflow: hidden;
+    }
+
+    .Faculty-table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 8px 10px 12px rgba(0, 0, 0, 0.1);
+    table-layout: fixed;
+}
+
+    .Faculty-table th {
+      background-color: var(--table-header);
+      text-align: left;
+      padding: 15px;
+      font-weight: 600;
+      border: 1px solid #ddd;
+      border-bottom: 2px solid var(--border-color);
+    }
+
+    .Faculty-table td {
+      padding: 15px;
+      border-bottom: 1px solid var(--border-color);
+      vertical-align: top;
+      border: 1px solid #ddd;
+    }
+
+    .Faculty-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .Faculty-table tr:hover {
+      background-color: #f5f5f5;
+    }
+
+    .publication-list {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    .publication-list li {
+      margin-bottom: 8px;
+      position: relative;
+      padding-left: 20px;
+    }
+
+    .publication-list li:before {
+      content: "=>";
+      position: absolute;
+      left: 0;
+      color: var(--primary-color);
+      font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+      .Faculty-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+      }
+
+      .Faculty-table th,
+      .Faculty-table td {
+        white-space: normal;
+        min-width: 200px;
+      }
+
+      .publication-list li {
+        white-space: normal;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 15px;
+      }
+
+      .Faculty-header {
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .Faculty-table th,
+      .Faculty-table td {
+        padding: 10px;
+        font-size: 0.9rem;
+      }
+    }
+   
+
+  </style>
+
+</head>
+
+<body>
+  <!--==================== Preloader Start ====================-->
+  <div class="preloader">
+    <img src="assets/images/icons/preload.gif" alt="" width="200px" />
+  </div>
+  <!--==================== Preloader End ====================-->
+
+  <!--==================== Overlay Start ====================-->
+  <div class="overlay"></div>
+  <!--==================== Overlay End ====================-->
+
+  <!--==================== Sidebar Overlay End ====================-->
+  <div class="side-overlay"></div>
+  <!--==================== Sidebar Overlay End ====================-->
+
+  <!-- ==================== Scroll to Top End Here ==================== -->
+  <div class="progress-wrap">
+    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+      <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+    </svg>
+  </div>
+  <!-- ==================== Scroll to Top End Here ==================== -->
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu-overlay"></div>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <div class="mobile-menu-header">
+      <div class="logo">
+        <a href="index.html" class="link">
+          <img src="assets/images/thumbs/headerLogo.png" alt="Logo" />
+        </a>
+      </div>
+      <button class="mobile-menu-close">
+        <i class="ph ph-x"></i>
+      </button>
+    </div>
+
+    <div class="mobile-menu-content">
+      <ul class="mobile-nav">
+        <li class="mobile-nav-item">
+          <a href="/" class="mobile-nav-link">Home</a>
+        </li>
+
+        <!-- About Us Dropdown -->
+        <li class="mobile-nav-item has-dropdown">
+          <div class="mobile-nav-link toggle-dropdown">
+            About Us <i class="ph ph-caret-down"></i>
+          </div>
+          <ul class="mobile-dropdown-menu">
+            <li><a href="university_profile.html">About UNWH</a></li>
+            <li><a href="leadership.html">Messages from Chancellor & VC</a></li>
+            <li><a href="values.html">Vision, Mission & Core Values</a></li>
+            <li><a href="accreditations-rankings.html">Our Achievements</a></li>
+          </ul>
+        </li>
+        <!-- Programs Mega Menu -->
+        <!-- <li class="mobile-nav-item has-dropdown">
+          <div class="mobile-nav-link toggle-dropdown">
+            Programs <i class="ph ph-caret-down"></i>
+          </div>
+          <ul class="mobile-dropdown-menu">
+          
+            <li class="mobile-dropdown-header">Management & Commerce</li>
+            <li><a href="#">B.Com (Hons) CA Preparation with Computerized Accounting</a></li>
+            <li><a href="#">M.Com with Financial Technology</a></li>
+            <li><a href="#">BBA (Hons) with Foreign Language & IELTS</a></li>
+            <li><a href="#">BBA Digital Marketing & Data Analytics</a></li>
+            <li><a href="#">MBA (HR/Marketing/Finance)</a></li>
+            <li><a href="#">Specialization in Logistics Supply Chain Management</a></li>
+            <li><a href="#">MBA Business Analytics/Data Science</a></li>
+            <li><a href="#">MBA Finance & Technology</a></li>
+
+          
+            <li class="mobile-dropdown-header">Science & Engineering</li>
+            <li><a href="#">BCA with Specialisation in AIML</a></li>
+            <li><a href="#">BCA with Specialisation in Cyber Security</a></li>
+            <li><a href="#">B.Tech - CS with Pilot Training</a></li>
+            <li><a href="#">B.Tech - IT with Pilot Training</a></li>
+            <li><a href="#">B.Tech - Data Science with IOT</a></li>
+            <li><a href="#">B.Tech - AI-ML</a></li>
+            <li><a href="#">MCA - Cyber Security/Data Science</a></li>
+
+          
+            <li class="mobile-dropdown-header">Hospitality Management</li>
+            <li><a href="#">Certificate in Hotel Management (CHM)</a></li>
+            <li><a href="#">Advance Certificate in Hotel Management (ACHM)</a></li>
+            <li><a href="#">Diploma in Hotel Management (DHM)</a></li>
+            <li><a href="#">Bachelor of Hotel Management (BHM)</a></li>
+            <li><a href="#">Bachelor of Hotel Management & Catering Technology (BHMCT)</a></li>
+            <li><a href="#">BBA with specialisation in Travel and Tourism</a></li>
+            <li><a href="#">BBA - Hospital Administration</a></li>
+            <li><a href="#">BBA with specialisation in Hospitality & Management</a></li>
+            <li><a href="#">MBA with specialisation in Travel and Tourism</a></li>
+            <li><a href="#">MBA with Hospitality</a></li>
+            <li><a href="#">PGDM</a></li>
+
+            <li class="mobile-dropdown-header"> Social Sciences & Humanities </li>
+            <li><a href="#">B.A. Economics Hons. with Civil Services Preparation</a></li>
+            <li><a href="#">M.A. Economics with IES preparation</a></li>
+            <li><a href="#">B.A. English Hons</a></li>
+            <li><a href="#">M.A. English</a></li>
+            <li><a href="#">B.A. Political Science Hons</a></li>
+            <li><a href="#">B.A. Psychology Hons</a></li>
+            <li><a href="#">M.A. Psychology</a></li>
+            <li><a href="#">B.A. Education Hons</a></li>
+            <li><a href="#">B.A. History Hons with Civil Service preparation</a></li>
+            <li><a href="#">B.A. Fine Arts Hons</a></li>
+            <li><a href="#">Certificate Library Science</a></li>
+            <li><a href="#">Diploma in Library Science</a></li>
+            <li><a href="#">B.Lib</a></li>
+            <li><a href="#">M.Lib</a></li>
+
+            <li class="mobile-dropdown-header"> Yogic Sciences </li>
+            <li><a href="#">Certificate Yogic Science</a></li>
+            <li><a href="#">Diploma In Yogic Science with Naturopathy</a></li>
+            <li><a href="#">B.A Yoga Hons</a></li>
+            <li><a href="#">B.Sc. Yoga Hons</a></li>
+
+            <li class="mobile-dropdown-header"> Earth Science </li>
+            <li><a href="#">B.Sc. (Hons.) Geography</a></li>
+            <li><a href="#">M.Sc. Geography</a></li>
+            <li><a href="#">M.Sc. Remote Sensing and GIS</a></li>
+            <li><a href="#">Diploma in Remote Sensing and GIS</a></li>
+            <li><a href="#">Certificate Remote Sensing and GIS</a></li>
+
+
+          </ul>
+        </li> -->
+
+        <li class="mobile-nav-item has-dropdown">
+          <div class="mobile-nav-link toggle-dropdown">
+            Schools <i class="ph ph-caret-down"></i>
+          </div>
+          <ul class="mobile-dropdown-menu">
+            <li><a href="school-commerce-business-studies.html">Commerce & Business Studies</a></li>
+            <li><a href="school-computer-science-engineering.html">Computer Science & Engineering</a></li>
+            <li><a href="school-hotel-hospitality-management.html">Hotel & Hospitality Management</a></li>
+            <li><a href="school-yogic-science.html">Yogic Sciences</a></li>
+            <li><a href="school-applied-social-sciences.html">Applied Social Sciences & Humanities</a></li>
+            <li><a href="school-skill-development.html">Skill Development & Vocational Studies</a></li>
+            <li><a href="school-earth-science.html">Earth Science</a></li>
+            <li><a href="school-of-health-sciences-and-technology.html">School of Health Sciences and Technology</a>
+            </li>
+
+
+          </ul>
+        </li>
+
+        <li class="mobile-nav-item">
+          <a href="all-programs.html" class="mobile-nav-link">Programs</a>
+        </li>
+
+        <li class="mobile-nav-item has-dropdown">
+          <div class="mobile-nav-link toggle-dropdown">
+            Admission <i class="ph ph-caret-down"></i>
+          </div>
+          <ul class="mobile-dropdown-menu">
+            <li><a href="admissions-procedure.html">Admission Procedure</a></li>
+            <li><a href="bank-details.html">Bank Details</a></li>
+            <li><a href="fees-Structure-2025-26.html">Fee Structure</a></li>
+            <li><a href="scholarship.html">Scholarship</a></li>
+
+          </ul>
+        </li>
+
+        <li class="mobile-nav-item">
+          <a href="academics.html" class="mobile-nav-link">Academics</a>
+        </li>
+
+        <!-- Campus Life Dropdown -->
+        <li class="mobile-nav-item has-dropdown">
+          <div class="mobile-nav-link toggle-dropdown">
+            Campus Life <i class="ph ph-caret-down"></i>
+          </div>
+          <ul class="mobile-dropdown-menu">
+            <li><a href="infrastructure.html">Infrastructure</a></li>
+            <li><a href="virtual-tour.html">Virtual Tour</a></li>
+            <li><a href="student-life.html">Student Life</a></li>
+          </ul>
+        </li>
+
+        <li class="mobile-nav-item">
+          <a href="research.html" class="mobile-nav-link">Research</a>
+        </li>
+
+        <li class="mobile-nav-item">
+          <a href="sports.html" class="mobile-nav-link">Sports</a>
+        </li>
+        <li class="mobile-nav-item">
+          <a href="placements.html" class="mobile-nav-link">Placements</a>
+        </li>
+
+        <li class="mobile-nav-item">
+          <a href="contact.html" class="mobile-nav-link">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <style>
+    .mobile-menu-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .mobile-menu-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .mobile-menu {
+      position: fixed;
+      top: 0;
+      left: -100%;
+      width: 85%;
+      max-width: 350px;
+      height: 100vh;
+      background: #fff;
+      z-index: 1001;
+      overflow-y: auto;
+      transition: all 0.4s ease;
+      box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .mobile-menu.active {
+      left: 0;
+    }
+
+    .mobile-menu-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .mobile-menu-header .logo img {
+      max-height: 60px;
+    }
+
+    .mobile-menu-close {
+      background: none;
+      border: none;
+      font-size: 24px;
+      color: #333;
+      cursor: pointer;
+    }
+
+    .mobile-menu-content {
+      padding: 15px;
+    }
+
+    .mobile-nav {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .mobile-nav-item {
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    .mobile-nav-link {
+      display: block;
+      padding: 12px 0;
+      color: #333;
+      text-decoration: none;
+      font-weight: 500;
+      position: relative;
+    }
+
+    .mobile-nav-link i {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: transform 0.3s ease;
+    }
+
+    .toggle-dropdown.active i {
+      transform: translateY(-50%) rotate(180deg);
+    }
+
+    .has-dropdown .mobile-nav-link {
+      padding-right: 25px;
+    }
+
+    .mobile-dropdown-menu {
+      list-style: none;
+      padding: 0 0 0 15px;
+      margin: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+
+    .mobile-dropdown-menu.active {
+      max-height: 3000px;
+    }
+
+    .mobile-dropdown-menu li {
+      padding: 8px 0;
+    }
+
+    .mobile-dropdown-menu a {
+      color: #555;
+      text-decoration: none;
+      display: block;
+      transition: all 0.2s;
+    }
+
+    .mobile-dropdown-menu a:hover {
+      color: #1a4b8e;
+    }
+
+    .mobile-dropdown-header {
+      font-weight: 600;
+      color: #1a4b8e;
+      margin-top: 10px;
+      padding: 8px 0;
+    }
+
+    /* Toggle button styles */
+    .toggle-mobileMenu {
+      background: none;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+      color: #333;
+      transition: all 0.2s ease;
+    }
+
+    .toggle-mobileMenu:hover {
+      color: #0066cc;
+      transform: scale(1.1);
+    }
+
+    /* Responsive adjustments */
+    @media (min-width: 992px) {
+
+      .mobile-menu,
+      .mobile-menu-overlay {
+        display: none;
+      }
+    }
+  </style>
+
+  <!-- ==================== Mobile Menu End Here ==================== -->
+
+  <!-- Top Header Start -->
+
+  <div class="py-8 mobile-hide" style="background-color: #232d69;  ">
+    <div class="container" style="margin: 0 auto; padding: 0 15px;">
+      <div class="top-bar-content"
+        style="display: flex; justify-content: space-between; flex-wrap: wrap; align-items: center; gap: 10px; color: white; font-size: 14px;">
+
+        <!-- Left Part -->
+        <div class="top-left">
+          <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px;">
+            <span
+              style="display: flex; align-items: center; gap: 5px; border-right: 1px solid rgba(255,255,255,0.5); padding-right: 10px;">
+              <i class="ph ph-phone"></i> <a href="tel:+919927999506"
+                class="text-white d-block hover-text-main-600 mb-0">+919927999506</a>
+            </span>
+            <span
+              style="display: flex; align-items: center; gap: 5px; border-right: 1px solid rgba(255,255,255,0.5); padding-right: 10px;">
+              <i class="ph ph-envelope"></i> <a href="mailto:info1UNWH@gmail.com"
+                class="text-white d-block hover-text-main-600 mb-4">info1UNWH@gmail.com</a>
+            </span>
+            <a href="career.html"
+              style="color: white; text-decoration: none; border-right: 1px solid rgba(255,255,255,0.5); padding-right: 10px;">Career</a>
+            <a href="gallery.html"
+              style="color: white; text-decoration: none; border-right: 1px solid rgba(255,255,255,0.5); padding-right: 10px;">Gallery</a>
+            <a href="sports.html"
+              style="color: white; text-decoration: none; border-right: 1px solid rgba(255,255,255,0.5); padding-right: 10px;">Sports</a>
+          </div>
+        </div>
+
+        <!-- Right Part -->
+        <div class="top-right">
+          <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px;">
+            <a href="fees-Structure-2025-26.html" target="_blank"
+              style="color: white; text-decoration: none; border-right: 1px solid rgba(255,255,255,0.5); padding-right: 10px;">Fees</a>
+
+            <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px;">
+              <a href="#"
+                style="color: white; text-decoration: none; border-right: 1px solid rgba(255,255,255,0.5); padding-right: 10px;">News</a>
+
+            </div>
+            <!-- Added Registration Button -->
+            <a class="blink" href="https://admission.unwhdoon.com/FreshApplication/register.aspx" target="_blank"
+              style="background-color: #ff6b00; color: white; text-decoration: none; padding: 5px 15px; border-radius: 4px; font-weight: bold; white-space: nowrap; cursor: pointer;">
+              Registration Open for 2025-26
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <style>
+    /* animation for button  */
+
+    .blink {
+      animation: blink-animation 1s steps(5, start) infinite;
+      -webkit-animation: blink-animation 1s steps(5, start) infinite;
+    }
+
+    @keyframes blink-animation {
+      to {
+        visibility: hidden;
+      }
+    }
+
+    @-webkit-keyframes blink-animation {
+      to {
+        visibility: hidden;
+      }
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .mobile-hide {
+        display: none !important;
+      }
+
+      /* You can keep these styles in case you want to show it again with different styling */
+      .top-bar-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+      }
+
+      .top-left div,
+      .top-right div {
+        flex-wrap: wrap;
+        row-gap: 10px;
+        margin: 0px 40px;
+      }
+
+      .top-left span,
+      .top-left a,
+      .top-right a:not(:last-child) {
+        border-right: none !important;
+        padding-right: 0 !important;
+      }
+
+      .has-submenu {
+        margin-left: 0 !important;
+      }
+    }
+
+    .has-submenu:hover .nav-submenu {
+      display: block !important;
+    }
+
+    .nav-submenu__link:hover {
+      background-color: #f0f0f0 !important;
+    }
+  </style>
+
+  <!-- Top Header End -->
+
+  <!-- Marquee -->
+
+  <style>
+    .marquee-container {
+      width: 100%;
+      background: #000000;
+      color: white;
+      padding: 0px 0;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .marquee-content {
+      display: inline-block;
+      white-space: nowrap;
+      padding-left: 100%;
+      animation: marquee 69s linear infinite;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .unwh-highlight {
+      color: #d4af37;
+      font-weight: 600;
+    }
+
+    @keyframes marquee {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .marquee-content {
+        font-size: 12px;
+        animation-duration: 20s;
+      }
+    }
+  </style>
+
+  <div class="marquee-container">
+    <div class="marquee-content">
+      Welcome to The University of North West Himalayas (UNwH), Dehradun, Admission Open for 2025-26 Session.
+    </div>
+  </div>
+
+  <!-- ==================== Header Start Here ==================== -->
+
+  <header class="header">
+    <div class="container container--xl">
+      <nav class="header-inner flex-between gap-8">
+        <div class="header-content-wrapper flex-align flex-grow-1">
+          <!-- Logo Start -->
+          <div class="logo">
+            <a href="index.html" class="link">
+              <img src="assets/images/thumbs/headerLogo.png" alt="Logo" />
+            </a>
+          </div>
+          <!-- Logo End  -->
+          <!-- Menu Start  -->
+          <div class="d-lg-block d-none ">
+            <ul class="nav-menu">
+              <li class="nav-item ">
+                <a href="/" class="nav-menu__link">Home</a>
+              </li>
+              <li class="nav-menu__item has-submenu">
+                <a href="javascript:void(0)" class="nav-menu__link">About Us</a>
+                <ul class="nav-submenu scroll-sm">
+                  <li class="nav-submenu__item">
+                    <a href="university_profile.html" class="nav-submenu__link hover-bg-neutral-30">About UNWH</a>
+                  </li>
+                  <li class="nav-submenu__item">
+                    <a href="leadership.html" class="nav-submenu__link hover-bg-neutral-30">Messages from Chancellor &
+                      VC</a>
+                  </li>
+                  <li class="nav-submenu__item">
+                    <a href="values.html" class="nav-submenu__link hover-bg-neutral-30">Vision, Mission & Core
+                      Values</a>
+                  </li>
+                  <li class="nav-submenu__item">
+                    <a href="accreditations-rankings.html" class="nav-submenu__link hover-bg-neutral-30">Our
+                      Achievements</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-menu__item">
+                <a href="all-programs.html" class="nav-menu__link">Programs</a>
+              </li>
+
+              <!-- mega menu 
+              <li class="nav-menu__item has-submenu mega-menu-item">
+                <a href="javascript:void(0)" class="nav-menu__link">Programs</a>
+                <div class="mega-menu">
+                  <div class="mega-row">
+                    <div class="mega-column">
+                      <h3 class="section-title">Management & Commerce</h3>
+                      <ul class="mega-submenu">
+                        <li><a href="#">B.Com (Hons) CA Preparation with Computerized Accounting</a></li>
+                        <li><a href="#">M.Com with Financial Technology</a></li>
+                        <li><a href="#">BBA (Hons) with Foreign Language & IELTS</a></li>
+                        <li><a href="#">BBA Digital Marketing & Data Analytics</a></li>
+                        <li><a href="#">MBA (HR/Marketing/Finance)</a></li>
+                        <li><a href="#">Specialization in Logistics Supply Chain Management</a></li>
+                        <li><a href="#">MBA Business Analytics/Data Science</a></li>
+                        <li><a href="#">MBA Finance & Technology</a></li>
+                      </ul>
+                    </div>
+                    <div class="mega-column">
+                      <h3 class="section-title">Science & Engineering</h3>
+                      <ul class="mega-submenu">
+                        <li><a href="#">BCA with Specialisation in AIML</a></li>
+                        <li><a href="#">BCA with Specialisation in Cyber Security</a></li>
+                        <li><a href="#">B.Tech - CS with Pilot Training</a></li>
+                        <li><a href="#">B.Tech - IT with Pilot Training</a></li>
+                        <li><a href="#">B.Tech - Data Science with IOT</a></li>
+                        <li><a href="#">B.Tech - AI-ML</a></li>
+                        <li><a href="#">MCA - Cyber Security/Data Science</a></li>
+                      </ul>
+                    </div>
+                    <div class="mega-column">
+                      <h3 class="section-title">Hospitality Management</h3>
+                      <ul class="mega-submenu">
+                        <li><a href="#">Certificate in Hotel Management (CHM)</a></li>
+                        <li><a href="#">Advance Certificate in Hotel Management (ACHM)</a></li>
+                        <li><a href="#">Diploma in Hotel Management (DHM)</a></li>
+                        <li><a href="#">Bachelor of Hotel Management (BHM)</a></li>
+                        <li><a href="#">Bachelor of Hotel Management & Catering Technology (BHMCT)</a></li>
+                        <li><a href="#">BBA with specialisation in Travel and Tourism</a></li>
+                        <li><a href="#">BBA - Hospital Administration</a></li>
+                        <li><a href="#">BBA with specialisation in Hospitality & Management</a></li>
+                        <li><a href="#">MBA with specialisation in Travel and Tourism</a></li>
+                        <li><a href="#">MBA with Hospitality</a></li>
+                        <li><a href="#">PGDM</a></li>
+                      </ul>
+                    </div>
+                    <div class="mega-column">
+                      <h3 class="section-title">Social Sciences & Humanities</h3>
+                      <ul class="mega-submenu">
+                        <li><a href="#">B.A. Economics Hons. with Civil Services Preparation</a></li>
+                        <li><a href="#">M.A. Economics with IES preparation</a></li>
+                        <li><a href="#">B.A. English Hons</a></li>
+                        <li><a href="#">M.A. English</a></li>
+                        <li><a href="#">B.A. Political Science Hons</a></li>
+                        <li><a href="#">B.A. Psychology Hons</a></li>
+                        <li><a href="#">M.A. Psychology</a></li>
+                        <li><a href="#">B.A. Education Hons</a></li>
+                        <li><a href="#">B.A. History Hons with Civil Service preparation</a></li>
+                        <li><a href="#">B.A. Fine Arts Hons</a></li>
+                        <li><a href="#">Certificate Library Science</a></li>
+                        <li><a href="#">Diploma in Library Science</a></li>
+                        <li><a href="#">B.Lib</a></li>
+                        <li><a href="#">M.Lib</a></li>
+                      </ul>
+                    </div>
+                    <div class="mega-column">
+                      <h3 class="section-title">Yogic Sciences</h3>
+                      <ul class="mega-submenu">
+                        <li><a href="#">Certificate Yogic Science</a></li>
+                        <li><a href="#">Diploma In Yogic Science with Naturopathy</a></li>
+                        <li><a href="#">B.A Yoga Hons</a></li>
+                        <li><a href="#">B.Sc. Yoga Hons</a></li>
+                      </ul>
+                    </div>
+                    <div class="mega-column">
+                      <h3 class="section-title">Earth Science</h3>
+                      <ul class="mega-submenu">
+                        <li><a href="#">B.Sc. (Hons.) Geography</a></li>
+                        <li><a href="#">M.Sc. Geography</a></li>
+                        <li><a href="#">M.Sc. Remote Sensing and GIS</a></li>
+                        <li><a href="#">Diploma in Remote Sensing and GIS</a></li>
+                        <li><a href="#">Certificate Remote Sensing and GIS</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              mega end   -->
+
+              <li class="nav-menu__item has-submenu">
+                <a href="javascript:void(0)" class="nav-menu__link">Schools</a>
+                <ul class="nav-submenu scroll-sm">
+                  <li class="nav-submenu__item">
+                    <a href="school-commerce-business-studies.html"
+                      class="nav-submenu__link hover-bg-neutral-30">Commerce & Business Studies</a>
+                  </li>
+                  <li class="nav-submenu__item">
+                    <a href="school-computer-science-engineering.html"
+                      class="nav-submenu__link hover-bg-neutral-30">Computer Science & Engineering</a>
+                  </li>
+                  <li class="nav-submenu__item">
+                    <a href="school-hotel-hospitality-management.html"
+                      class="nav-submenu__link hover-bg-neutral-30">Hotel & Hospitality Management</a>
+                  </li>
+                  <li class="nav-submenu__item">
+                    <a href="school-yogic-science.html" class="nav-submenu__link hover-bg-neutral-30">Yogic Sciences</a>
+                  </li>
+
+                  <li class="nav-submenu__item">
+                    <a href="school-applied-social-sciences.html" class="nav-submenu__link hover-bg-neutral-30">Applied
+                      Social Sciences & Humanities</a>
+                  </li>
+
+                  <li class="nav-submenu__item">
+                    <a href="school-skill-development.html" class="nav-submenu__link hover-bg-neutral-30">Skill
+                      Development & Vocational Studies</a>
+                  </li>
+                  <li class="nav-submenu__item">
+                    <a href="school-earth-science.html" class="nav-submenu__link hover-bg-neutral-30">Earth Science</a>
+                  </li>
+                  <li class="nav-submenu__item">
+                    <a href="school-of-health-sciences-and-technology.html"
+                      class="nav-submenu__link hover-bg-neutral-30">School of Health Sciences and Technology</a>
+                  </li>
+
+
+                </ul>
+              </li>
+
+
+
+
+              <li class="nav-menu__item has-submenu">
+                <a href="javascript:void(0)" class="nav-menu__link">Admission</a>
+                <ul class="nav-submenu scroll-sm">
+                  <li class="nav-submenu__item">
+                    <a href="admissions-procedure.html" class="nav-submenu__link hover-bg-neutral-30">Admission
+                      Procedure</a>
+                  </li>
+                  <li class="nav-submenu__item">
+                    <a href="bank-details.html" class="nav-submenu__link hover-bg-neutral-30">Bank Details</a>
+                  </li>
+                  <li class="nav-submenu__item">
+                    <a href="fees-Structure-2025-26.html" class="nav-submenu__link hover-bg-neutral-30">Fee
+                      Structure</a>
+                  </li>
+                  <li class="nav-submenu__item">
+                    <a href="scholarship.html" class="nav-submenu__link hover-bg-neutral-30"> Scholarship </a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-menu__item">
+                <a href="academics.html" class="nav-menu__link">Academics</a>
+              </li>
+
+              <!-- dropdown menu  -->
+              <li class="nav-menu__item has-submenu">
+                <a href="javascript:void(0)" class="nav-menu__link">Campus Life</a>
+                <ul class="nav-submenu scroll-sm">
+                  <li class="nav-submenu__item">
+                    <a href="infrastructure.html" class="nav-submenu__link hover-bg-neutral-30">Infrastructure</a>
+                  </li>
+                  <li class="nav-submenu__item">
+                    <a href="virtual-tour.html" class="nav-submenu__link hover-bg-neutral-30">Virtual Tour</a>
+                  </li>
+                  <li class="nav-submenu__item">
+                    <a href="student-life.html" class="nav-submenu__link hover-bg-neutral-30">Student Life</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-menu__item">
+                <a href="research.html" class="nav-menu__link">Research</a>
+              </li>
+
+
+              <li class="nav-menu__item">
+                <a href="placements.html" class="nav-menu__link">Placements</a>
+              </li>
+
+              <li class="nav-menu__item">
+                <a href="contact.html" class="nav-menu__link">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <!-- Menu End  -->
+        </div>
+        <!-- Header Right start -->
+        <div class="header-right flex-align">
+          <button type="button" class="toggle-mobileMenu d-lg-none text-neutral-200 flex-center"
+            style="margin-left: auto; padding: 10px; font-size: 28px;">
+            <i class="ph ph-list"></i>
+          </button>
+        </div>
+        <!-- Header Right End  -->
+      </nav>
+    </div>
+  </header>
+
+  <style>
+    /* Fixed Main Navigation Header Styles */
+
+
+    /* Ensure header content stays properly aligned */
+    .header .container {
+      max-width: 100% !important;
+    }
+
+    /* Make sure dropdowns appear above other content */
+    .nav-submenu {
+      z-index: 1000 !important;
+    }
+
+    /* Smooth transition for header */
+    .header {
+      transition: all 0.3s ease !important;
+    }
+  </style>
+
+  <!-- ==================== Header End Here ==================== -->
+
+  <!-- ================================== Banner Three Start =============================== -->
+
+  <section class="banner-three position-relative responsive-arrow overflow-hidden" style="overflow-x: hidden;">
+
+    <section class="breadcrumb py-160 position-relative z-1 overflow-hidden mb-0"
+      style="background: url('assets/images/thumbs/reception-2.png') center center / cover no-repeat;">
+
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="breadcrumb__wrapper text-center">
+              <h1 class="breadcrumb__title display-4 fw-semibold text-white">Our Schools</h1>
+
+              <ul class="breadcrumb__list d-flex align-items-center justify-content-center gap-3 mt-3">
+                <li class="breadcrumb__item">
+                  <a href="index.html" class="breadcrumb__link text-white fw-medium">Home</a>
+                </li>
+                <li class="breadcrumb__item text-white">/</li>
+                <li class="breadcrumb__item text-white">SES</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <div class="border-top border-white border-solid  border-2"></div>
+    </div>
+  </section>
+
+
+  <!-- Introduction -->
+
+  <section class="leadership-section">
+    <div class="container">
+
+      <!-- Chancellor -->
+      <div class="leadership-card">
+
+        <div class="leadership-content" style="text-align: justify;">
+
+          <h2 class=""> School of Earth Science </h2>
+          <p> <strong>The School of Earth Science at University of North West Himalayas (UNWH), Thano, Dehradun</strong>
+            is a vibrant academic hub dedicated to exploring the dynamic interactions between the Earth’s physical
+            systems and human activities. Situated in the lap of the Himalayas, the school provides students with a
+            unique opportunity to study Geography, Geology, Environmental Science, and cutting-edge technologies like
+            Remote Sensing and GIS in a real-world geospatial laboratory. <br>
+            The School of Earth Science at University of North West Himalayas (UNWH), Thano, Dehradun</p>
+          <p><strong>Tagline</strong> - <i>Geography, Geoscience, Geospatial, and Environment for Green Futures.</i></p>
+          <h3>Vision</h3>
+          <p>To cultivate scientific knowledge, technical skills, and environmental awareness through interdisciplinary
+            education and research in Earth system sciences, ensuring sustainable development and resilience for future
+            generations.</p>
+          <h3>Mission</h3>
+          <ul>
+            <li>⇒ To deliver high-quality education & research in Geography, Geology, Environmental Science, and
+              Geoinformatics.</li>
+            <li>⇒ To promote hands-on fieldwork, analytical research, and innovation.</li>
+            <li>⇒ To empower students to contribute meaningfully to sustainable environmental and developmental
+              practices.</li>
+            <li>⇒ To provide strength in students for competitive exam preparation. </li>
+          </ul>
+        </div>
+
+        <div class="leadership-image">
+          <img src="assets/images/thumbs/ses.png" alt="Chancellor UNWH" class="w-150 h-150 object-cover    mb-24">
+           
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <!-- tab Section  -->
+
+
+
+
+  <section style="margin: 10px;">
+    <div class="container"
+      style="padding: 15px;  box-shadow: rgba(14, 63, 126, 0.04) 0px 0px 0px 1px, rgba(42, 51, 69, 0.04) 0px 1px 1px -0.5px, rgba(42, 51, 70, 0.04) 0px 3px 3px -1.5px, rgba(42, 51, 70, 0.04) 0px 6px 6px -3px, rgba(14, 63, 126, 0.04) 0px 12px 12px -6px, rgba(14, 63, 126, 0.04) 0px 24px 24px -12px; border-radius: 10px; margin-bottom: 60px;">
+      <div class="tab-buttons">
+        <button class="tab-btn active" data-tab="programs">Programs Offered</button>
+        <button class="tab-btn" data-tab="about"> About Dean </button>
+        <button class="tab-btn " data-tab="message">Dean Message</button>
+        <button class="tab-btn" data-tab="faculty">Faculty</button>
+        <button class="tab-btn" data-tab="career">Opportunities</button>
+         
+      </div>
+
+
+      <div class="tab-content active" id="programs" style="padding: 20px;">
+
+        <p>The School of Earth Science offers a range of undergraduate, postgraduate, diploma, and certificate-level
+          programs that blend theory with hands-on experience:</p>
+
+        <h3 style="padding: 10px 0;">Undergraduate Programs</h3>
+
+        <div class="programs-container">
+          <div class="program-card">
+            <h3 class="program-title">B.Sc. (Hons.) Geography</h3>
+            <p class="program-description">
+              A comprehensive program focusing on physical geography, human geography, cartography, and geospatial
+              technology. Ideal for students passionate about earth-human relationships and sustainable planning.
+            </p>
+          </div>
+
+          <div class="program-card">
+            <h3 class="program-title">B.Sc. (Hons.) Geology</h3>
+            <p class="program-description">
+              Explore the dynamic structure of the Earth—from minerals and rocks to tectonics and paleontology. Perfect
+              for those seeking careers in mining, natural resource management, or Earth system sciences.
+            </p>
+          </div>
+
+        </div>
+
+        <h3 style="padding: 10px 0;">Postgraduate Programs</h3>
+
+        <div class="programs-container">
+          <div class="program-card">
+            <h2 class="program-title">M.Sc. Geography</h2>
+            <p class="program-description">
+              Advanced studies in geographical thought, quantitative techniques, spatial analysis, climatology, and
+              development geography with applications in regional planning and sustainability.
+            </p>
+          </div>
+
+          <div class="program-card">
+            <h2 class="program-title">M.Sc. Remote Sensing and GIS</h2>
+            <p class="program-description">
+              Interdisciplinary program integrating satellite-based observations with geospatial data analysis. Prepares
+              students for careers in disaster management, urban planning, forestry, hydrology, and more.
+            </p>
+          </div>
+
+          <div class="program-card">
+            <h2 class="program-title">M.Sc. Environmental Science</h2>
+            <p class="program-description">
+              Focused on environmental systems, pollution control, environmental impact assessment, sustainability
+              practices, and climate change mitigation—equipping future environmental scientists and policymakers.
+            </p>
+          </div>
+
+          <div class="program-card">
+            <h2 class="program-title">M.Sc. Geology</h2>
+            <p class="program-description">
+              Deepen your knowledge in petrology, structural geology, geophysics, economic geology, and geohydrology.
+              Includes extensive fieldwork and lab training for research and industry careers.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="tab-content" id="about" style="padding: 20px;">
+        <div class="leadership-card">
+          <div class="leadership-content" style="text-align: justify;">
+            <h2>Biography</h2>
+            <p>Dr Surendra Pal Singh has received his PhD (Jan 2009 to Feb 2015) from Geomatics Engineering Section,
+              Civil
+              Engineering Department, Indian Institute of Technology, Roorkee, (IIT-Roorkee), India. He received M.Tech
+              degree (2006-2008 Academic Year) in Geomatics Engineering, from Indian Institute of Surveying & Mapping,
+              Survey Of India, Government of India, collaboration with Jawaharlal Nehru Technological University JNTU,
+              Hyderabad, India. He has also Graduated and Post graduate in Environmental Science from University of
+              Allahabad, Prayagraj, India. His schooling is from Samthar (Native Town) Jhansi, UP. </p>
+            <p>He is expert in various Geomatics Engineering techniques for Engineering & Non-engineering applications.
+              Since 2015 to 2024, he worked in Ethiopian government universities. Currently, he is working as Dean &
+              Professor at School of Earth Science in University of North West Himalayas (UNWH), Dehradoon, Uttarakhand
+              (India). </p>
+            <p>He has published 5 books and more than 30 research papers in reputed international journals and
+              international
+              conferences. His research interest is Geomatics techniques (Remote sensing, GIS, Surveying & Mapping,
+              GNSS-GPS, Digital Photogrammetry, Laser Scanning, UAV Mapping etc techniques) for various engineering and
+              non-engineering applications. </p>
+            <p>He is member of academic societies such as the Indian National Cartographic Association (INCA), Hyderabad
+              (Life Member), Indian Society of Remote Sensing, (ISRS), Dehradun (Life Member), Indian Society of
+              Geomatics,
+              (ISG), Ahmedabad (Life Member), Indian Water Resources Society (IWRS) WRD&M, IIT-Roorkee (Life Member),
+              International Global Navigation Satellite Systems Society (IGNSS) (Annual Member). He is also doing
+              research
+              and community service projects for socio-economic development.</p>
+
+          </div>
+
+          <div class="leadership-image">
+            <img src="assets/images/thumbs/dean-ses.jpg" alt="Chancellor UNWH"
+              class="w-150 h-150 object-cover    mb-24">
+            <h5> Prof (Dr) Surendra Pal Singh (PhD IIT-Roorkee) </h5>
+            <h5>BSc MSc MTech PhD (IIT Roorkee)  </h5>
+          </div>
+        </div>
+
+
+        <div class="nested-tabs">
+          <div class="nested-buttons">
+            <button class="nested-btn active" data-nested="Qualifications">Qualifications</button>
+            <button class="nested-btn" data-nested="experience">Teaching & Research Experience</button>
+            <button class="nested-btn" data-nested="interests">Interests</button>
+            <button class="nested-btn" data-nested="trainings">Trainings</button>
+            <button class="nested-btn" data-nested="publications">Publications</button>
+
+
+          </div>
+          <div class="nested-content active" id="Qualifications">
+            <div>
+
+              <div class="qualification-section">
+                <h2>Academic Qualifications</h2>
+
+                <div class="qualification">
+                  <div class="degree">Ph.D. – Department of Civil Engineering , Geomatics Section, Indian Institute of
+                    Technology</div>
+                  <div class="institute">Roorkee (IIT-Roorkee), 2015. </div>
+                  <div class="thesis"><strong>Thesis Title:</strong> “Virtual 3D City Model by using Geomatics
+                    Techniques”</div>
+                </div>
+
+                <div class="qualification">
+                  <div class="degree">M.Tech. – Geomatics Engineering from</div>
+                  <div class="institute">Indian Institute of Surveying and Mapping (IISM), (Survey of India) and
+                    Jawaharlal Nehru Technological University (JNTU), Hyderabad, India – 2008</div>
+                  <div class="thesis"><strong>Thesis Title:</strong> “Generation of Fly-through model by Digital
+                    Photogrammetry’, at National Remote Sensing Agency (NRSA), Indian Space Research Organization
+                    (ISRO), Department of Space, Government of India, Hyderabad. </div>
+                </div>
+
+                <div class="qualification">
+                  <div class="degree">M.Sc. – Environmental Science</div>
+                  <div class="institute">University of Allahabad, Allahabad, India – 2004, M.Sc </div>
+                  <div class="thesis"><strong>Thesis Title:</strong> “Hospital Waste Management: Allahabad city - A case
+                    study”</div>
+                </div>
+
+                <div class="qualification">
+                  <div class="degree">B.Sc. – Zoology, Botany, Chemistry from </div>
+                  <div class="institute">University of Allahabad, Uttar Pradesh, 2002</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="nested-content" id="experience">
+            <table class="table table-bordered table-striped align-middle responsive-table">
+              <thead class="table-dark text-center">
+
+                <tr class="table-secondary">
+                  <th style="width: 10%;">S.No.</th>
+                  <th>University/Organization</th>
+                  <th>Designation </th>
+                  <th>Time Duration </th>
+                </tr>
+              </thead>
+              <tbody>
+
+                <tr>
+                  <td>1</td>
+                  <td>Indian Institute of Technology (IIT), Roorkee. India </td>
+                  <td>Research Scholar Geomatics Engineering Section, Civil Engineering Department </td>
+                  <td>Jan 2009 to Feb 2015 (6 years) </td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Wachemo University, Hossana City, Ethiopia</td>
+                  <td>Assistant Professor
+                    Civil & Geomatics Engineering Department
+                    (2275 US Dollar per month salary)
+                  </td>
+                  <td>Oct 2015 to July 2019
+                    (4 Academic Years)
+                  </td>
+
+                </tr>
+
+                <tr>
+                  <td>3</td>
+                  <td>Wollega University, Nekemte City, Ethiopia </td>
+                  <td>Assistant Professor
+                    Surveying Engineering Department
+                    (3610 US Dollar per month salary)
+                  </td>
+                  <td>Feb 2020 to July 2024
+                    (4 Academic Years)
+                  </td>
+
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Wollega University, Nekemte City, Ethiopia</td>
+                  <td>Associate Professor </td>
+                  <td>Promoted as Associate Professor in May 2024</td>
+                </tr>
+
+                <tr>
+                  <td>5</td>
+                  <td>Jigyasa The Curiosity (JTC), IAS Civil Service Academy, Kota (Rajasthan) </td>
+                  <td>Academic Director
+                    Faculty of UPSC
+                    (For Science & Tech, Disaster Management, Ecology & Environment)
+                  </td>
+                  <td>12 August 2024
+                    to
+                    July 2025.
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>6</td>
+                  <td>University of North West Himalayas (UNWH), Dehradoon. </td>
+                  <td>Dean & Professor</td>
+                  <td>01 August 2025
+                    to
+                    Till Date.
+                  </td>
+                </tr>
+
+
+              </tbody>
+            </table>
+            <p style="color: #000000;">
+              I have approximately <strong>Eight (9)</strong> year teaching experience & <strong>Six (6)</strong> Year
+              Research experience <strong>(Total 15 Years) Experience</strong> in Teaching, Research & Development in
+              Civil engineering, Geomatics engineering techniques such as Surveying Engineering (Basic Surveying,
+              Advance Surveying), Geomatics, Photogrammetry, Remote Sensing and Geographical Information System (GIS),
+              GNSS- GPS (Global Positioning System), Environmental Science & Engineering etc., related subjects.
+            </p>
+          </div>
+          <div class="nested-content" id="interests">
+            <h4>Teaching Interests </h4> Courses taught for
+            <h5>Undergraduates</h5>
+            <p>1. Basic Surveying, <br> 2. Advanced Surveying,<br> 3. Environmental Study. <br> 4. Water Treatment
+              5. Sewage Disposal & Treatment, <br> 6. Introduction to Photogrammetry,<br> 7. Analytical Photogrammetry
+              <br>
+              8. Introduction to Environmental Planning, <br> 9. Cadastral Surveying <br>
+              10. Research skill & Methodology in Engineering, <br> 11. Introduction of GPS-GNSS
+            </p>
+            <h5>
+              Postgraduates
+            </h5>
+            <p>1.Environmental Ecology, <br> 2. Environmental Remote Sensing, <br> 3. Geodesy & Positioning, <br>
+              4. Land Information System, <br> 5. Advanced Geomatics, <br> 6. Statistics for Geomatics Engineers <br>
+            </p>
+
+            <br>
+            <h4>Research Interests</h4>
+            <p>1. Geomatics techniques for various applications (Agriculture, Water Resources, Rural & City Planning
+              etc)</p>
+            <p>2. Photogrammetry, (Mainly Applications of Digital Close Range Photogrammetry) </p>
+            <p>3. Laser scanning, (Laser scanning applications for Terrestrial mapping and digital scene
+              reconstructions) </p>
+            <p>4. GIS, (GIS Mapping for various Engineering & Non Engineering Applications) </p>
+            <p>5. Geodesy, (Gravimetric measurements for various applications) </p>
+            <p>6. 3D City modeling. (For Urban and regional city planning) </p>
+            <p>7. Use of modern android based Smart mobile phone as a Geomatics mapping tool.</p>
+
+
+
+          </div>
+          <div class="nested-content" id="trainings">
+            <table class="table table-bordered table-striped align-middle responsive-table">
+              <thead class="table-dark text-center">
+
+                <tr class="table-secondary">
+                  <th style="width: 10%;">S.No.</th>
+                  <th>Organisation</th>
+                  <th> Period</th>
+                  <th> Details of Training </th>
+                </tr>
+              </thead>
+              <tbody>
+
+                <tr>
+                  <td>1</td>
+                  <td>Center for Environmental Education(CEE), Ministry of Environment & forest, Govt. of India. </td>
+                  <td> 10.02.04 11.02.04 </td>
+                  <td> Biomedical waste
+                    management status Analysis & Planning for future </td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Central Ground Water Board,
+                    Ministry of water Resources, Govt. of India
+
+                  </td>
+                  <td>23.03.04
+                    24.03.04
+                  </td>
+                  <td> Artificial recharge to ground water.</td>
+
+                </tr>
+
+                <tr>
+                  <td>3</td>
+                  <td> Biological Product lab
+                    Allahabad University, Allahabad
+
+                  </td>
+                  <td> 18.12.04
+                    21.12.04
+
+
+                  </td>
+                  <td>Organic farming.
+                  </td>
+
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Center for Social forestry & Eco Rehabilitation(CSFER)Allahabad, Ministry of Environment & forest,
+                    Govt. of India.
+                  </td>
+                  <td> 22.03.05
+                    23.03.05
+
+                  </td>
+                  <td>Research & development project on Jatropha plant.
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>5</td>
+                  <td> Survey of India, Hyderabad;
+                    Ministry of Science & technology,
+                    Govt. of India.
+
+                  </td>
+                  <td> 20.09.06
+                    22.09.06
+
+                  </td>
+                  <td> Photogrammetry & Remote Sensing – Overview for policy makers.
+
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>6</td>
+                  <td>Survey of India, Hyderabad;
+                    Ministry of Science & technology,
+                    Govt. of India.
+
+                  </td>
+                  <td>09.10.06
+                    13.10.06
+
+                  </td>
+                  <td>Modern survey instruments & techniques.
+
+                  </td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>Jawaharlal Nehru Technological University (JNTU) Hyderabad &NRDMS (Dept. of Science & Technology)
+                    Govt. of India. </td>
+                  <td>12.02.07 24.02.07 </td>
+                  <td>Two weeks short term program on <strong>Geospatial Technologies</strong></td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td>Advanced Training Institute, Hyderabad; Ministry of Labour & Employment,
+                    Govt. of India.
+                  </td>
+                  <td>14.03.08
+                    29.03.08
+                  </td>
+                  <td>Two weeks Advanced training in “Assembling and
+                    maintenance of P.C.Hardware.
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>9</td>
+                  <td>Osmania University- Hyderabad (AP)</td>
+                  <td>17.06.09 07.07.09 </td>
+                  <td>Three week SERC school on “Atmospheric Effect on
+                    GPS and Local Area Augmentation System (LASS)”.</td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td>Indian Institute of Technology-Roorkee (IITR), Uttarakhand, India.</td>
+                  <td>23.08.2010 27.08.2010</td>
+                  <td>One week short term course on <strong>Advance Geoinformation System</strong> </td>
+                </tr>
+
+                <tr>
+                  <td>11</td>
+                  <td>Indian Institute of Technology-Roorkee (IITR), Uttarakhand, India</td>
+                  <td>05.11.2012 10.11.2012</td>
+                  <td>Short term training course on “Prediction and mitigation of climate change impacts using space and
+                    agrometeorology based techniques”. </td>
+                </tr>
+
+                <tr>
+                  <td>12</td>
+                  <td>Indian Institute of Technology-Roorkee (IITR), Uttarakhand, India</td>
+                  <td>11.11.2013 16.11.2013</td>
+                  <td>Training programme on “Modeling sustainable agriculture under changing climate”</td>
+                </tr>
+
+                <tr>
+                  <td>13</td>
+                  <td>Indian Institute of Technology Roorkee (IITR), Uttarakhand, India.</td>
+                  <td>30.05.2014</td>
+                  <td>3D Modeling with FARO Focus 3D Laser Scanner</td>
+                </tr>
+
+                <tr>
+                  <td>14</td>
+                  <td>Indian Institute of Remote Sensing (IIRS), Indian Space Research Organization (ISRO), Dehradun,
+                    Uttarakhand, India</td>
+                  <td>27.01.2015 27.03.2015</td>
+                  <td>14th, IIRS Outreach Programme on "Applications of Remote Sensing and Geographical Information
+                    System for Natural Resources</td>
+                </tr>
+
+
+              </tbody>
+            </table>
+          </div>
+
+          <div class="nested-content" id="publications">
+            <div class="container py-5">
+              <h1 class="text-center mb-4">Publication during PhD (IIT-Roorkee, India) </h1>
+
+              <div class="list-group">
+
+
+                <div class="list-group-item">
+                  <h5 class="mb-1">1. Kamal Jain, V. Ravibabu Mandla, J.A. Shafi, & Surendra Pal Singh</h5>
+                  <p class="mb-1">
+                    “Using Rational Polynomial Coefficients (RPC) to generate digital elevation models – a comparative
+                    study”, (2009), , Applied GIS, Vol. 05, Issue 02, pp. 1-11. (SCOPUS Index) <br>
+
+                    <a href="https://figshare.com/articles/journal_contribution/Using_Rational_Polynomial_Coefficients_RPC_to_ge nerate_digital_elevation_models_a_comparative_study/3842934/1"
+                      target="_blank" class="text-primary">View Article</a>
+                  </p>
+                </div>
+
+
+                <div class="list-group-item">
+                  <h5 class="mb-1">2. Mandla V. Ravibabu, Kamal Jain, Surendra Pal Singh, Naga Jyothi Meeniga</h5>
+                  <p class="mb-1">
+                    “Accuracy Improvement of ASTER Stereo Satellite Generated DEM Using Texture Filter”, (2010),
+                    December, Geo-spatial Information Science, Vol. 13, Issue 04, pp. 257-262. (SCOPUS Index) <br>
+
+                    <a href="https://www.tandfonline.com/doi/pdf/10.1007/s11806-010-0376-9 " target="_blank"
+                      class="text-primary">View Article</a>
+                  </p>
+                </div>
+
+
+
+                <div class="list-group-item">
+                  <h5 class="mb-1">3. A. Chauhan, Vineet Chauhan, Surendra P. Singh, Ajay K. Tomar, Himanshu Chauhan
+                  </h5>
+                  <p class="mb-1">
+                    “A Text to Speech System for Hindi using English Language”, International Journal of Computer
+                    Science and Technology (IJCST), Vol. 02, Issue 03, September 2011, ISSN: 2229- 4333(Print), ISSN:
+                    0976-8491(Online). (UGC) <br>
+                    <a href="http://ijcst.com/vol23/2/achauhan.pdf " target="_blank" class="text-primary">View
+                      Article</a>
+                  </p>
+                </div>
+
+                <div class="list-group-item">
+                  <h5 class="mb-1">4. Surendra Pal Singh, Kamal Jain,V. Ravibabu Mandla</h5>
+                  <p class="mb-1">
+                    “Design and Calibration of Multi Camera setup for 3D City modeling,” (2013), International Journal
+                    of Engineering Research & Technology (IJERT), Vol. 02, Issue 05, May. (SCOPUS Index) <br>
+                    <a href="https://www.ijert.org/design-and-calibration-of-multi-camera-setup-for-virtual-3d-city-modeling"
+                      target="_blank" class="text-primary">View Article</a>
+                  </p>
+                </div>
+
+                <div class="list-group-item">
+                  <h5 class="mb-1">5. Surendra Pal Singh, Kamal Jain, V. Ravibabu Mandla</h5>
+                  <p class="mb-1">
+                    “Image Based 3D Modeling of Campus (Department of Civil Engineering, IIT Roorkee, Uttarakhand,
+                    India) by Using SketchUp”(2013), International Journal of Advanced Civil Engineering and
+                    Architecture Research, September, Vol. 02, Issue 01, pp. 65-71, Article ID Tech-168. (SCOPUS Index)
+                    <br>
+                    <a href="https://www.academia.edu/35619182/2_Image_Based_3D_Modeling_of_Campus_pdf " target="_blank"
+                      class="text-primary">View Article</a>
+                  </p>
+                </div>
+
+                <div class="list-group-item">
+                  <h5 class="mb-1">6. Surendra Pal Singh, Kamal Jain, V. Ravibabu Mandla</h5>
+                  <p class="mb-1">
+                    “Virtual 3D Campus Modeling by using Close Range Photogrammetry”, (2013), American Journal of Civil
+                    Engineering and Architecture, Vol.01, No. 06, pp. 200-205. December, doi: 10.12691/ajcea-1-6-9.
+                    (SCOPUS Index) <br>
+                    <a href="http://pubs.sciepub.com/ajcea/1/6/9/table/1" target="_blank" class="text-primary">View
+                      Article</a>
+                  </p>
+                </div>
+
+                <div class="list-group-item">
+                  <h5 class="mb-1">7. Surendra Pal Singh, Kamal Jain, V. Ravibabu Mandla</h5>
+                  <p class="mb-1">
+                    “3D Scene Reconstruction from Video Camera for Virtual 3D City Modeling” (2014), American Journal of
+                    Engineering Research (AJER), Vol.03, Issue 01, January, pp-140-148. (SCOPUS Index) <br>
+                    <a href="https://www.semanticscholar.org/paper/3D-Scene-Reconstruction-from-Video-Camera-for-3D-Singh Jain/f140a8505fe48b38a76ff97cad4d7c3cf896542a "
+                      target="_blank" class="text-primary">View Article</a>
+                  </p>
+                </div>
+
+                <div class="list-group-item">
+                  <h5 class="mb-1">8. Surendra Pal Singh, Kamal Jain, V. Ravibabu Mandla,</h5>
+                  <p class="mb-1">
+                    “Image based Virtual 3D Campus modeling by using CityEngine”, (2014), American Journal of
+                    Engineering Science and Technology Research, Vol. 02, No.01, January, pp- 01-10, ISSN: 2327-8269
+                    (Online). (SCOPUS Index) <br>
+                    <a href=" http://www.ajestr.com/AJESTR_Vol.%202,%20No.%201,%20January%202014/Image%20based.pdf "
+                      target="_blank" class="text-primary">View Article</a>
+                  </p>
+                </div>
+
+
+                <div class="list-group-item">
+                  <h5 class="mb-1">9. Surendra Pal Singh, Kamal Jain, V. Ravibabu Mandla</h5>
+                  <p class="mb-1">
+                    “Virtual 3D City Modeling : Techniques and Applications”, (2013), ISPRS International Archives of
+                    the Photogrammetry, Remote Sensing and Spatial Information Sciences, Vol. XL-2/W2, pp. 73-91,
+                    doi:10.5194/isprsarchives-XL-2-W2-73-2013 (SCOPUS Index) <br>
+                    <a href=" https://ui.adsabs.harvard.edu/abs/2013ISPAr.XL2b..73S/abstract " target="_blank"
+                      class="text-primary">View Article</a>
+                  </p>
+                </div>
+
+
+                <div class="list-group-item">
+                  <h5 class="mb-1">10. Surendra Pal Singh, Kamal Jain, V. Ravibabu Mandla</h5>
+                  <p class="mb-1">
+                    “Image based 3D City modeling: Comparative study”, (2014), ISPRS International Archives of the
+                    Photogrammetry, Remote Sensing and Spatial Information Sciences, XL-5, 537-546,
+                    doi:10.5194/isprsarchives-XL-5-537-2014. (SCOPUS Index) <br>
+                    <a href=" https://isprs-archives.copernicus.org/articles/XL-5/537/2014/ " target="_blank"
+                      class="text-primary">View Article</a>
+                  </p>
+                </div>
+
+
+                <div class="list-group-item">
+                  <h5 class="mb-1">11. Surendra Pal Singh, Kamal Jain, V. Ravibabu Mandla</h5>
+                  <p class="mb-1">
+                    “A New Approach towards Image Based Virtual 3D City Modeling by using Close Range Photogrammetry”,
+                    (2014), ISPRS International Annals of the Photogrammetry, Remote Sensing and Spatial Information
+                    Sciences, Vol. II-5, pp. 329-337. doi:10.5194/isprsannals-II-5-329-2014. (SCOPUS Index) <br>
+                    <a href=" https://ui.adsabs.harvard.edu/abs/2014ISPAn.II5..329S/abstract  " target="_blank"
+                      class="text-primary">View Article</a>
+                  </p>
+                </div>
+
+              </div>
+              <h1 class="text-center mb-4"> Publication during ETHIOPIA </h1>
+
+              <div class="list-group">
+
+
+                <div class="list-group-item">
+                  <h5 class="mb-1">12. Gajendra K. Vishwakarma, Neha Singh and Surendra Pal Singh, (2021)</h5>
+                  <p class="mb-1">
+                    “Computing the average body mass index: A study with systematic sampling using auxiliary
+                    information”, Mathematical Problems in Engineering, Hindawi Publication, Volume 2022, Article ID
+                    9291313, 7 pages, https://doi.org/10.1155/2022/9291313 19th Jan 2022, Corresponding author. (SCOPUS
+                    Index) <br>
+
+                    <a href="https://www.hindawi.com/journals/mpe/2022/9291313/" target="_blank"
+                      class="text-primary">View Article</a>
+                  </p>
+                </div>
+
+                <div class="list-group-item">
+                  <h5 class="mb-1">13. Sunny Agarwal, A.S. Suchithra and Surendra Pal Singh, (2021)</h5>
+                  <p class="mb-1">
+                    “Analysis and Interpretation of Rainfall Trend using Mann Kendall's and Sen's Slope Method”, Indian
+                    Journal of Ecology, (2021) 48(2): 453-457, Published-16 Aug 2021. (SCOPUS Index) <br>
+
+                    <a href="https://www.indianjournals.com/ijor.aspx?target=ijor:ije1&volume=48&issue=2&article=021"
+                      target="_blank" class="text-primary">View Article</a>
+                  </p>
+                </div>
+
+
+                <div class="list-group-item">
+                  <h5 class="mb-1">14. Toryila Michael Tiza, Sitesh Kumar Singh, Leevesh Kumar, Mahesh P. Shettar,
+                    Surendra Pal Singh (2021), </h5>
+                  <p class="mb-1">
+                    Assessing the potentials of Bamboo and sheep wool fiber as sustainable construction materials: A
+                    review, Materials Today: Proceedings Volume 47, Part 14, 2021, Pages 4484-4489,
+                    https://doi.org/10.1016/j.matpr.2021.05.322, Published-28 May 2021, (Elsevier, SCOPUS Index) <br>
+
+                    <a href=" https://www.sciencedirect.com/science/article/abs/pii/S221478532103916X" target="_blank"
+                      class="text-primary">View Article</a>
+                  </p>
+                </div>
+
+                <div class="list-group-item">
+                  <h5 class="mb-1">15. Markkandan S, Aditi Sharma, Surendra Pal Singh, Vikas Solanki, Selvakanmani
+                    Sethuramalingam, Simar Preet Singh, </h5>
+                  <p class="mb-1">
+                    SVM-based compliance discrepancies detection using remote sensing for organic farms, Arabian Journal
+                    of Geosciences https://doi.org/10.1007/s12517-021-07700-4 Published-28 Sep 2021, (SCOPUS Index).<br>
+
+                    <a href=" https://link.springer.com/article/10.1007/s12517-021-07700-4" target="_blank"
+                      class="text-primary">View Article</a>
+                  </p>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="tab-content " id="message" style="padding: 20px;">
+        <h2> Message from the Dean </h2>
+
+        <p><strong>Greetings from the School of Earth Sciences at the University of North West Himalayas (UNWH),
+            Dehradun!</strong></p> <br>
+        <p>It gives me immense pleasure to welcome you to one of the most dynamic and future-oriented academic
+          environments in the field of Earth and Environmental Sciences. Nestled in the lap of the Himalayas, our
+          university offers a unique setting to explore, understand, and protect our planet through rigorous academic
+          training and hands-on field exposure.</p> <br>
+        <p>At the School of Earth Sciences, we are committed to nurturing scientific curiosity and developing
+          sustainable solutions to address the global environmental and geospatial challenges of our time. Our
+          curriculum integrates classical concepts with modern technological tools such as GIS, GPS-GNSS, Remote
+          Sensing, Geospatial intelligence, Photogrammetry and environmental monitoring systems.</p><br>
+        <p>We offer a wide range of undergraduate and postgraduate programs in Geography, Geology, Environmental Science
+          and Remote Sensing & GIS. </p><br>
+        <p>Our courses are designed in alignment with national-level competitive examinations such as UGC-NET, GATE
+          (Geomatics), and Civil Services (Geography Optional), providing our students with a strong foundation for
+          academic and professional excellence.</p><br>
+        <p>The faculty at the School of Earth Sciences comprises experienced educators, researchers, and professionals
+          who bring rich interdisciplinary knowledge, strong industry-academia linkages, and a student-centered approach
+          to learning. We are working together with Tagline- </p><br>
+        <p> <strong><i>"Geography, Geoscience, Geospatial and Environment for Green Futures."</i></strong> </p><br>
+        <p>As the Dean, I invite you to embark on this transformative journey with us—to explore the wonders of the
+          Earth, to understand the science behind its changing landscapes, and to become stewards of our environment.
+        </p><br>
+        <p>Let us learn together, research responsibly, and innovate sustainably—for a better, greener future for
+          sustainable development. </p><br>
+        <p>
+          Warm regards, <br>
+          <b>Prof. Dr Surendra Pal Singh</b> <br>
+          <b>(BSc., MSc, MTech., PhD IIT-Roorkee) </b>
+        </p>
+
+      </div>
+
+      <div class="tab-content" id="faculty" style="padding: 20px;">
+   
+  <div class="container py-60">
+
+    <div class="Faculty-section">
+      <section style="text-align: center;
+            margin-bottom: 40px;">
+      <h1 class="text-black">Faculty Of Earth Science</h1>
+
+    </section>
+
+      <table class="Faculty-table" style="border: 1px solid #ddd;">
+        <thead>
+          <tr>
+            <th style="font-size: 1.2rem;">Name</th>
+            <th style="font-size: 1.2rem;">Qualification</th>
+            <th style="font-size: 1.2rem;">Publications</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <img src="assets/images/thumbs/Dr. D. D. Chauniyal.jpg" alt="" width="200" height="200" class="object-cover rounded-16 transition hover-scale">
+              <br><strong>Dr. D. D. Chauniyal</strong></td>
+            <td>
+              M.A., Ph.D. (Geography)<br>
+              P.G. Diploma in Remote Sensing and GIS from IIRS, Dehradun<br>
+              4 months GIS training course<br>
+              2 months cartography and mapping course<br>
+              1 month Neo-tectonic course from IIRS, Dehradun
+            </td>
+            <td>
+              <ul class="publication-list">
+                <li>Principles of Remote Sensing and GIS (Hindi) second edition</li>
+                <li>Mountain Geomorphology (Ed)</li>
+                <li>Socio-Economic Geography of Garhwal Himalaya (Ed.)</li>
+                <li>Cultural Geography of Garhwal Himalaya (Hindi)</li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+        
+      </div>
+
+      <div class="tab-content" id="career" style="padding: 20px;">
+      <div class="container py-5">
+
+    <!-- Career Opportunities -->
+    <div class="mb-5">
+      <h2 class="mb-3">Career Opportunities</h2>
+      <p>Graduates from the School of Earth Science are placed in sectors such as</p>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">•	Establishment of Own Business firm  </li>
+        <li class="list-group-item">• Urban and Regional Planning</li>
+        <li class="list-group-item">• Environmental Consulting</li>
+        <li class="list-group-item">• Mining & Geological Survey</li>
+        <li class="list-group-item">• Climate and Water Resource Management</li>
+        <li class="list-group-item">• Forest and Wildlife Departments</li>
+        <li class="list-group-item">• Remote Sensing & GIS Firms</li>
+        <li class="list-group-item">• Academic and Research Institutions</li>
+        <li class="list-group-item">• Strong background for UPSC Exam and UGC NET/JRF Exam preparation</li>
+      </ul>
+    </div>
+
+    <!-- Special Features -->
+    <div class="mb-5">
+      <h2 class="mb-3">Special Feature</h2>
+      <p> <strong>The University of North West Himalayas (UNWH)</strong> offers a dynamic blend of academic excellence and competitive exam preparation through its specialized undergraduate and postgraduate programs. At the UG level, students can pursue <strong>B.Sc. (Hons.) in Geography and B.Sc. (Hons.) in Geology</strong>, uniquely integrated with <strong>UPSC Civil Services preparation</strong>, where these subjects are taught as optional papers with a strong conceptual and analytical foundation. At the PG level, the university offers <strong>M.Sc. in Environmental Science and M.Sc. in Geography, MSc Geology,</strong> these subjects aligned with <strong>UGC-NET/JRF</strong> exam preparation to empower future educators and researchers. Additionally, the <strong>M.Sc. in Remote Sensing & GIS program</strong> is tailored with a focus on <strong>GATE (Geomatics Engineering)</strong> exam preparation, combining technical mastery with strategic guidance. UNWH ensures that students not only graduate with strong academic credentials but are also competitively positioned for national-level examinations and prestigious careers in science, education, research, and civil services.</p>
+    </div>
+
+    <!-- Location Advantage -->
+    <div class="mb-5">
+      <h2 class="mb-3">Location Advantage</h2>
+      <p>Located in Dehradun, the gateway to the Himalayas and a center of environmental and geospatial research, the school offers unparalleled exposure to ecological diversity and earth sciences in action.</p>
+    </div>
+
+    <!-- Contact Information -->
+    <div class="bg-white p-4 rounded shadow-sm">
+      <h2 class="mb-3">Connect With Us</h2>
+      <p><strong>School of Earth Science</strong><br>
+        University of North West Himalayas (UNWH)<br>
+        Village- Sangaon Bhagwanpur, Dharkot Road, Thano<br>
+        Dehradun – 248143, Uttarakhand (India)</p>
+          <strong>Mobile:</strong> <a style="color:  #000000;" href="tel:919927999506">+919927999506</a>,  <a style="color: #000000;" href="tel:919927999509">+919927999509</a>
+          
+
+          
+       </p>
+    </div>
+
+  </div>
+      </div>
+
+ 
+
+    </div>
+  </section>
+
+  <!-- Fixed Left Side Button -->
+  <div class="fixed-left-button" overflow-x: hidden;>
+    <button class="left-side-button" title="ERP" style="background-color: #ff6b00;"><a
+        href="https://admission.unwhdoon.com/FreshApplication/register.aspx" target="_blank" style="color: white;">Apply
+        Now</a></button>
+    <button class="left-side-button" title="Enquiry"><a href="https://admission.unwhdoon.com/newLead.aspx"
+        target="_blank" style="color: white;">Enquire Now</a></button>
+  </div>
+
+  <div class="fixed-social">
+    <div class="social-links">
+      <div class="d-flex flex-column align-items-center">
+
+        <a href="https://www.facebook.com/unwhdehradun" class="social-icon bg-facebook" title="Facebook"><i
+            class="ph ph-facebook-logo"></i></a>
+        <a href="https://x.com/unwhdehradun" class="social-icon bg-twitter" title="Twitter"><i
+            class="ph ph-x-logo"></i></a>
+        <a href="https://www.instagram.com/unwhdehradun/" class="social-icon bg-instagram" title="Instagram"><i
+            class="ph ph-instagram-logo"></i></a>
+        <a href="https://www.youtube.com/@unwhdehradun/" class="social-icon bg-youtube" title="Youtube"><i
+            class="ph ph-youtube-logo"></i></a>
+        <a href="https://wa.me/919927999506" target="_blank" class="social-icon bg-whatsapp" title="WhatsApp"><i
+            class="ph ph-whatsapp-logo"></i></a>
+        <!-- <a href="#" class="social-icon bg-linkedin" title="LinkedIn"><i class="ph ph-linkedin-logo"></i></a> -->
+        <!-- <a href="#" class="social-icon bg-youtube" title="YouTube"><i class="ph ph-youtube-logo"></i></a> -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ====================  Start Here ==================== -->
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <!-- Column 1 - Details (Distinct Background) -->
+      <div class="footer-column details-column">
+        <div class=" ">
+          <a href="index.html">
+            <img src="assets/images/thumbs/footernew.png" alt="" width="300px" /></a>
+        </div>
+        <p style="color: white;"><strong>The University of North West Himalayas (UNwH)</strong></p>
+        <div class="contact-col">
+          <div class="icon-circle">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <div style="color: white;">
+            Village- Sangaon <br> Bhagwanpur, Dharkot Road,   Thano Dehradun – 248143,   Uttarakhand, India
+          </div>
+        </div>
+
+        <div class="contact-col">
+          <div class="icon-circle">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div style="color: white;">
+            <a style="color: white;" href="mailto:info1UNWH@gmail.com">info1UNWH@gmail.com</a>
+          </div>
+        </div>
+        <div class="footer-social-links">
+          <a href="https://www.facebook.com/unwhdehradun"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://x.com/unwhdehradun"><i class="fab fa-x"></i></a>
+          <a href="https://www.instagram.com/unwhdehradun/"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/919927999506"><i class="ph ph-whatsapp-logo"></i></a>
+          <a href="https://www.youtube.com/@unwhdehradun/"><i class="fab fa-youtube"></i></a>
+        </div>
+
+      </div>
+
+      <!-- Column 2 - Quick Links -->
+      <div class="footer-column">
+        <h4>About</h4>
+        <ul>
+          <li><a href="university_profile.html">About UNwH</a></li>
+          <li><a href="Leadership.html">Messages from Chancellor & VC</a></li>
+          <li><a href="values.html">Vision, Mission & Core</a></li>
+          <li><a href="accreditations-rankings.html">Our Achievements</a></li>
+          <li><a href="all-programs.html">All Programs</a></li>
+          <li><a href="fees-Structure-2025-26.html">Fees Structure 2025-26</a></li>
+
+        </ul>
+      </div>
+
+      <!-- Column 3 - Services -->
+      <div class="footer-column">
+        <h4>Academic</h4>
+        <ul>
+          <li><a href="school-commerce-business-studies.html">Commerce & Business Studies</a></li>
+          <li><a href="school-computer-science-engineering.html">Computer Science & Engineering</a></li>
+          <li><a href="school-hotel-hospitality-management.html">Hotel & Hospitality Management</a></li>
+          <li><a href="school-yogic-science.html">Yogic Sciences</a></li>
+          <li><a href="school-applied-social-sciences.html">Applied Social Sciences & Humanities</a></li>
+          <li><a href="school-skill-development.html">Skill Development & Vocational Studies</a></li>
+          <li><a href="school-earth-science.html">Earth Science</a></li>
+          <li><a href="school-of-health-sciences-and-technology.html">Health Sciences and Technology</a></li>
+        </ul>
+      </div>
+      <!-- Column 4 - Resources -->
+      <div class="footer-column">
+        <h4>Quick Link</h4>
+        <ul>
+          <li><a href="infrastructure.html">Infrastructure</a></li>
+          <li><a href="virtual-tour.html">Virtual Tour</a></li>
+          <li><a href="student-life.html">Students Life</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="placements.html">Placement</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="career.html">Career</a></li>
+
+        </ul>
+      </div>
+      <!-- Column 5 - Newsletter -->
+      <div class="footer-column">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="https://www.aicte.gov.in/">AICTE</a></li>
+          <li><a href="https://ugcnet.nta.ac.in/">UGC</a></li>
+          <li><a href="#">Downloads</a></li>
+
+
+        </ul>
+      </div>
+    </div>
+    <!-- copyright section start here -->
+
+
+    <div class="footer-row">
+
+      <!-- Left Side: Copyright -->
+      <div class="footer-left">
+        Copyright &copy; 2025
+        <span class="fw-semibold">UNWH</span> |
+        ERP & Website By:
+        <a href="https://uniedgesolutions.in/" target="_blank">UniEdge Solutions</a>
+      </div>
+
+      <!-- Right Side: Contact -->
+      <div class="footer-right">
+        <div class="contact-col">
+          <div class="icon-circle">
+            <i class="fas fa-phone-alt"></i>
+          </div>
+          <div>
+            <a style="color: white;" href="tel:919927999509">+919927999509</a>
+            <a style="color: white;" href="tel:919927999506">+919927999506</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==================== Footer End Here ==================== -->
+
+  <script>
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const tabContents = document.querySelectorAll('.tab-content');
+    const nestedBtns = document.querySelectorAll('.nested-btn');
+    const nestedContents = document.querySelectorAll('.nested-content');
+
+    tabBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        tabBtns.forEach(b => b.classList.remove('active'));
+        tabContents.forEach(tc => tc.classList.remove('active'));
+        btn.classList.add('active');
+        document.getElementById(btn.dataset.tab).classList.add('active');
+      });
+    });
+
+    nestedBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const parent = btn.closest('.nested-tabs');
+        parent.querySelectorAll('.nested-btn').forEach(b => b.classList.remove('active'));
+        parent.querySelectorAll('.nested-content').forEach(c => c.classList.remove('active'));
+        btn.classList.add('active');
+        parent.querySelector(`#${btn.dataset.nested}`).classList.add('active');
+      });
+    });
+  </script>
+
+  <script>
+    // JavaScript to handle scroll behavior for fixed header
+    window.addEventListener('scroll', function () {
+      const header = document.querySelector('.header');
+      const topHeader = document.querySelector('.py-8.mobile-hide');
+      const marquee = document.querySelector('.marquee-container');
+
+      // Calculate the height of top header and marquee
+      let offsetHeight = 0;
+      if (topHeader) offsetHeight += topHeader.offsetHeight;
+      if (marquee) offsetHeight += marquee.offsetHeight;
+
+      if (window.scrollY > offsetHeight) {
+        header.classList.add('scrolled');
+        // Add padding to body to prevent content jump
+        document.body.style.paddingTop = header.offsetHeight + 'px';
+      } else {
+        header.classList.remove('scrolled');
+        // Remove padding when header is not fixed
+        document.body.style.paddingTop = '0px';
+      }
+    });
+  </script>
+
+  <!-- Mobile menu -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Mobile menu toggle
+      const mobileMenuBtn = document.querySelector('.toggle-mobileMenu');
+      const mobileMenu = document.querySelector('.mobile-menu');
+      const mobileOverlay = document.querySelector('.mobile-menu-overlay');
+      const mobileCloseBtn = document.querySelector('.mobile-menu-close');
+
+      mobileMenuBtn.addEventListener('click', function () {
+        mobileMenu.classList.add('active');
+        mobileOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      });
+
+      mobileCloseBtn.addEventListener('click', function () {
+        mobileMenu.classList.remove('active');
+        mobileOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+
+      mobileOverlay.addEventListener('click', function () {
+        mobileMenu.classList.remove('active');
+        mobileOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+
+      // Dropdown toggles
+      const dropdownToggles = document.querySelectorAll('.toggle-dropdown');
+
+      dropdownToggles.forEach(toggle => {
+        toggle.addEventListener('click', function () {
+          const dropdown = this.parentElement.querySelector('.mobile-dropdown-menu');
+          dropdown.classList.toggle('active');
+          this.classList.toggle('active');
+          const icon = this.querySelector('i');
+
+          if (dropdown.classList.contains('active')) {
+            icon.classList.remove('ph-caret-down');
+            icon.classList.add('ph-caret-up');
+          } else {
+            icon.classList.remove('ph-caret-up');
+            icon.classList.add('ph-caret-down');
+          }
+        });
+      });
+    });
+  </script>
+
+  <!-- clear cahce  -->
+  <script src="cache-buster.js"></script>
+
+  <!-- Jquery js -->
+
+  <script src="assets/js/jquery-3.7.1.min.js"></script>
+
+  <!-- Bootstrap Bundle Js -->
+
+  <script src="assets/js/boostrap.bundle.min.js"></script>
+
+  <!-- select2 Js -->
+
+  <!-- <script src="assets/js/select2.min.js"></script> -->
+
+  <!-- Phosphor Icon Js -->
+
+  <script src="assets/js/phosphor-icon.js"></script>
+
+  <!-- Slick js -->
+
+  <script src="assets/js/slick.min.js"></script>
+
+  <!-- Slick js -->
+
+  <script src="assets/js/counter.min.js"></script>
+
+  <!-- magnific popup -->
+
+  <script src="assets/js/magnific-popup.min.js"></script>
+
+  <!-- Jquery Ui js -->
+
+  <script src="assets/js/jquery-ui.js"></script>
+
+  <!-- plyr Js -->
+
+  <script src="assets/js/plyr.js"></script>
+
+  <!-- vanilla Tilt -->
+
+  <!-- <script src="assets/js/vanilla-tilt.min.js"></script> -->
+
+  <!-- wow -->
+
+  <script src="assets/js/wow.min.js"></script>
+
+  <script src="assets/js/aos.js"></script>
+
+  <!-- main js -->
+
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Footer </title>
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+        }
+        
+        /* Footer styles */
+        .site-footer {
+            background-color: #000000;
+            padding: 0;
+            width: 100%;
+            box-shadow: 0 -5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .footer-container {
+            
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 2px 50px;
+        }
+        
+        /* First Column - Distinct Background */
+        .footer-column.details-column {
+            flex: 1.2;
+            min-width: 280px;
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 50px 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .footer-column.details-column::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: -20px;
+            width: 40px;
+            height: 100%;
+            background: #2c3e50;
+            transform: skewX(-10deg);
+            z-index: 1;
+        }
+        
+        /* Other Columns - Matching Background */
+        .footer-column:not(.details-column) {
+            flex: 1;
+            min-width: 200px;
+            background-color: #000000;
+            padding: 50px 30px;
+            border-left: 1px solid #eee;
+        }
+        
+        /* Common Column Styles */
+        .footer-column {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .footer-column.details-column .logo {
+            font-size: 26px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .footer-column.details-column .logo i {
+            margin-right: 12px;
+            font-size: 32px;
+            color: #f39c12;
+        }
+        
+        .footer-column.details-column p {
+            color: #bdc3c7;
+            margin-bottom: 30px;
+            font-size: 15px;
+            line-height: 1.8;
+        }
+        
+        .footer-column.details-column .company-info {
+            margin-top: 30px;
+        }
+        
+        .footer-column.details-column .info-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 18px;
+        }
+        
+        .footer-column.details-column .info-item i {
+            color: #f39c12;
+            margin-right: 15px;
+            margin-top: 4px;
+            font-size: 18px;
+        }
+        
+        .footer-column.details-column .info-text {
+            color: #bdc3c7;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+        
+        /* Links Columns */
+        .footer-column h4 {
+            color:white;
+            margin-bottom: 25px;
+            font-size: 18px;
+            position: relative;
+            padding-bottom: 12px;
+            font-weight: 600;
+        }
+        
+        .footer-column h4::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 40px;
+            height: 3px;
+            background: #f39c12;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 14px;
+        }
+        
+        .footer-column ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: block;
+            font-size: 15px;
+        }
+        
+        .footer-column:not(.details-column) ul li a:hover {
+            color: #f39c12;
+            padding-left: 8px;
+        }
+        
+        .footer-column.details-column ul li a {
+            color: #bdc3c7;
+        }
+        
+        .footer-column.details-column ul li a:hover {
+            color: #f39c12;
+        }
+        
+        /* Fourth Column - Special Styling */
+        .footer-column.links-column h4 {
+            color: #e74c3c;
+        }
+        
+        .footer-column.links-column h4::after {
+            background: #e74c3c;
+        }
+        
+        .footer-column.links-column ul li {
+            position: relative;
+            padding-left: 15px;
+        }
+        
+        .footer-column.links-column ul li::before {
+            content: '•';
+            color: #f39c12;
+            position: absolute;
+            left: 0;
+        }
+        
+        /* Social Links */
+        .social-links {
+            display: flex;
+            gap: 12px;
+            margin-top: 25px;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 38px;
+            height: 38px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: #fff;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background-color: #f39c12;
+            transform: translateY(-3px);
+        }
+        
+        /* Newsletter */
+        .newsletter-form {
+            margin-top: 20px;
+        }
+        
+        .newsletter-form input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        
+        .newsletter-form button {
+            background: #f39c12;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+        
+        .newsletter-form button:hover {
+            background: #e67e22;
+        }
+        
+        /* Footer Bottom */
+        .footer-bottom {
+            width: 100%;
+            text-align: center;
+            padding: 25px;
+            background-color: #2c3e50;
+            color: #bdc3c7;
+            font-size: 14px;
+        }
+        
+        .footer-bottom .legal-links {
+            margin-top: 15px;
+        }
+        
+        .footer-bottom .legal-links a {
+            color: #bdc3c7;
+            text-decoration: none;
+            margin: 0 12px;
+            font-size: 13px;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-bottom .legal-links a:hover {
+            color: #f39c12;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 1200px) {
+            .footer-column {
+                padding: 40px 25px;
+            }
+            
+            .footer-column.details-column {
+                flex: 1;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .footer-column {
+                flex: 0 0 50% !important;
+                min-width: 50%;
+                border-bottom: 1px solid #eee;
+            }
+            
+            .footer-column.details-column::before {
+                display: none;
+            }
+            
+            .footer-column:not(.details-column) {
+                border-left: none;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .footer-column {
+                flex: 0 0 100% !important;
+                text-align: center;
+                padding: 35px 20px;
+            }
+            
+            .footer-column h4::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            
+            .social-links {
+                justify-content: center;
+            }
+            
+            .footer-column.details-column .logo,
+            .footer-column.details-column .info-item {
+                justify-content: center;
+            }
+            
+            .footer-column.links-column ul li {
+                padding-left: 0;
+            }
+            
+            .footer-column.links-column ul li::before {
+                display: none;
+            }
+        }
+    </style>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Your page content here -->
+    
+   <footer class="site-footer">
+        <div class="footer-container">
+            <!-- Column 1 - Details (Distinct Background) -->
+            <div class="footer-column details-column">
+                <div class=" ">
+                <a href="index.html">
+                <img src="assets/images/thumbs/footernew.png" alt="" width="300px" /></a>
+                </div>
+                <p>Welcome to The University of North West Himalayas (UNwH)</p>
+                
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+                
+                <div class="company-info">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span class="info-text">123 Business Avenue </span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <span class="info-text">+1 (555) 123-4567</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <span class="info-text">contact@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Column 2 - Quick Links -->
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Testimonials</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            
+            <!-- Column 3 - Services -->
+            <div class="footer-column">
+                <h4>Our Services</h4>
+                <ul>
+                    <li><a href="#">Web Development</a></li>
+                    <li><a href="#">Mobile Apps</a></li>
+                    <li><a href="#">UI/UX Design</a></li>
+                    <li><a href="#">Digital Marketing</a></li>
+                    <li><a href="#">SEO Services</a></li>
+                    <li><a href="#">Cloud Solutions</a></li>
+                </ul>
+            </div>
+            
+            <!-- Column 4 - Resources -->
+            <div class="footer-column links-column">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Documentation</a></li>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Tutorials</a></li>
+                    <li><a href="#">API Reference</a></li>
+                    <li><a href="#">Community</a></li>
+                </ul>
+            </div>
+            
+            <!-- Column 5 - Newsletter -->
+            <div class="footer-column">
+                <h4>Newsletter</h4>
+                <p>Subscribe to get updates on our latest offers and news.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+                <p style="font-size: 12px; margin-top: 10px; color: #777;">We'll never share your email with anyone else.</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2023 BrandName. All rights reserved.</p>
+            <div class="legal-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookies</a>
+                <a href="#">Sitemap</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
+
+
+
+<!-- 
+
+
+
+/* foooter  */
+
+ 
+        
+        /* Footer styles */
+        .site-footer {
+            background-color: #000000;
+            padding: 0;
+            width: 100%;
+            box-shadow: 0 -5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .footer-container {
+            
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 2px 50px;
+        }
+        
+        /* First Column - Distinct Background */
+        .footer-column.details-column {
+            flex: 1.2;
+            min-width: 280px;
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 50px 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .footer-column.details-column::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: -20px;
+            width: 40px;
+            height: 100%;
+            background: #2c3e50;
+            transform: skewX(-10deg);
+            z-index: 1;
+        }
+        
+        /* Other Columns - Matching Background */
+        .footer-column:not(.details-column) {
+            flex: 1;
+            min-width: 200px;
+            background-color: #000000;
+            padding: 50px 30px;
+             
+        }
+        
+        /* Common Column Styles */
+        .footer-column {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .footer-column.details-column .logo {
+            font-size: 26px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .footer-column.details-column .logo i {
+            margin-right: 12px;
+            font-size: 32px;
+            color: #f39c12;
+        }
+        
+        .footer-column.details-column p {
+            color: #bdc3c7;
+            margin-bottom: 30px;
+            font-size: 15px;
+            line-height: 1.8;
+        }
+        
+        .footer-column.details-column .company-info {
+            margin-top: 30px;
+        }
+        
+        .footer-column.details-column .info-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 18px;
+        }
+        
+        .footer-column.details-column .info-item i {
+            color: #f39c12;
+            margin-right: 15px;
+            margin-top: 4px;
+            font-size: 18px;
+        }
+        
+        .footer-column.details-column .info-text {
+            color: #bdc3c7;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+        
+        /* Links Columns */
+        .footer-column h4 {
+            color:white;
+            margin-bottom: 25px;
+            font-size: 18px;
+            position: relative;
+            padding-bottom: 12px;
+            font-weight: 600;
+        }
+        
+        .footer-column h4::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 40px;
+            height: 3px;
+            background: #f39c12;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 14px;
+        }
+        
+        .footer-column ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: block;
+            font-size: 15px;
+        }
+        
+        .footer-column:not(.details-column) ul li a:hover {
+            color: #f39c12;
+            padding-left: 8px;
+        }
+        
+        .footer-column.details-column ul li a {
+            color: #bdc3c7;
+        }
+        
+        .footer-column.details-column ul li a:hover {
+            color: #f39c12;
+        }
+        
+        /* Fourth Column - Special Styling */
+        .footer-column.links-column h4 {
+            color: #e74c3c;
+        }
+        
+        .footer-column.links-column h4::after {
+            background: #e74c3c;
+        }
+        
+        .footer-column.links-column ul li {
+            position: relative;
+            padding-left: 15px;
+        }
+        
+        .footer-column.links-column ul li::before {
+            content: '•';
+            color: #f39c12;
+            position: absolute;
+            left: 0;
+        }
+        
+        /* Social Links */
+        .social-links {
+            display: flex;
+            gap: 12px;
+            margin-top: 25px;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 38px;
+            height: 38px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: #fff;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background-color: #f39c12;
+            transform: translateY(-3px);
+        }
+        
+        /* Newsletter */
+        .newsletter-form {
+            margin-top: 20px;
+        }
+        
+        .newsletter-form input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        
+        .newsletter-form button {
+            background: #f39c12;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+        
+        .newsletter-form button:hover {
+            background: #e67e22;
+        }
+        
+        /* Footer Bottom */
+        .footer-bottom {
+            width: 100%;
+            text-align: center;
+            padding: 25px;
+            background-color: #2c3e50;
+            color: #bdc3c7;
+            font-size: 14px;
+        }
+        
+        .footer-bottom .legal-links {
+            margin-top: 15px;
+        }
+        
+        .footer-bottom .legal-links a {
+            color: #bdc3c7;
+            text-decoration: none;
+            margin: 0 12px;
+            font-size: 13px;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-bottom .legal-links a:hover {
+            color: #f39c12;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 1200px) {
+            .footer-column {
+                padding: 40px 25px;
+            }
+            
+            .footer-column.details-column {
+                flex: 1;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .footer-column {
+                flex: 0 0 50% !important;
+                min-width: 50%;
+                border-bottom: 1px solid #eee;
+            }
+            
+            .footer-column.details-column::before {
+                display: none;
+            }
+            
+            .footer-column:not(.details-column) {
+                border-left: none;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .footer-column {
+                flex: 0 0 100% !important;
+                text-align: center;
+                padding: 35px 20px;
+            }
+            
+            .footer-column h4::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            
+            .social-links {
+                justify-content: center;
+            }
+            
+            .footer-column.details-column .logo,
+            .footer-column.details-column .info-item {
+                justify-content: center;
+            }
+            
+            .footer-column.links-column ul li {
+                padding-left: 0;
+            }
+            
+            .footer-column.links-column ul li::before {
+                display: none;
+            }
+        }
+   
+
+-->

@@ -1,0 +1,2384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Title -->
+  <title> The University of North West Himalayas, Dehradun Uttarakhand
+  </title>
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="assets/images/thumbs/favicin.jpg" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+  <!-- select2 -->
+  <link rel="stylesheet" href="assets/css/select2.min.css" />
+  <!-- Slick -->
+  <link rel="stylesheet" href="assets/css/slick.css" />
+  <!-- Slick -->
+  <link rel="stylesheet" href="assets/css/magnific-popup.css" />
+  <!-- jquery-ui -->
+  <link rel="stylesheet" href="assets/css/jquery-ui.css" />
+  <!-- plyr Css -->
+  <link rel="stylesheet" href="assets/css/plyr.css" />
+  <!-- animate -->
+  <link rel="stylesheet" href="assets/css/animate.css" />
+
+  <link rel="stylesheet" href="assets/css/aos.css" />
+  <!-- Main css -->
+  <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body>
+  <!--==================== Preloader Start ====================-->
+  <div class="preloader">
+    <img src="assets/images/icons/preload.gif" alt="" width="200px" />
+  </div>
+  <!--==================== Preloader End ====================-->
+
+  <!--==================== Overlay Start ====================-->
+  <div class="overlay"></div>
+  <!--==================== Overlay End ====================-->
+
+  <!--==================== Sidebar Overlay End ====================-->
+  <div class="side-overlay"></div>
+  <!--==================== Sidebar Overlay End ====================-->
+
+  <!-- ==================== Scroll to Top End Here ==================== -->
+  <div class="progress-wrap">
+    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+      <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+    </svg>
+  </div>
+  <!-- ==================== Scroll to Top End Here ==================== -->
+
+  <!-- Mobile Menu Overlay -->
+   
+ 
+    <style>
+          
+        /* Main navbar styles */
+        .main-navbar {
+            background-color: white;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            border-top: 3px solid #e53935;
+        }
+        
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 70px;
+        }
+        
+        .logo img {
+            height: 50px;
+            max-width: 100%;
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 5px;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+        
+        .nav-item {
+            position: relative;
+        }
+        
+        .nav-link {
+            color: #333;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: block;
+            font-weight: 600;
+            font-size: 15px;
+            transition: all 0.3s;
+            border-radius: 4px;
+            white-space: nowrap;
+        }
+        
+        .nav-link:hover, .nav-item:hover .nav-link {
+            color: #e53935;
+            background-color: #f5f5f5;
+        }
+        
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: white;
+            min-width: 220px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+            z-index: 10;
+            border-top: 3px solid #e53935;
+        }
+        
+        .nav-item:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .dropdown-item {
+            padding: 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .dropdown-item a {
+            color: #555;
+            text-decoration: none;
+            display: block;
+            padding: 12px 20px;
+            transition: all 0.3s;
+            font-weight: 500;
+        }
+        
+        .dropdown-item a:hover {
+            color: #e53935;
+            background-color: #f9f9f9;
+            padding-left: 25px;
+        }
+        
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            color: #333;
+            font-size: 24px;
+        }
+        
+        /* Mobile styles */
+        
+    </style>
+    
+    <!-- Main Navbar -->
+    <nav class="main-navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="assets/images/thumbs/headerLogo.png" alt="UNWH Logo">
+                <div class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">About Us</a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-item"><a href="#">History & Mission</a></li>
+                        <li class="dropdown-item"><a href="#">Leadership</a></li>
+                        <li class="dropdown-item"><a href="#">Accreditation</a></li>
+                        <li class="dropdown-item"><a href="#">Campus Tour</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Programs</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Schools</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Admission</a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-item"><a href="#">Application Process</a></li>
+                        <li class="dropdown-item"><a href="#">Requirements</a></li>
+                        <li class="dropdown-item"><a href="#">Tuition & Fees</a></li>
+                        <li class="dropdown-item"><a href="#">Scholarships</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Academics</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Campus Life</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Research</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Placements</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    
+    
+    <script>
+        // Mobile menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+        
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            hamburger.innerHTML = navMenu.classList.contains('active') ? 
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Mobile dropdown toggle
+        document.querySelectorAll('.nav-item').forEach(item => {
+            const link = item.querySelector('.nav-link');
+            const dropdown = item.querySelector('.dropdown-menu');
+            
+            if (dropdown) {
+                link.addEventListener('click', (e) => {
+                    if (window.innerWidth <= 992) {
+                        e.preventDefault();
+                        item.classList.toggle('active');
+                    }
+                });
+            }
+        });
+        
+        // Close menu when clicking on a link
+        document.querySelectorAll('.dropdown-item a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 992) {
+                    navMenu.classList.remove('active');
+                    hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+                }
+            });
+        });
+        
+        // Make navbar sticky on scroll for desktop
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.main-navbar');
+            if (window.innerWidth > 992) {
+                if (window.scrollY > 0) {
+                    navbar.style.position = 'fixed';
+                    navbar.style.top = '0';
+                } else {
+                    navbar.style.position = 'fixed';
+                    navbar.style.top = '0';
+                }
+            }
+        });
+    </script>
+</body>
+</html>
+
+   <!-- ==================== Header End Here ==================== -->
+
+  <!-- ================================== Banner Three Start =============================== -->
+
+  <section class="banner-three position-relative responsive-arrow overflow-hidden" style="overflow-x: hidden;">
+    <!-- Navigation Arrows -->
+    <button type="button" id="banner-three-prev"
+      class="slick-arrow-prev slick-arrow flex-center rounded-circle bg-white text-main-600 hover-border-main-600 text-2xl hover-bg-main-600 hover-text-white transition-1 w-56 h-56 position-absolute ms-16 inset-inline-start-0 top-50 translate-middle-y z-3">
+      <i class="ph-bold ph-arrow-left"></i>
+    </button>
+
+    <button type="button" id="banner-three-next"
+      class="slick-arrow-next slick-arrow flex-center rounded-circle bg-white text-main-600 hover-border-main-600 text-2xl hover-bg-main-600 hover-text-white transition-1 w-56 h-56 position-absolute me-16 inset-inline-end-0 top-50 translate-middle-y z-3">
+      <i class="ph-bold ph-arrow-right"></i>
+    </button>
+
+    <!-- Slider with Images Only -->
+
+    <section class="banner-three">
+      <div class="banner-three__slider">
+        <!-- Slide 1 -->
+        <div class="banner-three__slide">
+          <img src="assets/images/thumbs/1.png" alt="Banner 1" class="banner-three__img">
+        </div>
+
+        <!-- Slide 2 -->
+        <!-- <div class="banner-three__slide">
+          <img src="assets/images/thumbs/2.png" alt="Banner 2" class="banner-three__img">
+        </div> -->
+        <!-- Slide 3 -->
+        <div class="banner-three__slide">
+          <img src="assets/images/thumbs/3.png" alt="Banner 3" class="banner-three__img">
+        </div>
+      </div>
+    </section>
+
+    <style>
+      /* Reset and base styles */
+
+
+      .banner-three {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .banner-three__slider {
+        display: flex;
+        height: 100vh;
+        max-height: 700px;
+        min-height: 300px;
+        overflow-x: auto;
+        overflow-y: hidden;
+      }
+
+      .banner-three__slide {
+        flex: 0 0 100%;
+        width: 100%;
+        scroll-snap-align: start;
+        position: relative;
+      }
+
+      .banner-three__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      /* Fallback if images don't load */
+      .banner-three__slide::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #f0f0f0;
+        z-index: -1;
+      }
+
+      /* Hide scrollbar */
+      .banner-three__slider::-webkit-scrollbar {
+        display: none;
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 1200px) {
+        .banner-three__slider {
+          max-height: 700px;
+        }
+
+      }
+
+      @media (max-width: 992px) {
+        .banner-three__slider {
+          max-height: 600px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .banner-three__slider {
+          max-height: 500px;
+          min-height: 250px;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .banner-three__slider {
+          max-height: 400px;
+          min-height: 200px;
+        }
+      }
+    </style>
+
+    <!-- ================================== Banner Three End =============================== -->
+
+    <!-- ========================== Info Two Section Start =================================== -->
+
+    <section class="info-two half-bg">
+      <div class="container">
+        <div class="bg-white box-shadow-md rounded-16 p-16">
+          <div class="row gy-4 justify-content-center">
+            <div class="col-xl-4 col-sm-6" data-aos="fade-up" data-aos-duration="400">
+              <div
+                class="info-two-item flex-align animation-item h-100 gap-28 border border-neutral-30 rounded-12 bg-main-25">
+                <span class="flex-shrink-0">
+                  <img src="assets/images/icons/info-two-icon1.png" class="animate__heartBeat" alt="" />
+                </span>
+
+                <div>
+                  <h4 class="mb-16">Academic Excellence </h4>
+
+                  <p class="text-neutral-700 paragraph">
+                    Empowering students with globally relevant education & experienced faculty.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-4 col-sm-6" data-aos="fade-up" data-aos-duration="600">
+              <div
+                class="info-two-item flex-align animation-item h-100 gap-28 border border-neutral-30 rounded-12 bg-main-two-25">
+                <span class="flex-shrink-0">
+                  <img src="assets/images/icons/info-two-icon2.png" class="animate__heartBeat" alt="" />
+                </span>
+
+                <div>
+                  <h4 class="mb-16"> Career-Ready Programs</h4>
+
+                  <p class="text-neutral-700 paragraph">
+                    Offering modern, skill-based programs designed to meet real-world demands.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-4 col-sm-6" data-aos="fade-up" data-aos-duration="800">
+              <div
+                class="info-two-item flex-align animation-item h-100 gap-28 border border-neutral-30 rounded-12 bg-main-three-25">
+                <span class="flex-shrink-0">
+                  <img src="assets/images/icons/info-two-icon3.png" class="animate__heartBeat" alt="" />
+                </span>
+
+                <div>
+                  <h4 class="mb-16">Campus Life Amidst Nature</h4>
+
+                  <p class="text-neutral-700 paragraph">
+                    A serene and safe learning environment that nurtures personal growth & creativity.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================== Info Two Section End =================================== -->
+
+    <!-- ================================ About Three Section Start ==================================== -->
+
+    <section class="about-three py-120 position-relative z-1 bg-main-25 overflow-hidden">
+      <div class="position-relative">
+        <div class="container">
+          <div class="row gy-xl-0 gy-5 flex-wrap-reverse align-items-center">
+            <!-- Left Image Column -->
+            <div class="col-xl-6 pe-xl-5">
+              <div class="about-three-thumbs position-relative me-xxl-5">
+                <div class="row gy-4">
+                  <div class="col-12">
+                    <img src="assets/images/thumbs/About us.png" alt="About Us"
+                      class="about-three-thumbs__two rounded-16 " data-tilt data-tilt-max="10" data-tilt-speed="500"
+                      data-tilt-perspective="5000" data-tilt-full-page-listening style="object-fit: cover;" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Content Column -->
+            <div class="col-xl-6">
+              <div class="about-three-content">
+                <div class="mb-40">
+                  <div class="flex-align d-inline-flex gap-8 mb-16 ">
+                    <span class="text-main-600 text-2xl d-flex">
+                      <i class="ph-bold ph-book-open"></i>
+                    </span>
+                    <h5 class="text-main-600 mb-0" data-aos="zoom-in-right"> The University of North West Himalayas</h5>
+                  </div>
+
+                  <h2 class="mb-24 " data-aos="zoom-in-right">Overview</h2>
+
+                  <p class="text-neutral-500 text-line-2 " data-aos="zoom-in-right">
+                    Nestled amidst the tranquil beauty of the Himalayan foothills, The University of North West
+                    Himalayas is a newly
+                    established university run by The Shivalik Hills Foundation Trust is committed to nurturing the next
+                    generation of
+                    leaders, innovators, and changemakers.
+                  </p>
+                </div>
+
+                <div class="pt-40 border-top border-neutral-50 mt-40 border-dashed border-0"></div>
+
+                <div class="grid-cols-2">
+                  <!-- Vision -->
+                  <div class="flex-align align-items-start gap-20 animation-item" data-aos="fade-up"
+                    data-aos-duration="600">
+                    <span
+                      class="flex-shrink-0 w-60 h-60 flex-center d-inline-flex bg-white text-main-600 text-40 rounded-16 box-shadow-md">
+                      <img src="assets/images/icons/choose-us-icon1.png" class="animate__swing" alt="" />
+                    </span>
+
+                    <div class="flex-grow-1">
+                      <h6 class="text-neutral-800 text-xl fw-medium mb-8">Vision</h6>
+                      <div class="  gap-8 text-neutral-500" style="text-align: justify">
+                        To convert, Uttarakhand into a model state with high level of quality education for its youth
+                        population and
+                        to focus on arts, science and culture
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Mission -->
+                  <div class="flex-align align-items-start gap-20 animation-item" data-aos="fade-up"
+                    data-aos-duration="800">
+                    <span
+                      class="flex-shrink-0 w-60 h-60 flex-center d-inline-flex bg-white text-main-600 text-40 rounded-16 box-shadow-md">
+                      <img src="assets/images/icons/choose-us-icon2.png" class="animate__swing" alt="" />
+                    </span>
+
+                    <div class="flex-grow-1">
+                      <h6 class="text-neutral-800 text-xl fw-medium mb-8">Mission</h6>
+                      <div class="flex-align gap-8 text-neutral-500" style="text-align: justify">
+                        To provide opportunities to the youth for Higher Education according to the requirements and
+                        demands after
+                        they have received Secondary Education.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="pt-40 border-top border-neutral-50 mt-40 border-dashed border-0">
+                  <a href="#" class="btn btn-main rounded-pill flex-align d-inline-flex gap-8">
+                    Read More
+                    <i class="ph-bold ph-arrow-up-right d-flex text-lg"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Right Content Column End -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ================================ About Three Section End ==================================== -->
+
+    <!-- =================================== Video Section Start ============================= -->
+
+    <section class=" counter-three py-12 bg-main-25 " sty>
+      <div class="container">
+        <div class="section-heading text-center">
+
+
+          <h2 class="mb-24" data-aos="zoom-in-up"> Management</h2>
+        </div>
+
+        <section class="counter-three py-12 bg-main-25">
+          <div class="p-16 rounded-16 bg-white">
+            <div class="row gy-4">
+              <div class="col-xl-3 col-sm-6 col-xs-6" data-aos="fade-up" data-aos-duration="200">
+                <div
+                  class="counter-three-item animation-item h-100 text-center px-16 py-32 rounded-12 bg-main-25 border border-neutral-30">
+                  <!-- Image added here (replace src with your image path) -->
+                  <img src="assets/images/thumbs/Dr. Subhash Chand.png" alt="Instructors"
+                    class="w-150 h-150 object-cover    mb-24">
+
+                  <h4 class="display-four mb-16 text-neutral-700 counter" style="font-size: 17px;">
+                    Dr. Subhash Chand
+                  </h4>
+
+                  <span class="text-neutral-500 text-lg"> Managing Trustee</span>
+                </div>
+              </div>
+
+              <div class="col-xl-3 col-sm-6 col-xs-6" data-aos="fade-up" data-aos-duration="200">
+                <div
+                  class="counter-three-item animation-item h-100 text-center px-16 py-32 rounded-12 bg-main-25 border border-neutral-30">
+                  <!-- Image added here (replace src with your image path) -->
+                  <img src="assets/images/thumbs/Ms. JyotsnaRani.png" alt="Instructors"
+                    class="w-150 h-150 object-cover    mb-24">
+
+                  <h4 class="display-four mb-16 text-neutral-700 counter" style="font-size: 17px;">
+                    Ms. Jyotsna Rani
+                  </h4>
+
+                  <span class="text-neutral-500 text-lg"> Treasurer </span>
+                </div>
+              </div>
+
+              <div class="col-xl-3 col-sm-6 col-xs-6" data-aos="fade-up" data-aos-duration="200">
+                <div
+                  class="counter-three-item animation-item h-100 text-center px-16 py-32 rounded-12 bg-main-25 border border-neutral-30">
+                  <!-- Image added here (replace src with your image path) -->
+                  <img src="assets/images/thumbs/Mr. Anant Kirti Nagar.png" alt="Instructors"
+                    class="w-150 h-150 object-cover    mb-24">
+
+                  <h4 class="display-four mb-16 text-neutral-700 counter" style="font-size: 17px;">
+                    Mr. Anant Kirti Nagar
+                  </h4>
+
+                  <span class="text-neutral-500 text-lg"> Vice-President </span>
+                </div>
+              </div>
+
+              <div class="col-xl-3 col-sm-6 col-xs-6" data-aos="fade-up" data-aos-duration="200">
+                <div
+                  class="counter-three-item animation-item h-100 text-center px-16 py-32 rounded-12 bg-main-25 border border-neutral-30">
+                  <!-- Image added here (replace src with your image path) -->
+                  <img src="assets/images/thumbs/Mr. Harshvardhan.png" alt="Instructors"
+                    class="w-150 h-150 object-cover    mb-24">
+
+                  <h4 class="display-four mb-16 text-neutral-700 counter" style="font-size: 17px;">
+                    Mr. Harshvardhan
+                  </h4>
+
+                  <span class="text-neutral-500 text-lg"> Secretary</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+      </div>
+    </section>
+
+    </div>
+  </section>
+
+  <!-- pop up  -->
+
+  <div id="popup1" class="overlay">
+    <div class="popup" id="popupBox">
+      <span class="close" onclick="closePopup()">&times;</span>
+      <a href="index.html">
+        <img src="assets/images/thumbs/headerLogo.png" alt="" />
+      </a>
+
+
+      <div class="content">
+        <!-- Popup Content Box -->
+        <div style="text-align: center; padding: 20px; font-family: 'Segoe UI', sans-serif; border: 1px solid #ccc;">
+          <h4> Welcome to UNWH!</h4>
+
+          <h4 style="margin-top: 0; font-weight: 600;">Admission Open 2025–26</h4>
+
+          <a href="https://admission.unwhdoon.com/admission.aspx" target="_blank"
+            style=" display: inline-block;background-color: #28a745; color: white; font-weight: bold; padding: 10px 20px; border-radius: 5px; text-decoration: none;margin-bottom: 10px;  ">
+            Apply Now </a>
+
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- =================================== Video Section End ============================= -->
+  <!-- <section class="video pt-120">
+      <div class="container">
+        <div class="section-heading text-center">
+          <div class="flex-align d-inline-flex gap-8 mb-16">
+            <span class="text-main-600 text-2xl d-flex"
+              ><i class="ph-bold ph-book-open"></i
+            ></span>
+
+            <h5 class="text-main-600 mb-0">Campus Life</h5>
+          </div>
+
+          <h2 class="mb-24 wow bounceIn">Campus Highlights</h2>
+
+          <p class="wow bounceInDown">
+            Welcome to our vibrant campus, where learning comes to life in a
+            dynamic and inspiring environment.
+          </p>
+        </div>
+      </div>
+
+      <div class="video-img position-relative half-bg">
+        <div class="container wow bounceIn">
+          <img
+            src="assets/images/thumbs/video-img.png"
+            class="rounded-12 cover-img"
+            alt=""
+            data-tilt
+            data-tilt-max="4"
+            data-tilt-speed="500"
+            data-tilt-perspective="5000"
+            data-tilt-transition="1s"
+          />
+
+          <a
+            href="https://www.youtube.com/watch?v=MFLVmAE4cqg"
+            class="play-button position-absolute start-50 top-50 translate-middle z-1 w-72 h-72 flex-center bg-main-two-600 text-white rounded-circle text-2xl"
+          >
+            <i class="ph-fill ph-play"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+     -->
+
+
+  <!-- next section  -->
+
+  <section class="container" style="overflow-x: hidden;">
+    <h1 class="section-title py-12" style="color: black;">Courses</h1>
+
+    <div class="timeline">
+      <div class="timeline-container left" data-aos="zoom-in-left">
+        <div class="college-card">
+          <h2 class="college-title">School of Management & Commerce</h2>
+          <ul class="programs-list">
+            <li>B.Com<sup>(Hons)</sup> , M.Com<sup>(Hons)</sup> , BBA</li>
+            <li>MBA (HR/Mkt, Finance, Data Science, Business Analytics)</li>
+          </ul>
+          <a href="fees-Structure-2025-26.html" target="_blank">
+            <button
+              style="background-color: #ff6b00; color: white; text-decoration: none; padding: 8px 15px; border-radius: 4px; font-weight: bold; white-space: nowrap; cursor: pointer;">See
+              fee Structure</button>
+          </a>
+        </div>
+      </div>
+
+      <div class="timeline-container right" data-aos="zoom-in-right">
+        <div class="college-card">
+          <h2 class="college-title">School of Computer Science & Engineering</h2>
+          <ul class="programs-list">
+            <li>BCA, MCA</li>
+            <li>B. Tech -(CS/IT, Data Science, AIML)</li>
+          </ul>
+          <a href="fees-Structure-2025-26.html" target="_blank">
+            <button
+              style="background-color: #ff6b00; color: white; text-decoration: none; padding: 8px 15px; border-radius: 4px; font-weight: bold; white-space: nowrap; cursor: pointer;">See
+              fee Structure</button>
+          </a>
+        </div>
+      </div>
+
+      <div class="timeline-container left" data-aos="zoom-in-left">
+        <div class="college-card">
+          <h2 class="college-title">School of Social Sciences</h2>
+          <ul class="programs-list">
+            <li>B.A. (Economics, English, Poli Sci, Psychology, Hindi, Education, History)</li>
+            <li>M.A. (Economics, English, Poli Sci, Psychology, Hindi, Education, History)</li>
+          </ul>
+          <a href="fees-Structure-2025-26.html" target="_blank">
+            <button
+              style="background-color: #ff6b00; color: white; text-decoration: none; padding: 8px 15px; border-radius: 4px; font-weight: bold; white-space: nowrap; cursor: pointer;">See
+              fee Structure</button>
+          </a>
+        </div>
+      </div>
+
+      <div class="timeline-container right" data-aos="zoom-in-right">
+        <div class="college-card">
+          <h2 class="college-title">School of Yogic Science</h2>
+          <ul class="programs-list">
+            <li>Certificate Yogic Science</li>
+            <li>Diploma In Yogic Science with Naturopathy</li>
+            <li>B.A Yoga Hons</li>
+            <li>B.Sc. Yoga Hons</li>
+          </ul>
+          <a href="fees-Structure-2025-26.html" target="_blank">
+            <button
+              style="background-color: #ff6b00; color: white; text-decoration: none; padding: 8px 15px; border-radius: 4px; font-weight: bold; white-space: nowrap; cursor: pointer;">See
+              fee Structure</button>
+          </a>
+        </div>
+      </div>
+
+      <div class="timeline-container left" data-aos="zoom-in-left">
+        <div class="college-card">
+          <h2 class="college-title">School of Hotel & Hospitality Management</h2>
+          <ul class="programs-list">
+            <li>Diploma in Hotel Management (DHM)</li>
+            <li>Bachelor of Hotel Management (BHM)</li>
+            <li>Master of Hotel Management (MHM)</li>
+          </ul>
+          <a href="fees-Structure-2025-26.html" target="_blank">
+            <button
+              style="background-color: #ff6b00; color: white; text-decoration: none; padding: 8px 15px; border-radius: 4px; font-weight: bold; white-space: nowrap; cursor: pointer;">See
+              fee Structure</button>
+          </a>
+        </div>
+      </div>
+      <div class="timeline-container right" data-aos="zoom-in-right">
+        <div class="college-card">
+          <h2 class="college-title">School of Earth Science</h2>
+          <ul class="programs-list">
+            <li>B.Sc. (Hons.) Geography</li>
+            <li>M.Sc. Geography</li>
+            <li>M.Sc. Remote Sensing and GIS</li>
+            <li>Diploma in Remote Sensing and GIS</li>
+            <li>Certificate Remote Sensing and GIS</li>
+          </ul>
+          <a href="fees-Structure-2025-26.html" target="_blank">
+            <button
+              style="background-color: #ff6b00; color: white; text-decoration: none; padding: 8px 15px; border-radius: 4px; font-weight: bold; white-space: nowrap; cursor: pointer;">See
+              fee Structure</button>
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+
+  </section>
+
+  <!-- Students Support Facilities -->
+
+
+  <section class="counter-three py-80 bg-main-25">
+    <div class="container">
+      <h1 class="section-title" style="color: black;">Students Support Facilities</h1>
+
+      <div class="p-16 rounded-16 bg-white">
+        <div class="row gy-4">
+          <div class="col-xl-4 col-sm-6 col-xs-6" data-aos="fade-up" data-aos-duration="200">
+            <div
+              class="counter-three-item animation-item h-100 text-center px-16 py-32 rounded-12   border border-neutral-30"
+              style="background-color: #79afbc;">
+              <span
+                class="w-80 h-80 flex-center d-inline-flex bg-white text-main-600 text-40 rounded-circle box-shadow-md mb-24">
+                <i class="animate__wobble ph ph-briefcase"></i>
+              </span>
+              <h2 class="display-four mb-16 text-neutral-700">Job Skill Module</h2>
+              <span class="text-neutral-500 text-lg">Career development and skill enhancement programs</span>
+            </div>
+          </div>
+
+          <div class="col-xl-4 col-sm-6 col-xs-6" data-aos="fade-up" data-aos-duration="400">
+            <div
+              class="counter-three-item animation-item h-100 text-center px-16 py-32 rounded-12 bg-main-two-25 border border-neutral-30">
+              <span
+                class="w-80 h-80 flex-center d-inline-flex bg-white text-main-two-600 text-40 rounded-circle box-shadow-md mb-24">
+                <i class="animate__wobble ph ph-users-three"></i>
+              </span>
+              <h2 class="display-four mb-16 text-neutral-700">Technical Clubs & Society</h2>
+              <span class="text-neutral-500 text-lg">Student groups for technical learning and collaboration</span>
+            </div>
+          </div>
+
+          <div class="col-xl-4 col-sm-6 col-xs-6" data-aos="fade-up" data-aos-duration="600">
+            <div
+              class="counter-three-item animation-item h-100 text-center px-16 py-32 rounded-12   border border-neutral-30"
+              style="background-color: #79afbc;">
+              <span
+                class="w-80 h-80 flex-center d-inline-flex bg-white text-main-600 text-40 rounded-circle box-shadow-md mb-24">
+                <i class="animate__wobble ph ph-basketball"></i>
+              </span>
+              <h2 class="display-four mb-16 text-neutral-700">Indoor & Outdoor Sports</h2>
+              <span class="text-neutral-500 text-lg">Comprehensive sports facilities for all students</span>
+            </div>
+          </div>
+
+          <div class="col-xl-4 col-sm-6 col-xs-6" data-aos="fade-up" data-aos-duration="800">
+            <div
+              class="counter-three-item animation-item h-100 text-center px-16 py-32 rounded-12 bg-main-two-25 border border-neutral-30">
+              <span
+                class="w-80 h-80 flex-center d-inline-flex bg-white text-main-two-600 text-40 rounded-circle box-shadow-md mb-24">
+                <i class="animate__wobble ph ph-monitor-play"></i>
+              </span>
+              <h2 class="display-four mb-16 text-neutral-700">Online Tutoring Support</h2>
+              <span class="text-neutral-500 text-lg">Remote academic assistance and guidance</span>
+            </div>
+          </div>
+
+          <!-- Additional row for remaining items -->
+          <div class="col-xl-4 col-sm-6 col-xs-6" data-aos="fade-up" data-aos-duration="1000">
+            <div
+              class="counter-three-item animation-item h-100 text-center px-16 py-32 rounded-12 border border-neutral-30"
+              style="background-color: #79afbc;">
+              <span
+                class="w-80 h-80 flex-center d-inline-flex bg-white text-main-600 text-40 rounded-circle box-shadow-md mb-24">
+                <i class="animate__wobble ph ph-heartbeat"></i>
+              </span>
+              <h2 class="display-four mb-16 text-neutral-700">Students Counselling Cell</h2>
+              <span class="text-neutral-500 text-lg">Mental health and academic counseling services</span>
+            </div>
+          </div>
+
+          <div class="col-xl-4 col-sm-6 col-xs-6" data-aos="fade-up" data-aos-duration="1200">
+            <div
+              class="counter-three-item animation-item h-100 text-center px-16 py-32 rounded-12 bg-main-two-25 border border-neutral-30">
+              <span
+                class="w-80 h-80 flex-center d-inline-flex bg-white text-main-two-600 text-40 rounded-circle box-shadow-md mb-24">
+                <i class="animate__wobble ph ph-handshake"></i>
+              </span>
+              <h2 class="display-four mb-16 text-neutral-700">Grievances Redressal Cell</h2>
+              <span class="text-neutral-500 text-lg">System for addressing student concerns and complaints</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- our Service  -->
+
+  <!-- <section class="py-60  ">
+    <div class="container">
+      <h1 class="section-title text-center mb-40" style="color: black;">Our Services</h1>
+
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-duration="200">
+          <div
+            class="service-card h-100 p-30 bg-white rounded-16 shadow-sm border border-light hover-shadow transition">
+            <div class="d-flex align-items-center mb-20">
+              <div class="icon-box bg-primary-50 text-primary-600 rounded-12 flex-shrink-0">
+                <i class="ph ph-graduation-cap fs-24"></i>
+              </div>
+              <h3 class="fs-20 fw-600 ms-16 mb-0">Academic Programs</h3>
+            </div>
+            <p class="text-neutral-600 mb-0">Comprehensive curriculum with industry-aligned courses and expert faculty
+              guidance.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-duration="300">
+          <div
+            class="service-card h-100 p-30 bg-white rounded-16 shadow-sm border border-light hover-shadow transition">
+            <div class="d-flex align-items-center mb-20">
+              <div class="icon-box bg-success-50 text-success-600 rounded-12 flex-shrink-0">
+                <i class="ph ph-microscope fs-24"></i>
+              </div>
+              <h3 class="fs-20 fw-600 ms-16 mb-0">Research Facilities</h3>
+            </div>
+            <p class="text-neutral-600 mb-0">State-of-the-art labs and resources to support innovative research
+              projects.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-duration="400">
+          <div
+            class="service-card h-100 p-30 bg-white rounded-16 shadow-sm border border-light hover-shadow transition">
+            <div class="d-flex align-items-center mb-20">
+              <div class="icon-box bg-info-50 text-info-600 rounded-12 flex-shrink-0">
+                <i class="ph ph-briefcase fs-24"></i>
+              </div>
+              <h3 class="fs-20 fw-600 ms-16 mb-0">Career Services</h3>
+            </div>
+            <p class="text-neutral-600 mb-0">Placement support, internships, and career counseling for professional
+              growth.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-duration="500">
+          <div
+            class="service-card h-100 p-30 bg-white rounded-16 shadow-sm border border-light hover-shadow transition">
+            <div class="d-flex align-items-center mb-20">
+              <div class="icon-box bg-warning-50 text-warning-600 rounded-12 flex-shrink-0">
+                <i class="ph ph-globe-stand fs-24"></i>
+              </div>
+              <h3 class="fs-20 fw-600 ms-16 mb-0">Global Opportunities</h3>
+            </div>
+            <p class="text-neutral-600 mb-0">International collaborations, exchange programs, and study abroad options.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-duration="600">
+          <div
+            class="service-card h-100 p-30 bg-white rounded-16 shadow-sm border border-light hover-shadow transition">
+            <div class="d-flex align-items-center mb-20">
+              <div class="icon-box bg-danger-50 text-danger-600 rounded-12 flex-shrink-0">
+                <i class="ph ph-buildings fs-24"></i>
+              </div>
+              <h3 class="fs-20 fw-600 ms-16 mb-0">Campus Life</h3>
+            </div>
+            <p class="text-neutral-600 mb-0">Vibrant community with clubs, events, and recreational facilities.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-duration="700">
+          <div
+            class="service-card h-100 p-30 bg-white rounded-16 shadow-sm border border-light hover-shadow transition">
+            <div class="d-flex align-items-center mb-20">
+              <div class="icon-box bg-secondary-50 text-secondary-600 rounded-12 flex-shrink-0">
+                <i class="ph ph-hand-heart fs-24"></i>
+              </div>
+              <h3 class="fs-20 fw-600 ms-16 mb-0">Student Support</h3>
+            </div>
+            <p class="text-neutral-600 mb-0">Comprehensive services including counseling, tutoring, and wellness
+              programs.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- Our Gallery  -->
+
+
+  <section class=" py-70 bg-light" style="overflow-x: hidden;">
+    <div class="container">
+      <h2 class="section-title text-center mb-40" style="color: black;">Infrastructure</h2>
+
+      <div class="row g-4 gallery-grid">
+        <!-- Gallery Item 1 (Wide) -->
+        <div class="col-md-8">
+          <div class="gallery-item rounded-16 overflow-hidden">
+            <img src="assets/images/thumbs/infra5.jpeg" alt="Campus view"
+              class="w-100 h-100 object-cover transition hover-scale">
+            <div class="gallery-caption">
+              <h3 class="text-white">Main Campus</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gallery Item 2 -->
+        <div class="col-md-4">
+          <div class="gallery-item rounded-16 overflow-hidden">
+            <img src="assets/images/thumbs/infra3.jpeg" alt="Library"
+              class="w-100 h-100 object-cover transition hover-scale">
+            <div class="gallery-caption">
+              <h3 class="text-white">Yoga Area</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gallery Item 3 -->
+        <div class="col-md-4">
+          <div class="gallery-item rounded-16 overflow-hidden">
+            <img src="assets/images/thumbs/infra2.jpeg" alt="Lab"
+              class="w-100 h-100 object-cover transition hover-scale">
+            <div class="gallery-caption">
+              <h3 class="text-white">Research Lab</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gallery Item 4 -->
+        <div class="col-md-4">
+          <div class="gallery-item rounded-16 overflow-hidden">
+            <img src="assets/images/thumbs/auditorium.jpg" alt="Sports"
+              class="w-100 h-100 object-cover transition hover-scale">
+            <div class="gallery-caption">
+              <h3 class="text-white">Auditorium </h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gallery Item 5 -->
+        <div class="col-md-4">
+          <div class="gallery-item rounded-16 overflow-hidden">
+            <img src="assets/images/thumbs/Computer-lab.jpg" alt="Event"
+              class="w-100 h-100 object-cover transition hover-scale">
+            <div class="gallery-caption">
+              <h3 class="text-white">Computer Lab</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="text-center mt-40">
+      <button class="btn btn-primary px-40 py-12 rounded-8">View More Photos</button>
+    </div> -->
+    </div>
+  </section>
+
+  <!-- Contact Us  -->
+
+  <section class="contact-section py-80 bg-light" style="overflow-x: hidden;">
+    <div class="container">
+      <div class="section-header text-center mb-60">
+        <h2 class="section-title" style="color: black;">Contact Us</h2>
+        <p class="section-subtitle">The University of North West Himalayas</p>
+      </div>
+
+      <div class="row g-4 align-items-center">
+        <!-- Contact Info Column -->
+        <div class="col-lg-6 order-lg-1 order-2" data-aos="zoom-in-left">
+          <div class="contact-info-card bg-white p-40 rounded-16 h-100 shadow-sm">
+            <!-- Contact Card -->
+            <div class="contact-method mb-30 d-flex">
+              <div class="icon-box bg-primary-50 text-primary-600 mb-20 flex-shrink-0">
+                <i class="ph ph-phone fs-24"></i>
+              </div>
+              <div class="ms-24">
+                <h3 class="h5 mb-12">Phone</h3>
+                <p class="mb-8"> <a style="color: black;" href="tel:919068261443">919068261443</a> </p>
+                <p class="mb-0"> <a style="color: black;" href="tel:919837213369">919837213369</a> </p>
+              </div>
+            </div>
+
+
+            <!-- Email Card -->
+            <div class="contact-method mb-30 d-flex">
+              <div class="icon-box bg-success-50 text-success-600 mb-20 flex-shrink-0">
+                <i class="ph ph-envelope fs-24"></i>
+              </div>
+              <div class="ms-24">
+                <h3 class="h5 mb-12">Email</h3>
+                <p class="mb-8"><a style="color: black;" href="mailto:hrunwh@gmail.com"> hrunwh@gmail.com</a></p>
+              </div>
+            </div>
+
+            <!-- Address Card -->
+            <div class="contact-method d-flex">
+              <div class="icon-box bg-warning-50 text-warning-600 mb-20 flex-shrink-0">
+                <i class="ph ph-map-pin fs-24"></i>
+              </div>
+              <div class="ms-24">
+                <h3 class="h5 mb-12">Address</h3>
+                <p class="mb-0 ">Village Sangaun Bhagwanpur, Dharkot Road, Thano,<br>
+                  Near Jolly Grant Airport, Dehradun (Uttrakhand) 248143</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Image Column -->
+        <div class="col-lg-6 order-lg-2 order-1" data-aos="zoom-in-right">
+          <div class="contact-image h-100 rounded-16 overflow-hidden">
+            <img
+              src=" https://www.shutterstock.com/image-photo/students-graduation-caps-sky-happiness-600nw-2475380851.jpg"
+              alt="University students" class="w-100 h-100 object-cover" style="min-height: 450px;">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- socail icons  -->
+
+
+  <!-- Fixed Social Media Buttons -->
+
+
+
+
+  <!-- Fixed Left Side Button -->
+  <div class="fixed-left-button" overflow-x: hidden;>
+    <button class="left-side-button" title="ERP" style="background-color: #ff6b00;"><a
+        href="https://admission.unwhdoon.com/admission.aspx" target="_blank" style="color: white;">Apply
+        Now</a></button>
+    <button class="left-side-button" title="Enquiry"><a href="https://admission.unwhdoon.com/newLead.aspx"
+        target="_blank" style="color: white;">Enquire Now</a></button>
+  </div>
+  <div class="fixed-social">
+    <div class="social-links">
+      <div class="d-flex flex-column align-items-center">
+        <a href="https://www.facebook.com/unwhdehradun" target="_blank" class="social-icon bg-facebook"
+          title="Facebook"><i class="ph ph-facebook-logo"></i></a>
+        <a href="https://x.com/unwhdehradun" target="_blank" class="social-icon bg-twitter" title="Twitter"><i
+            class="ph ph-x-logo"></i></a>
+        <a href="https://www.instagram.com/unwhdehradun/" target="_blank" class="social-icon bg-instagram"
+          title="Instagram"><i class="ph ph-instagram-logo"></i></a>
+        <a href="https://wa.me/919837213369" target="_blank" class="social-icon bg-whatsapp" title="WhatsApp"><i
+            class="ph ph-whatsapp-logo"></i></a>
+        <!-- <a href="#" class="social-icon bg-linkedin" title="LinkedIn"><i class="ph ph-linkedin-logo"></i></a> -->
+        <!-- <a href="#" class="social-icon bg-youtube" title="YouTube"><i class="ph ph-youtube-logo"></i></a> -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================================== Testimonials Section Three Start ================================= -->
+
+  <!-- <section
+      class="testimonials-three py-120 bg-main-25 position-relative z-1 overflow-hidden"
+    >
+      <img
+        src="assets/images/shapes/shape2.png"
+        alt=""
+        class="shape two animation-scalation"
+      />
+
+      <img
+        src="assets/images/shapes/shape6.png"
+        alt=""
+        class="shape four animation-scalation"
+      />
+
+      <img
+        src="assets/images/shapes/shape4.png"
+        alt=""
+        class="shape one animation-scalation"
+      />
+
+      <div class="container">
+        <div class="row gy-4 align-items-center flex-wrap-reverse">
+          <div class="col-xl-7">
+            <div class="testimonials-three-slider">
+              <div
+                class="testimonials-three-item bg-white p-24 rounded-12 box-shadow-md"
+              >
+                <div class="w-90 h-90 rounded-circle position-relative mb-4">
+                  <img
+                    src="assets/images/thumbs/testimonials-three-img2.png"
+                    alt=""
+                    class="cover-img rounded-circle"
+                  />
+
+                  <span
+                    class="w-40 h-40 bg-main-two-600 flex-center border border-white border-2 rounded-circle position-absolute inset-block-end-0 inset-inline-end-0 mt--5 me--5"
+                  >
+                    <img src="assets/images/icons/quote-two-icon.png" alt="" />
+                  </span>
+                </div>
+
+                <p class="text-neutral-500 my-24">
+                  Attending [University Name] was one of the best decisions I've
+                  made. The
+                </p>
+
+                <ul class="flex-align gap-8 mb-16">
+                  <li class="text-warning-600 text-xl d-flex">
+                    <i class="ph-fill ph-star"></i>
+                  </li>
+
+                  <li class="text-warning-600 text-xl d-flex">
+                    <i class="ph-fill ph-star"></i>
+                  </li>
+
+                  <li class="text-warning-600 text-xl d-flex">
+                    <i class="ph-fill ph-star"></i>
+                  </li>
+
+                  <li class="text-warning-600 text-xl d-flex">
+                    <i class="ph-fill ph-star"></i>
+                  </li>
+
+                  <li class="text-warning-600 text-xl d-flex">
+                    <i class="ph-fill ph-star-half"></i>
+                  </li>
+                </ul>
+
+                <h4 class="mb-16 text-lg">Ronald Richards</h4>
+
+                <span class="text-neutral-500">Student</span>
+              </div>
+
+              <div
+                class="testimonials-three-item bg-white p-24 rounded-12 box-shadow-md"
+              >
+                <div class="w-90 h-90 rounded-circle position-relative mb-4">
+                  <img
+                    src="assets/images/thumbs/testimonials-three-img1.png"
+                    alt=""
+                    class="cover-img rounded-circle"
+                  />
+
+                  <span
+                    class="w-40 h-40 bg-main-two-600 flex-center border border-white border-2 rounded-circle position-absolute inset-block-end-0 inset-inline-end-0 mt--5 me--5"
+                  >
+                    <img src="assets/images/icons/quote-two-icon.png" alt="" />
+                  </span>
+                </div>
+
+                <p class="text-neutral-500 my-24">
+                  "The faculty at are not only experts in their fields but
+                  teaching students."
+                </p>
+
+                <ul class="flex-align gap-8 mb-16">
+                  <li class="text-warning-600 text-xl d-flex">
+                    <i class="ph-fill ph-star"></i>
+                  </li>
+
+                  <li class="text-warning-600 text-xl d-flex">
+                    <i class="ph-fill ph-star"></i>
+                  </li>
+
+                  <li class="text-warning-600 text-xl d-flex">
+                    <i class="ph-fill ph-star"></i>
+                  </li>
+
+                  <li class="text-warning-600 text-xl d-flex">
+                    <i class="ph-fill ph-star"></i>
+                  </li>
+
+                  <li class="text-warning-600 text-xl d-flex">
+                    <i class="ph-fill ph-star-half"></i>
+                  </li>
+                </ul>
+
+                <h4 class="mb-16 text-lg">Brooklyn Simmons</h4>
+
+                <span class="text-neutral-500">Student</span>
+              </div>
+
+              <div
+                class="testimonials-three-item bg-white p-24 rounded-12 box-shadow-md"
+              >
+                <div class="w-90 h-90 rounded-circle position-relative mb-4">
+                  <img
+                    src="assets/images/thumbs/testimonials-three-img3.png"
+                    alt=""
+                    class="cover-img rounded-circle"
+                  />
+
+                  <span
+                    class="w-40 h-40 bg-main-two-600 flex-center border border-white border-2 rounded-circle position-absolute inset-block-end-0 inset-inline-end-0 mt--5 me--5"
+                  >
+                    <img src="assets/images/icons/quote-two-icon.png" alt="" />
+                  </span>
+                </div>
+
+                <p class="text-neutral-500 my-24">
+                  As a faculty member at [University Name], I've had the
+                  privilege of working
+                </p>
+
+                <ul class="flex-align gap-8 mb-16">
+                  <li class="text-warning-600 text-xl d-flex">
+                    <i class="ph-fill ph-star"></i>
+                  </li>
+
+                  <li class="text-warning-600 text-xl d-flex">
+                    <i class="ph-fill ph-star"></i>
+                  </li>
+
+                  <li class="text-warning-600 text-xl d-flex">
+                    <i class="ph-fill ph-star"></i>
+                  </li>
+
+                  <li class="text-warning-600 text-xl d-flex">
+                    <i class="ph-fill ph-star"></i>
+                  </li>
+
+                  <li class="text-warning-600 text-xl d-flex">
+                    <i class="ph-fill ph-star-half"></i>
+                  </li>
+                </ul>
+
+                <h4 class="mb-16 text-lg">Courtney Henry</h4>
+
+                <span class="text-neutral-500">Student</span>
+              </div>
+
+              <div
+                class="testimonials-three-item bg-white p-24 rounded-12 box-shadow-md"
+              >
+                <div class="w-90 h-90 rounded-circle position-relative mb-4">
+                  <img
+                    src="assets/images/thumbs/testimonials-three-img3.png"
+                    alt=""
+                    class="cover-img rounded-circle"
+                  />
+
+                  <span
+                    class="w-40 h-40 bg-main-two-600 flex-center border border-white border-2 rounded-circle position-absolute inset-block-end-0 inset-inline-end-0 mt--5 me--5"
+                  >
+                    <img src="assets/images/icons/quote-two-icon.png" alt="" />
+                  </span>
+                </div>
+
+                <p class="text-neutral-500 my-24">
+                  "The faculty at are not only experts in their fields but
+                  teaching students."
+                </p>
+
+                <ul class="flex-align gap-8 mb-16">
+                  <li class="text-warning-600 text-xl d-flex">
+                    <i class="ph-fill ph-star"></i>
+                  </li>
+
+                  <li class="text-warning-600 text-xl d-flex">
+                    <i class="ph-fill ph-star"></i>
+                  </li>
+
+                  <li class="text-warning-600 text-xl d-flex">
+                    <i class="ph-fill ph-star"></i>
+                  </li>
+
+                  <li class="text-warning-600 text-xl d-flex">
+                    <i class="ph-fill ph-star"></i>
+                  </li>
+
+                  <li class="text-warning-600 text-xl d-flex">
+                    <i class="ph-fill ph-star-half"></i>
+                  </li>
+                </ul>
+
+                <h4 class="mb-16 text-lg">Brooklyn Simmons</h4>
+
+                <span class="text-neutral-500">Student</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-5 ps-xl-5">
+            <div class="flex-align d-inline-flex gap-8 mb-16 wow bounceInDown">
+              <span class="text-main-600 text-2xl d-flex"
+                ><i class="ph-bold ph-book-open"></i
+              ></span>
+
+              <h5 class="text-main-600 mb-0">Testimonials</h5>
+            </div>
+
+            <h2 class="mb-24 wow bounceInRight">What Our Community Says</h2>
+
+            <p class="text-neutral-500 text-line-4 wow bounceInUp">
+              Welcome to our testimonial section, where members of our
+              university community share their experiences and insights about
+              life at EduAll. We invite you to join us and be part of our
+              inspiring journey of learning, growth, and achievement.
+            </p>
+
+            <div class="flex-align gap-16 mt-40">
+              <button
+                type="button"
+                id="testimonials-three-prev"
+                class="slick-prev slick-arrow flex-center rounded-circle border border-gray-100 hover-border-main-600 text-xl hover-bg-main-600 hover-text-white transition-1 w-48 h-48"
+                style=""
+              >
+                <i class="ph ph-caret-left"></i>
+              </button>
+
+              <button
+                type="button"
+                id="testimonials-three-next"
+                class="slick-next slick-arrow flex-center rounded-circle border border-gray-100 hover-border-main-600 text-xl hover-bg-main-600 hover-text-white transition-1 w-48 h-48"
+                style=""
+              >
+                <i class="ph ph-caret-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+  <!-- ===================================== Testimonials Section Three End ================================= -->
+
+  <!-- ===================================== Event Section Start ================================= -->
+
+  <!-- <section class="event py-120 overflow-hidden">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-8 pe-lg-5">
+            <div class="section-heading style-left">
+              <div
+                class="flex-align d-inline-flex gap-8 mb-16 wow bounceInDown"
+              >
+                <span class="text-main-600 text-2xl d-flex"
+                  ><i class="ph-bold ph-book-open"></i
+                ></span>
+
+                <h5 class="text-main-600 mb-0">Upcoming Events</h5>
+              </div>
+
+              <h2 class="mb-24 wow bounceInRight">Join Our Upcoming Events</h2>
+
+              <p class="text-neutral-500 text-line-4 wow bounceInUp">
+                Join us for a variety of exciting events that cater to your
+                interests and learning needs. Our events are designed to inspire
+                and educate
+              </p>
+            </div>
+
+            <div
+              class="event-item-wrapper overflow-x-auto scroll-sm scroll-sm-horizontal pb-4"
+            >
+              <div
+                class="event-item bg-main-25 rounded-12 p-24 d-flex align-items-center border border-neutral-20 min-width-max-content hover-bg-main-600 hover-border-main-600 hover-text-white transition-1 mb-24"
+                data-aos="fade-up-left"
+                data-aos-duration="200"
+              >
+                <div class="">
+                  <h3 class="mb-8 text-main-600">25</h3>
+
+                  <span class="text-neutral-500">May, 2024</span>
+                </div>
+
+                <span
+                  class="border border-neutral-40 border-dashed h-72"
+                ></span>
+
+                <div class="">
+                  <div class="flex-between gap-16 flex-wrap mb-16">
+                    <div class="flex-align gap-8">
+                      <span class="text-neutral-700 text-lg d-flex"
+                        ><i class="ph-bold ph-clock"></i
+                      ></span>
+
+                      <span class="text-neutral-700 text-lg fw-normal"
+                        >02:30:am to 04:25:pm</span
+                      >
+                    </div>
+
+                    <div class="flex-align gap-8">
+                      <span class="text-neutral-700 text-lg d-flex"
+                        ><i class="ph-bold ph-map-trifold"></i
+                      ></span>
+
+                      <span class="text-neutral-700 text-lg fw-normal"
+                        >New York</span
+                      >
+                    </div>
+                  </div>
+
+                  <h4 class="mt-12 mb-0">Community Service Events</h4>
+                </div>
+
+                <span
+                  class="border border-neutral-40 border-dashed h-72"
+                ></span>
+
+                <div class="flex-shrink-0">
+                  <a
+                    href="about.html"
+                    class="btn btn-outline-main rounded-pill flex-align d-inline-flex gap-8"
+                  >
+                    Join Now
+
+                    <i class="ph-bold ph-arrow-up-right d-flex text-lg"></i>
+                  </a>
+                </div>
+              </div>
+
+              <div
+                class="event-item bg-main-25 rounded-12 p-24 d-flex align-items-center border border-neutral-20 min-width-max-content hover-bg-main-600 hover-border-main-600 hover-text-white transition-1 mb-24"
+                data-aos="fade-up-left"
+                data-aos-duration="400"
+              >
+                <div class="">
+                  <h3 class="mb-8 text-main-600">12</h3>
+
+                  <span class="text-neutral-500">Jun, 2024</span>
+                </div>
+
+                <span
+                  class="border border-neutral-40 border-dashed h-72"
+                ></span>
+
+                <div class="">
+                  <div class="flex-between gap-16 flex-wrap mb-16">
+                    <div class="flex-align gap-8">
+                      <span class="text-neutral-700 text-lg d-flex"
+                        ><i class="ph-bold ph-clock"></i
+                      ></span>
+
+                      <span class="text-neutral-700 text-lg fw-normal"
+                        >02:30:am to 04:25:pm</span
+                      >
+                    </div>
+
+                    <div class="flex-align gap-8">
+                      <span class="text-neutral-700 text-lg d-flex"
+                        ><i class="ph-bold ph-map-trifold"></i
+                      ></span>
+
+                      <span class="text-neutral-700 text-lg fw-normal"
+                        >New York</span
+                      >
+                    </div>
+                  </div>
+
+                  <h4 class="mt-12 mb-0">Sports & Health Promotion</h4>
+                </div>
+
+                <span
+                  class="border border-neutral-40 border-dashed h-72"
+                ></span>
+
+                <div class="flex-shrink-0">
+                  <a
+                    href="about.html"
+                    class="btn btn-outline-main rounded-pill flex-align d-inline-flex gap-8"
+                  >
+                    Join Now
+
+                    <i class="ph-bold ph-arrow-up-right d-flex text-lg"></i>
+                  </a>
+                </div>
+              </div>
+
+              <div
+                class="event-item bg-main-25 rounded-12 p-24 d-flex align-items-center border border-neutral-20 min-width-max-content hover-bg-main-600 hover-border-main-600 hover-text-white transition-1 mb-0"
+                data-aos="fade-up-left"
+                data-aos-duration="500"
+              >
+                <div class="">
+                  <h3 class="mb-8 text-main-600">29</h3>
+
+                  <span class="text-neutral-500">Jul, 2024</span>
+                </div>
+
+                <span
+                  class="border border-neutral-40 border-dashed h-72"
+                ></span>
+
+                <div class="">
+                  <div class="flex-between gap-16 flex-wrap mb-16">
+                    <div class="flex-align gap-8">
+                      <span class="text-neutral-700 text-lg d-flex"
+                        ><i class="ph-bold ph-clock"></i
+                      ></span>
+
+                      <span class="text-neutral-700 text-lg fw-normal"
+                        >02:30:am to 04:25:pm</span
+                      >
+                    </div>
+
+                    <div class="flex-align gap-8">
+                      <span class="text-neutral-700 text-lg d-flex"
+                        ><i class="ph-bold ph-map-trifold"></i
+                      ></span>
+
+                      <span class="text-neutral-700 text-lg fw-normal"
+                        >New York</span
+                      >
+                    </div>
+                  </div>
+
+                  <h4 class="mt-12 mb-0">Career Fair Festivals</h4>
+                </div>
+
+                <span
+                  class="border border-neutral-40 border-dashed h-72"
+                ></span>
+
+                <div class="flex-shrink-0">
+                  <a
+                    href="about.html"
+                    class="btn btn-outline-main rounded-pill flex-align d-inline-flex gap-8"
+                  >
+                    Join Now
+
+                    <i class="ph-bold ph-arrow-up-right d-flex text-lg"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <a
+              href="course.html"
+              class="btn btn-outline-main rounded-pill flex-align d-inline-flex gap-8 mt-40"
+            >
+              See All Events
+
+              <i class="ph-bold ph-arrow-up-right d-flex text-lg"></i>
+            </a>
+          </div>
+
+          <div class="col-lg-4">
+            <div
+              class="event-video rounded-16 overflow-hidden position-relative h-100 wow bounceIn"
+            >
+              <img
+                src="assets/images/thumbs/event-video-img.png"
+                class="rounded-16 cover-img"
+                alt=""
+                data-tilt
+                data-tilt-max="8"
+                data-tilt-speed="500"
+                data-tilt-perspective="5000"
+                data-tilt-transition="1s"
+                data-tilt-full-page-listening
+              />
+
+              <a
+                href="https://www.youtube.com/watch?v=MFLVmAE4cqg"
+                class="play-button position-absolute start-50 top-50 translate-middle z-1 w-72 h-72 flex-center bg-main-two-600 text-white rounded-circle text-2xl"
+              >
+                <i class="ph-fill ph-play"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+  <!-- ===================================== Event Section End ================================= -->
+
+  <!-- =========================== Blog Two SEction Start ============================= -->
+
+  <!-- <section class="blog-two py-120 bg-main-25">
+      <div class="container">
+        <div class="section-heading text-center">
+          <div class="flex-align d-inline-flex gap-8 mb-16 wow bounceInDown">
+            <span class="text-main-600 text-2xl d-flex"
+              ><i class="ph-bold ph-book-open"></i
+            ></span>
+
+            <h5 class="text-main-600 mb-0">Latest News</h5>
+          </div>
+
+          <h2 class="mb-24 wow bounceIn">Stay Informed, Stay Inspired</h2>
+
+          <p class="wow bounceInUp">
+            Welcome to our blog, where we share insights, stories, and updates
+            on topics ranging from education
+          </p>
+        </div>
+
+        <div class="blog-two-slider">
+          <div
+            class="scale-hover-item bg-white rounded-16 p-12 h-100"
+            data-aos="fade-up"
+            data-aos-duration="200"
+          >
+            <div
+              class="course-item__thumb rounded-12 overflow-hidden position-relative"
+            >
+              <a href="blog-details.html" class="w-100 h-100">
+                <img
+                  src="assets/images/thumbs/blog-two-img1.png"
+                  alt="Course Image"
+                  class="scale-hover-item__img rounded-12 cover-img transition-2"
+                />
+              </a>
+
+              <div
+                class="position-absolute inset-inline-end-0 inset-block-end-0 me-16 mb-16 py-12 px-24 rounded-8 bg-main-three-600 text-white fw-medium"
+              >
+                <h3 class="mb-0 text-white fw-medium">21</h3>
+
+                DEC
+              </div>
+            </div>
+
+            <div class="pt-32 pb-24 px-16 position-relative">
+              <h4 class="mb-28">
+                <a href="blog-details.html" class="link text-line-2"
+                  >Navigating the Job Market: Advice for Graduates</a
+                >
+              </h4>
+
+              <div class="flex-align gap-14 flex-wrap my-20">
+                <div class="flex-align gap-8">
+                  <span class="text-neutral-500 text-2xl d-flex"
+                    ><i class="ph ph-user-circle"></i
+                  ></span>
+
+                  <span class="text-neutral-500 text-lg">By Admin</span>
+                </div>
+
+                <span class="w-8 h-8 bg-neutral-100 rounded-circle"></span>
+
+                <div class="flex-align gap-8">
+                  <span class="text-neutral-500 text-2xl d-flex"
+                    ><i class="ph-bold ph-eye"></i
+                  ></span>
+
+                  <span class="text-neutral-500 text-lg">1.6k</span>
+                </div>
+
+                <span class="w-8 h-8 bg-neutral-100 rounded-circle"></span>
+
+                <div class="flex-align gap-8">
+                  <span class="text-neutral-500 text-2xl d-flex"
+                    ><i class="ph ph-chat-dots"></i
+                  ></span>
+
+                  <span class="text-neutral-500 text-lg">24</span>
+                </div>
+              </div>
+
+              <div
+                class="flex-between gap-8 pt-24 border-top border-neutral-50 mt-28 border-dashed border-0"
+              >
+                <a
+                  href="blog-details.html"
+                  class="flex-align gap-8 text-main-600 hover-text-decoration-underline transition-1 fw-semibold"
+                  tabindex="0"
+                >
+                  Read More
+
+                  <i class="ph ph-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="scale-hover-item bg-white rounded-16 p-12 h-100"
+            data-aos="fade-up"
+            data-aos-duration="400"
+          >
+            <div
+              class="course-item__thumb rounded-12 overflow-hidden position-relative"
+            >
+              <a href="blog-details.html" class="w-100 h-100">
+                <img
+                  src="assets/images/thumbs/blog-two-img2.png"
+                  alt="Course Image"
+                  class="scale-hover-item__img rounded-12 cover-img transition-2"
+                />
+              </a>
+
+              <div
+                class="position-absolute inset-inline-end-0 inset-block-end-0 me-16 mb-16 py-12 px-24 rounded-8 bg-main-three-600 text-white fw-medium"
+              >
+                <h3 class="mb-0 text-white fw-medium">21</h3>
+
+                DEC
+              </div>
+            </div>
+
+            <div class="pt-32 pb-24 px-16 position-relative">
+              <h4 class="mb-28">
+                <a href="blog-details.html" class="link text-line-2"
+                  >The Importance of Diversity in Higher Education</a
+                >
+              </h4>
+
+              <div class="flex-align gap-14 flex-wrap my-20">
+                <div class="flex-align gap-8">
+                  <span class="text-neutral-500 text-2xl d-flex"
+                    ><i class="ph ph-user-circle"></i
+                  ></span>
+
+                  <span class="text-neutral-500 text-lg">By Admin</span>
+                </div>
+
+                <span class="w-8 h-8 bg-neutral-100 rounded-circle"></span>
+
+                <div class="flex-align gap-8">
+                  <span class="text-neutral-500 text-2xl d-flex"
+                    ><i class="ph-bold ph-eye"></i
+                  ></span>
+
+                  <span class="text-neutral-500 text-lg">1.6k</span>
+                </div>
+
+                <span class="w-8 h-8 bg-neutral-100 rounded-circle"></span>
+
+                <div class="flex-align gap-8">
+                  <span class="text-neutral-500 text-2xl d-flex"
+                    ><i class="ph ph-chat-dots"></i
+                  ></span>
+
+                  <span class="text-neutral-500 text-lg">24</span>
+                </div>
+              </div>
+
+              <div
+                class="flex-between gap-8 pt-24 border-top border-neutral-50 mt-28 border-dashed border-0"
+              >
+                <a
+                  href="blog-details.html"
+                  class="flex-align gap-8 text-main-600 hover-text-decoration-underline transition-1 fw-semibold"
+                  tabindex="0"
+                >
+                  Read More
+
+                  <i class="ph ph-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="scale-hover-item bg-white rounded-16 p-12 h-100"
+            data-aos="fade-up"
+            data-aos-duration="600"
+          >
+            <div
+              class="course-item__thumb rounded-12 overflow-hidden position-relative"
+            >
+              <a href="blog-details.html" class="w-100 h-100">
+                <img
+                  src="assets/images/thumbs/blog-two-img3.png"
+                  alt="Course Image"
+                  class="scale-hover-item__img rounded-12 cover-img transition-2"
+                />
+              </a>
+
+              <div
+                class="position-absolute inset-inline-end-0 inset-block-end-0 me-16 mb-16 py-12 px-24 rounded-8 bg-main-three-600 text-white fw-medium"
+              >
+                <h3 class="mb-0 text-white fw-medium">21</h3>
+
+                DEC
+              </div>
+            </div>
+
+            <div class="pt-32 pb-24 px-16 position-relative">
+              <h4 class="mb-28">
+                <a href="blog-details.html" class="link text-line-2"
+                  >10 Tips for Successful Online Learning</a
+                >
+              </h4>
+
+              <div class="flex-align gap-14 flex-wrap my-20">
+                <div class="flex-align gap-8">
+                  <span class="text-neutral-500 text-2xl d-flex"
+                    ><i class="ph ph-user-circle"></i
+                  ></span>
+
+                  <span class="text-neutral-500 text-lg">By Admin</span>
+                </div>
+
+                <span class="w-8 h-8 bg-neutral-100 rounded-circle"></span>
+
+                <div class="flex-align gap-8">
+                  <span class="text-neutral-500 text-2xl d-flex"
+                    ><i class="ph-bold ph-eye"></i
+                  ></span>
+
+                  <span class="text-neutral-500 text-lg">1.6k</span>
+                </div>
+
+                <span class="w-8 h-8 bg-neutral-100 rounded-circle"></span>
+
+                <div class="flex-align gap-8">
+                  <span class="text-neutral-500 text-2xl d-flex"
+                    ><i class="ph ph-chat-dots"></i
+                  ></span>
+
+                  <span class="text-neutral-500 text-lg">24</span>
+                </div>
+              </div>
+
+              <div
+                class="flex-between gap-8 pt-24 border-top border-neutral-50 mt-28 border-dashed border-0"
+              >
+                <a
+                  href="blog-details.html"
+                  class="flex-align gap-8 text-main-600 hover-text-decoration-underline transition-1 fw-semibold"
+                  tabindex="0"
+                >
+                  Read More
+
+                  <i class="ph ph-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="scale-hover-item bg-white rounded-16 p-12 h-100"
+            data-aos="fade-up"
+            data-aos-duration="800"
+          >
+            <div
+              class="course-item__thumb rounded-12 overflow-hidden position-relative"
+            >
+              <a href="blog-details.html" class="w-100 h-100">
+                <img
+                  src="assets/images/thumbs/blog-two-img2.png"
+                  alt="Course Image"
+                  class="scale-hover-item__img rounded-12 cover-img transition-2"
+                />
+              </a>
+
+              <div
+                class="position-absolute inset-inline-end-0 inset-block-end-0 me-16 mb-16 py-12 px-24 rounded-8 bg-main-three-600 text-white fw-medium"
+              >
+                <h3 class="mb-0 text-white fw-medium">21</h3>
+
+                DEC
+              </div>
+            </div>
+
+            <div class="pt-32 pb-24 px-16 position-relative">
+              <h4 class="mb-28">
+                <a href="blog-details.html" class="link text-line-2"
+                  >The Importance of Diversity in Higher Education</a
+                >
+              </h4>
+
+              <div class="flex-align gap-14 flex-wrap my-20">
+                <div class="flex-align gap-8">
+                  <span class="text-neutral-500 text-2xl d-flex"
+                    ><i class="ph ph-user-circle"></i
+                  ></span>
+
+                  <span class="text-neutral-500 text-lg">By Admin</span>
+                </div>
+
+                <span class="w-8 h-8 bg-neutral-100 rounded-circle"></span>
+
+                <div class="flex-align gap-8">
+                  <span class="text-neutral-500 text-2xl d-flex"
+                    ><i class="ph-bold ph-eye"></i
+                  ></span>
+
+                  <span class="text-neutral-500 text-lg">1.6k</span>
+                </div>
+
+                <span class="w-8 h-8 bg-neutral-100 rounded-circle"></span>
+
+                <div class="flex-align gap-8">
+                  <span class="text-neutral-500 text-2xl d-flex"
+                    ><i class="ph ph-chat-dots"></i
+                  ></span>
+
+                  <span class="text-neutral-500 text-lg">24</span>
+                </div>
+              </div>
+
+              <div
+                class="flex-between gap-8 pt-24 border-top border-neutral-50 mt-28 border-dashed border-0"
+              >
+                <a
+                  href="blog-details.html"
+                  class="flex-align gap-8 text-main-600 hover-text-decoration-underline transition-1 fw-semibold"
+                  tabindex="0"
+                >
+                  Read More
+
+                  <i class="ph ph-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex-align gap-16 mt-40 justify-content-center">
+          <button
+            type="button"
+            id="blog-two-prev"
+            class="slick-prev slick-arrow flex-center rounded-circle border border-gray-100 hover-border-main-600 text-xl hover-bg-main-600 hover-text-white transition-1 w-48 h-48"
+            style=""
+          >
+            <i class="ph ph-caret-left"></i>
+          </button>
+
+          <button
+            type="button"
+            id="blog-two-next"
+            class="slick-next slick-arrow flex-center rounded-circle border border-gray-100 hover-border-main-600 text-xl hover-bg-main-600 hover-text-white transition-1 w-48 h-48"
+            style=""
+          >
+            <i class="ph ph-caret-right"></i>
+          </button>
+        </div>
+      </div>
+    </section> -->
+
+  <!-- =========================== Blog Two SEction End ============================= -->
+
+  <!-- ========================== Brand Section Start =========================== -->
+
+  <!-- <div
+      class="brand wow fadeInUpBig"
+      data-wow-duration="1s"
+      data-wow-delay=".5s"
+    >
+      <div class="container container--lg">
+        <div class="brand-box py-80 px-16">
+          <h5 class="mb-40 text-center text-neutral-500">
+            TRUSTED BY OVER 17,300 GREAT TEAMS
+          </h5>
+
+          <div class="container">
+            <div class="brand-slider">
+              <div class="brand-slider__item px-24">
+                <img src="assets/images/thumbs/brand-img1.png" alt="" />
+              </div>
+
+              <div class="brand-slider__item px-24">
+                <img src="assets/images/thumbs/brand-img2.png" alt="" />
+              </div>
+
+              <div class="brand-slider__item px-24">
+                <img src="assets/images/thumbs/brand-img3.png" alt="" />
+              </div>
+
+              <div class="brand-slider__item px-24">
+                <img src="assets/images/thumbs/brand-img4.png" alt="" />
+              </div>
+
+              <div class="brand-slider__item px-24">
+                <img src="assets/images/thumbs/brand-img5.png" alt="" />
+              </div>
+
+              <div class="brand-slider__item px-24">
+                <img src="assets/images/thumbs/brand-img6.png" alt="" />
+              </div>
+
+              <div class="brand-slider__item px-24">
+                <img src="assets/images/thumbs/brand-img7.png" alt="" />
+              </div>
+
+              <div class="brand-slider__item px-24">
+                <img src="assets/images/thumbs/brand-img3.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+  <!-- ========================== Brand Section End =========================== -->
+
+  <!-- ==================== Footer Start Here ==================== -->
+
+  <footer class="footer bg-neutral-900 position-relative z-1" style="overflow-x: hidden;">
+    <img src="assets/images/shapes/shape2.png" alt="" class="shape five animation-scalation" />
+
+    <img src="assets/images/shapes/shape6.png" alt="" class="shape one animation-scalation" />
+
+    <div class="py-72">
+      <div class="container container-two">
+        <div class="row gy-5">
+          <div class="col-lg-3 col-sm-6 col-xs-6" data-aos="fade-up" data-aos-duration="800">
+            <div class="footer-item">
+              <h4 class="footer-item__title fw-medium text-white mb-32">
+                Contact Us
+              </h4>
+
+              <div class="flex-align gap-20 mb-24">
+                <span class="icon d-flex text-32 text-main-600"><i class="ph ph-phone"></i></span>
+
+                <div class="">
+                  <a href="tel:919068261443" class="text-white d-block hover-text-main-600 mb-4">9068261443</a>
+
+                  <a href="tel:919837213369" class="text-white d-block hover-text-main-600 mb-0">919837213369</a>
+                </div>
+              </div>
+
+              <div class="flex-align gap-20 mb-24">
+                <span class="icon d-flex text-32 text-main-600"><i class="ph ph-envelope-open"></i></span>
+
+                <div class="">
+                  <a href="mailto:hrunwh@gmail.com "
+                    class="text-white d-block hover-text-main-600 mb-4">hrunwh@gmail.com </a>
+                </div>
+              </div>
+
+              <div class="flex-align gap-20 mb-0">
+                <span class="icon d-flex text-32 text-main-600"><i class="ph ph-map-trifold"></i></span>
+
+                <div class="">
+                  <p style="color: white;" class="mb-0 paragraph">Village Sangaun Bhagwanpur, Dharkot Road, Thano,<br>
+                    Near Jolly Grant Airport, Dehradun (Uttrakhand) 248143</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6 col-xs-6" data-aos="fade-up" data-aos-duration="400">
+            <div class="footer-item">
+              <h4 class="footer-item__title fw-medium text-white mb-32">
+                About US
+              </h4>
+
+              <ul class="footer-menu">
+                <li class="mb-16">
+                  <a href="#" class="text-white hover-text-main-600 hover-text-decoration-underline">Chancellor's
+                    Message</a>
+                </li>
+
+                <li class="mb-16">
+                  <a href="#" class="text-white hover-text-main-600 hover-text-decoration-underline">Pro Chancellor's
+                    Message</a>
+                </li>
+
+                <li class="mb-16">
+                  <a href="#" class="text-white hover-text-main-600 hover-text-decoration-underline">Vice Chancellor's
+                    Message</a>
+                </li>
+
+                <li class="mb-16">
+                  <a href="#" class="text-white hover-text-main-600 hover-text-decoration-underline">Managing
+                    Chancellor's Message</a>
+                </li>
+
+                <li class="mb-0">
+                  <a href="#" class="text-white hover-text-main-600 hover-text-decoration-underline">Director General
+                    Message</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-sm-6 col-xs-6" data-aos="fade-up" data-aos-duration="600">
+            <div class="footer-item">
+              <h4 class="footer-item__title fw-medium text-white mb-32">
+                Admission
+              </h4>
+
+              <ul class="footer-menu">
+                <li class="mb-16">
+                  <a href="#" class="text-white hover-text-main-600 hover-text-decoration-underline">Admission Procedure
+                  </a>
+                </li>
+
+                <li class="mb-16">
+                  <a href="#" class="text-white hover-text-main-600 hover-text-decoration-underline">
+                    Bank Details </a>
+                </li>
+
+                <li class="mb-16">
+                  <a href="#" class="text-white hover-text-main-600 hover-text-decoration-underline">Fee Structure
+                  </a>
+                </li>
+
+
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-sm-6 col-xs-6" data-aos="fade-up" data-aos-duration="1200">
+            <div class="footer-item">
+              <h4 class="footer-item__title fw-medium text-white mb-32">
+                Follow Us
+              </h4>
+              <iframe
+                src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Funwhdehradun&tabs=timeline&width=300&height=250&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=291725552172351"
+                width="300" height="250" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                allowfullscreen="true"
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- bottom Footer -->
+      <div class="bottom-footer border-top border-dashed border-neutral-600 border-0 py-16">
+        <div class="container container-two">
+          <div class="bottom-footer__inner flex-between gap-16 flex-wrap">
+            <div class="footer-item__logo mb-0" data-aos="zoom-in-right">
+              <a href="index.html">
+                <img src="assets/images/thumbs/footernew.png" alt="" /></a>
+            </div>
+
+            <p class="text-white text-line-1 fw-normal" data-aos="zoom-in">
+              Copyright &copy; 2025
+              <span class="fw-semibold">UNWH</span>
+              | ERP & Website By: <a style="color: white;" href="https://uniedgesolutions.in/">UniEdge Solutions</a>
+            </p>
+
+            <ul class="social-list flex-align gap-24" data-aos="zoom-in-left">
+              <li class="social-list__item">
+                <a href="https://www.facebook.com/unwhdehradun" target="_blank"
+                  class="text-white text-2xl hover-text-main-two-600"><i class="ph-bold ph-facebook-logo"></i></a>
+              </li>
+
+              <li class="social-list__item">
+                <a href="https://x.com/unwhdehradun" target="_blank"
+                  class="text-white text-2xl hover-text-main-two-600">
+                  <i class="ph-bold ph-x-logo"></i></a>
+              </li>
+
+              <li class="social-list__item">
+                <a href="https://www.instagram.com/unwhdehradun/" target="_blank"
+                  class="text-white text-2xl hover-text-main-two-600"><i class="ph-bold ph-instagram-logo"></i></a>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== Footer End Here ==================== -->
+  <!-- clear cahce  -->
+
+ <!-- Mobile menu -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Mobile menu toggle
+      const mobileMenuBtn = document.querySelector('.toggle-mobileMenu');
+      const mobileMenu = document.querySelector('.mobile-menu');
+      const mobileOverlay = document.querySelector('.mobile-menu-overlay');
+      const mobileCloseBtn = document.querySelector('.mobile-menu-close');
+
+      mobileMenuBtn.addEventListener('click', function () {
+        mobileMenu.classList.add('active');
+        mobileOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      });
+
+      mobileCloseBtn.addEventListener('click', function () {
+        mobileMenu.classList.remove('active');
+        mobileOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+
+      mobileOverlay.addEventListener('click', function () {
+        mobileMenu.classList.remove('active');
+        mobileOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+
+      // Dropdown toggles
+      const dropdownToggles = document.querySelectorAll('.toggle-dropdown');
+
+      dropdownToggles.forEach(toggle => {
+        toggle.addEventListener('click', function () {
+          const dropdown = this.parentElement.querySelector('.mobile-dropdown-menu');
+          dropdown.classList.toggle('active');
+          this.classList.toggle('active');
+          const icon = this.querySelector('i');
+
+          if (dropdown.classList.contains('active')) {
+            icon.classList.remove('ph-caret-down');
+            icon.classList.add('ph-caret-up');
+          } else {
+            icon.classList.remove('ph-caret-up');
+            icon.classList.add('ph-caret-down');
+          }
+        });
+      });
+    });
+    </script>
+
+  <script src="cache-buster.js"></script>
+
+  <!-- Jquery js -->
+
+  <script src="assets/js/jquery-3.7.1.min.js"></script>
+
+  <!-- Bootstrap Bundle Js -->
+
+  <script src="assets/js/boostrap.bundle.min.js"></script>
+
+  <!-- select2 Js -->
+
+  <!-- <script src="assets/js/select2.min.js"></script> -->
+
+  <!-- Phosphor Icon Js -->
+
+  <script src="assets/js/phosphor-icon.js"></script>
+
+  <!-- Slick js -->
+
+  <script src="assets/js/slick.min.js"></script>
+
+  <!-- Slick js -->
+
+  <script src="assets/js/counter.min.js"></script>
+
+  <!-- magnific popup -->
+
+  <script src="assets/js/magnific-popup.min.js"></script>
+
+  <!-- Jquery Ui js -->
+
+  <script src="assets/js/jquery-ui.js"></script>
+
+  <!-- plyr Js -->
+
+  <script src="assets/js/plyr.js"></script>
+
+  <!-- vanilla Tilt -->
+
+  <!-- <script src="assets/js/vanilla-tilt.min.js"></script> -->
+
+  <!-- wow -->
+
+  <script src="assets/js/wow.min.js"></script>
+
+  <script src="assets/js/aos.js"></script>
+
+  <!-- main js -->
+
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    window.onload = function () {
+      const overlay = document.getElementById('popup1');
+      const popupBox = document.getElementById('popupBox');
+
+      // Show overlay
+      overlay.classList.add('active');
+
+      // Delay animation slightly to allow CSS transition to apply
+      setTimeout(() => {
+        popupBox.classList.add('show');
+      }, 100);
+    };
+
+    function closePopup() {
+      const overlay = document.getElementById('popup1');
+      const popupBox = document.getElementById('popupBox');
+
+      overlay.classList.remove('active');
+      popupBox.classList.remove('show');
+    }
+  </script>
+
+</body>
+
+</html>
