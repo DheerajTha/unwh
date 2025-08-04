@@ -1134,7 +1134,7 @@
             <!-- Academic Excellence -->
             <div class="col-lg-4 col-md-6 col-sm-6" data-aos="fade-up" data-aos-duration="400">
               <div
-                class="info-two-item flex-align gap-3 gap-md-4 animation-item h-60 border border-neutral-30 rounded-12 p-md-4 transition-all hover-scale"
+                class="info-two-item d-flex justify-content-center align-items-center flex-align gap-3 gap-md-4 animation-item h-60 border border-neutral-30 rounded-12 p-md-4 transition-all hover-scale"
                 style="background-color: #2a2e65; padding:40px 0px !important; ">
                 <span class="flex-shrink-0 icon-wrapper">
                   <i class="fa-solid fa-graduation-cap fa-xl animate__heartBeat " style="color: white;"></i>
@@ -1148,8 +1148,8 @@
             <!-- Career-Oriented Programs -->
             <div class="col-lg-4 col-md-6 col-sm-6" data-aos="fade-up" data-aos-duration="600">
               <div
-                class="info-two-item flex-align gap-3 gap-md-4 animation-item h-60 border border-neutral-30 rounded-12  p-3 p-md-4 transition-all hover-scale"
-                style="background-color: #bee0bd; padding:40px 0px !important; ">
+                class="info-two-item d-flex justify-content-center align-items-center flex-align gap-3 gap-md-4 animation-item h-60 border border-neutral-30 rounded-12  p-3 p-md-4 transition-all hover-scale"
+                style="background-color: #649dac; padding:40px 0px !important; ">
                 <span class="flex-shrink-0 icon-wrapper">
                   <i class="fa-solid fa-briefcase fa-xl animate__heartBeat  " style="color: white"></i>
                 </span>
@@ -1162,7 +1162,7 @@
             <!-- Campus Life Amidst Nature -->
             <div class="col-lg-4 col-md-6 col-sm-6" data-aos="fade-up" data-aos-duration="800">
               <div
-                class="info-two-item flex-align gap-3 gap-md-4 animation-item h-60 border border-neutral-30 rounded-12  p-3 p-md-4 transition-all hover-scale"
+                class="info-two-item d-flex justify-content-center align-items-center flex-align gap-3 gap-md-4 animation-item h-60 border border-neutral-30 rounded-12  p-3 p-md-4 transition-all hover-scale"
                 style="background-color: #2a2e65; padding:40px 0px !important; ">
                 <span class="flex-shrink-0 icon-wrapper">
                   <i class="fa-solid fa-tree fa-xl animate__heartBeat  " style="color: white"></i>
@@ -1365,7 +1365,7 @@
     <div class="container">
       <!-- Header Section -->
       <div class="header-section">
-        <h2 class="section-title mb-0">Featured Courses</h2>
+        <h2 class="section-title mb-0"> School</h2>
         <div class="nav-arrows">
           <button class="nav-arrow prev-arrow">←</button>
           <button class="nav-arrow next-arrow">→</button>
@@ -1416,15 +1416,14 @@
           </a>
         </div>
         <div class="course-card">
-          <a href="school-applied-social-sciences.html">
-            <div class="course-image-container">
-              <img src="assets/images/thumbs/Course-5.png" alt="Course 5" class="course-image">
-            </div>
-            <div class="course-content">
-              <h3 class="course-title">School of Applied Social Sciences & Humanities</h3>
+          <a href="school-applied-social-sciences.html"></a>
+          <div class="course-image-container">
+            <img src="assets/images/thumbs/Course-5.png" alt="Course 5" class="course-image">
+          </div>
+          <div class="course-content">
+            <h3 class="course-title">School of Applied Social Sciences & Humanities</h3>
 
-            </div>
-          </a>
+          </div>
         </div>
         <div class="course-card">
           <a href="school-skill-development.html">
@@ -1807,6 +1806,8 @@
 
       .tab-content {
         padding: 30px 20px;
+        display: flex;
+        flex-direction: column;
       }
 
       .content-box h2 {
@@ -2009,7 +2010,7 @@
               </div>
 
             </div>
-            <div class="text-center mt-10">
+            <div class="text-center mt-20">
               <a href="#" style="background-color: #ff6b00;" class="btn text-white">View All</a>
             </div>
           </div>
@@ -2029,9 +2030,13 @@
       <div class="section-header text-center my-40">
         <h2 class="section-title " style="color: black;">News & Events </h2>
       </div>
-      <div id="blog-container" class="row gy-4"></div>
+      <div id="blog-container" class="row gy-4 mb-40"></div>
     </div>
   </section>
+
+  <!-- <a href="blog-details.html?id=${blog.id}" class="w-100 h-100">
+                  <img src="${blog.image}" alt="Blog Image" class="scale-hover-item__img rounded-12 cover-img transition-2">
+                </a> -->
 
   <script>
     fetch('assets/data/blogs.json')
@@ -2045,18 +2050,19 @@
           <div class="col-lg-4 col-sm-6">
             <div class="blog-item scale-hover-item bg-main-25 rounded-16 p-12 h-100 border border-neutral-30">
               <div class="rounded-12 overflow-hidden position-relative">
-                <a href="blog-details.html?id=${blog.id}" class="w-100 h-100">
+                <a href="#" class="w-100 h-100">
                   <img src="${blog.image}" alt="Blog Image" class="scale-hover-item__img rounded-12 cover-img transition-2">
                 </a>
+                
               </div>
               <div class="p-24 pt-32">
                  <h4 class="mb-28">
-                  <a href="blog-details.html?id=${blog.id}" class="link text-line-2">${blog.title}</a>
+                  <a href="#" class="link text-line-2">${blog.title}</a>
                 </h4>
                  
                 <p class="text-neutral-500 text-line-2">${blog.description}</p>
                 <div class="pt-24 border-top border-neutral-50 mt-28 border-dashed border-0">
-                  <a href="blog-details.html?id=${blog.id}" class="flex-align gap-8 text-black hover-text-decoration-underline transition-1 fw-semibold">Read More <i class="ph ph-arrow-right"></i></a>
+                  <a href="#" class="flex-align gap-8 text-black hover-text-decoration-underline transition-1 fw-semibold">Read More <i class="ph ph-arrow-right"></i></a>
                 </div>
               </div>
             </div>
@@ -2071,78 +2077,8 @@
 
 
 
-  <!-- Contact Us  -->
-
-  <section class="contact-section py-80 bg-light" style="overflow-x: hidden;">
-    <div class="container">
-      <div class="section-header text-center mb-60">
-        <h2 class="section-title" style="color: black;">Contact Us</h2>
-        <p class="section-subtitle">The University of North West Himalayas</p>
-      </div>
-
-      <div class="row g-4 align-items-center">
-        <!-- Contact Info Column -->
-        <div class="col-lg-6 order-lg-1 order-2" data-aos="zoom-in-left">
-          <div class="contact-info-card bg-white p-40 rounded-16 h-100 shadow-sm">
-            <!-- Contact Card -->
-            <div class="contact-method mb-30 d-flex">
-              <div class="icon-box bg-primary-50 text-primary-600 mb-20 flex-shrink-0">
-                <i class="ph ph-phone fs-24"></i>
-              </div>
-              <div class="ms-24">
-                <h3 class="h5 mb-12">Phone</h3>
-                <p class="mb-8"> <a style="color: black;" href="tel:919068261443">+919927999506</a> </p>
-                <p class="mb-0"> <a style="color: black;" href="tel:919837213369">+919927999509</a> </p>
-              </div>
-            </div>
-
-
-            <!-- Email Card -->
-            <div class="contact-method mb-30 d-flex">
-              <div class="icon-box bg-success-50 text-success-600 mb-20 flex-shrink-0">
-                <i class="ph ph-envelope fs-24"></i>
-              </div>
-              <div class="ms-24">
-                <h3 class="h5 mb-12">Email</h3>
-                <p class="mb-8"><a style="color: black;" href="mailto:info1UNWH@gmail.com">info1UNWH@gmail.com</a></p>
-              </div>
-            </div>
-
-            <!-- Address Card -->
-            <div class="contact-method d-flex">
-              <div class="icon-box bg-warning-50 text-warning-600 mb-20 flex-shrink-0">
-                <i class="ph ph-map-pin fs-24"></i>
-              </div>
-              <div class="ms-24">
-                <h3 class="h5 mb-12">Address</h3>
-                <p class="mb-0 ">Village- Sangaon Bhagwanpur, Dharkot Road, Thano Dehradun – 248143, Uttarakhand, India
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Image Column -->
-        <div class="col-lg-6 order-lg-2 order-1" data-aos="zoom-in-right">
-          <div class="contact-image h-100 rounded-16 overflow-hidden">
-            <img
-              src=" https://www.shutterstock.com/image-photo/students-graduation-caps-sky-happiness-600nw-2475380851.jpg"
-              alt="University students" class="w-100 h-100 object-cover" style="min-height: 450px;">
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
 
   <!-- socail icons  -->
-
-
-  <!-- Fixed Social Media Buttons -->
-
-
-
-
   <!-- Fixed Left Side Button -->
   <div class="fixed-left-button" overflow-x: hidden;>
     <button class="left-side-button" title="ERP" style="background-color: #ff6b00;"><a
@@ -2712,27 +2648,33 @@
     });
   </script>
 
-  <!-- testimonials -->
+ 
 
   <script>
     const testimonials = [
       {
+        name: "Pallav Kumar Gopal",
+        degree: "MBA",
+        text: "These happy times at HRIT added an extra layer of richness to my educational journey. They served as a reminder that learning extends beyond the classroom walls, and that personal happiness is an integral part of the holistic college experience.",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSra33TXWFQcgtUWNap2aDvm97GZflRLYtxiA&s"
+      },
+      {
         name: "Riya Sharma",
         degree: "B.Sc. Environmental Sciences",
-        text: "Choosing UNwH for my higher education was the best decision I made. The faculty is incredibly supportive, the campus environment is peaceful, and I’ve grown both academically and personally. Studying amidst the Himalayas is truly a unique experience!",
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRI9lRck6miglY0SZF_BZ_sK829yiNskgYRUg&s"
+        text: "Choosing UNwH for my higher education was the best decision I made. The faculty is incredibly supportive, the campus environment is peaceful, and I've grown both academically and personally.",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSra33TXWFQcgtUWNap2aDvm97GZflRLYtxiA&s"
       },
-      {
-        name: " Rajat joshi",
+       {
+        name: "Raj Joshi",
         degree: "M.A. Himalayan Culture & History",
-        text: "As an international student, I felt welcomed and valued at The North West Himalayas University. The infrastructure is modern, the courses are industry-relevant, and the exposure I gained here has been phenomenal",
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRI9lRck6miglY0SZF_BZ_sK829yiNskgYRUg&s"
+        text: "As an international student, I felt welcomed and valued. The infrastructure is modern, the courses are industry-relevant, and the exposure I gained here has been phenomenal.",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSra33TXWFQcgtUWNap2aDvm97GZflRLYtxiA&s"
       },
       {
-        name: "Aarav Mehra",
+        name: "Aarav Mehra",
         degree: "BBA (Rural Development & Management)",
-        text: "UNwH is more than just a university — it’s a place that nurtures ambition. From top-notch labs and research opportunities to co-curricular activities and scenic surroundings, it offers the complete package.",
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRI9lRck6miglY0SZF_BZ_sK829yiNskgYRUg&s"
+        text: "This university is more than just an institution — it's a place that nurtures ambition. From top-notch labs to co-curricular activities, it offers the complete package.",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSra33TXWFQcgtUWNap2aDvm97GZflRLYtxiA&s"
       }
     ];
 
@@ -2740,41 +2682,41 @@
       const $slider = $('.testimonial-slider');
       testimonials.forEach(t => {
         $slider.append(`
-        <div class="testimonial-card">
-          <div class="testimonial-content">
-            <div class="quote-icon">"</div>
-            <p class="testimonial-text">${t.text}</p>
-            <div class="alumni-info">
-              <img src="${t.image}" class="testimonial-img" alt="${t.name}">
-              <div>
-                <h6 class="alumni-name">${t.name}</h6>
-                <small class="alumni-degree">${t.degree}</small>
+          <div class="testimonial-slide">
+            <div class="testimonial-image-container">
+              <img src="${t.image}" alt="${t.name}" class="testimonial-image">
+            </div>
+            <div class="testimonial-content">
+              <div class="testimonial-quote">
+                <p>${t.text}</p>
+              </div>
+              <div class="testimonial-author">
+                <h4>${t.name}</h4>
+                <p class="degree">${t.degree}</p>
               </div>
             </div>
           </div>
-        </div>
-      `);
+        `);
       });
 
       $('.testimonial-slider').slick({
         dots: true,
         arrows: false,
-        prevArrow: '<button type="button" class="slick-prev"><i class="bi bi-chevron-left">Prev</i></button>',
-        nextArrow: '<button type="button" class="slick-next"><i class="bi bi-chevron-right">Next</i></button>',
         infinite: true,
-        speed: 600,
+        speed: 500,
         slidesToShow: 1,
         autoplay: true,
-        autoplaySpeed: 6000,
+        autoplaySpeed: 8000,
         pauseOnHover: true,
-        fade: true,
-        cssEase: 'cubic-bezier(0.645, 0.045, 0.355, 1)',
+        fade: false,
+        cssEase: 'ease-in-out',
         customPaging: function (slider, i) {
           return `<button type="button" class="number-dot">${i + 1}</button>`;
         }
       });
     });
-  </script>
+</script>
+
 
   <!-- Mobile menu -->
   <script>

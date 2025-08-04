@@ -1,12 +1,12 @@
 [
   {
     "id": 1,
-    "title": "Top 10 Tips for Online Learning Success",
+    "title": "World Environment Day Celebrated at UNwH – 5th June 2025",
     "category": "Online",
     "author": "Jeswal",
     "date": "12 May, 24",
-    "image": "assets/images/thumbs/blog-img1.png",
-    "description": "This blog post provides practical tips and strategies to help students succeed in their online learning journey.",
+    "image": "assets/images/thumbs/news1.png",
+    "description": "The university campus came alive with green spirit as students and faculty joined hands to celebrate the 1st Environment Day at UNwH. Plantation drives, poster-making, and awareness talks were held to promote sustainable living and environmental responsibility.A special guest lecture on Climate Change and Youth Responsibility was also organized, inspiring students to take actionable steps toward a greener tomorrow. The event concluded with a pledge to reduce plastic use and protect natural resources.",
     "highlightTitle": "Create a Dedicated Study Space",
     "points": [
       "Ensure your study area is quiet and distraction-free.",
@@ -24,12 +24,12 @@
   },
   {
     "id": 2,
-    "title": "Why Time Management is Crucial for Students",
+    "title": "International Yoga Day Observed with Enthusiasm – 21st June 2025",
     "category": "Productivity",
     "author": "Jeswal",
     "date": "15 May, 24",
-    "image": "assets/images/thumbs/blog-img2.png",
-    "description": "Learn how time management can transform student productivity, reduce stress, and improve academic performance.",
+    "image": "assets/images/thumbs/news3.png",
+    "description": "UNwH celebrated International Yoga Day with a rejuvenating yoga session led by trained instructors on the lush campus lawns. Students, faculty, and staff participated with great energy, embracing the theme of “Yoga for Well-being” amidst the tranquil Himalayan surroundings.The event also featured breathing and meditation exercises, helping participants experience mental clarity and inner peace. Informative sessions on yoga’s role in managing stress and improving lifestyle were appreciated by all",
     "highlightTitle": "Master the Clock",
     "points": [
       "Create a weekly plan with priorities.",
@@ -47,12 +47,12 @@
   },
   {
     "id": 3,
-    "title": "How to Stay Motivated During Online Courses",
+    "title": "Guru Purnima Celebration Honours Teachers – 10th July 2025",
     "category": "Self-Development",
     "author": "Jeswal",
     "date": "20 May, 24",
-    "image": "assets/images/thumbs/blog-img3.png",
-    "description": "Staying motivated in online education is tough. Here are methods to keep going, even when you feel like quitting.",
+    "image": "assets/images/thumbs/news2.png",
+    "description": "In a heartfelt tribute to the guiding lights of education, UNwH celebrated Guru Purnima with cultural performances, speeches, and ceremonial expressions of gratitude. The event strengthened the student-teacher bond and highlighted the value of mentorship in learning.Students performed traditional songs and presented handmade cards and flowers to their mentors. The celebration ended with blessings from the faculty and motivational words from the university leadership.",
     "highlightTitle": "Find Your Purpose",
     "points": [
       "Set clear short-term goals weekly.",
@@ -67,28 +67,5 @@
       "Remind yourself of the ‘why’ behind your learning."
     ],
     "content": "Motivation fluctuates, especially when studying remotely. Start by clearly understanding why you are taking the course. Break goals into smaller, achievable steps and celebrate wins. A motivation journal, positive learning environment, and regular interaction with peers can keep your energy high. Also, consume positive content—videos, books, and speakers that inspire you. Remember: discipline will carry you when motivation fades. Stay consistent and always focus on the bigger picture."
-  },
-  {
-    "id": 4,
-    "title": "5 Common Mistakes to Avoid in Online Learning",
-    "category": "Awareness",
-    "author": "Jeswal",
-    "date": "25 May, 24",
-    "image": "assets/images/thumbs/blog-img3.png",
-    "description": "Online learning offers flexibility but also traps. Learn the mistakes that slow down your progress—and how to fix them.",
-    "highlightTitle": "Learn Smart, Not Hard",
-    "points": [
-      "Not setting a fixed study routine.",
-      "Passive video watching without note-taking.",
-      "Ignoring interaction in group activities.",
-      "Leaving assignments till the last minute.",
-      "Neglecting physical & mental health.",
-      "Relying only on course material.",
-      "Skipping self-assessment and revision.",
-      "Lack of accountability partners.",
-      "Multitasking while attending classes.",
-      "Not asking for help when confused."
-    ],
-    "content": "The convenience of online learning can sometimes lead to careless habits. Students often skip routines, delay work, or underestimate participation. The key is structure. Build a timetable, take notes actively, and engage with classmates. Don’t ignore your health—breaks, hydration, and sleep matter. Ask questions and revisit concepts for retention. Online learning works best when treated like real classroom learning—with even more responsibility. Avoid these mistakes to achieve meaningful results."
   }
 ]

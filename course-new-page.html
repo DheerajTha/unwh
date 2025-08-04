@@ -97,93 +97,63 @@
             background-color: #0b0f1e;
         }
 
-        .course-description {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: auto;
-            padding: 30px 20px;
-            line-height: 1.7;
-            color: #333;
+        .about-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            align-items: flex-start;
+            justify-content: space-between;
+            padding: 2rem 1rem;
+        }
+
+        .course-description,
+        .leadership-image {
+            flex: 1;
+            min-width: 300px;
+            max-width: 100%;
         }
 
         .course-description p {
-            margin-bottom: 20px;
-            font-size: 16px;
-            text-align: justify;
-        }
-
-
-
-        .leadership-card {
-            display: flex;
-            gap: 30px;
-            align-items: center;
-            margin-bottom: 60px;
-            flex-wrap: wrap;
-        }
-
-        .leadership-card.reverse {
-            flex-direction: row-reverse;
+            letter-spacing: 1px;
+            word-spacing: 3px;
+            line-height: 1.8;
+            font-size: 1rem;
+            margin-bottom: 1rem;
         }
 
         .leadership-image {
-            flex: 1 1 300px;
+            text-align: center;
         }
 
         .leadership-image img {
-            width: 100%;
             max-width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            height: auto;
+            border-radius: 8px;
         }
 
-        .leadership-content {
-            flex: 1 1 500px;
-        }
-
-        .leadership-content h2 {
-            font-size: 28px;
-            color: #333;
-            margin-bottom: 10px;
-        }
-
-        .leadership-content ul {
-            padding-left: 20px;
-            margin-top: 10px;
-        }
-
-        .leadership-content li {
-            margin-bottom: 10px;
-            line-height: 1.6;
-            color: #444;
-        }
-
-
-        .leadership-content h4 {
-            font-size: 18px;
-            color: #666;
-            margin-bottom: 20px;
-        }
-
-        .leadership-content p {
-            font-size: 16px;
-            color: #444;
-            line-height: 1.7;
-            margin-bottom: 15px;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-
-            .leadership-card,
-            .leadership-card.reverse {
+        /* Optional: better mobile spacing */
+        @media (max-width: 576px) {
+            .about-section {
                 flex-direction: column;
             }
 
-            .leadership-image,
-            .leadership-content {
-                flex: 1 1 100%;
+            .course-description p {
+                font-size: 0.95rem;
             }
         }
+
+        @media (max-width: 768px) {
+            .about-section {
+                flex-direction: column;
+            }
+
+            .course-description p {
+                font-size: 0.95rem;
+            }
+        }
+
+
+
 
 
         .main-wrapper {
@@ -320,7 +290,7 @@
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
         }
 
-         
+
 
         .highlight-box h3 {
             font-size: 22px;
@@ -1397,20 +1367,20 @@
             <div class="course-card">
                 <div class="course-header">
                     <span class="icon">🎓</span>
-                    <h2><span class="highlight">B.Tech.</span></h2>
+                    <h2 style="color: black;"> B.Tech </h2>
                 </div>
                 <p class="course-subtitle">Computer Science & Engineering</p>
 
                 <div class="course-info">
-                    <div class="info-box dark-red">
+                    <div class="info-box " style="background-color: #2e3267;">
                         <p class="label">DURATION</p>
                         <p>4 Years</p>
                     </div>
-                    <div class="info-box orange">
+                    <div class="info-box orange" style="background-color: #649dac;">
                         <p class="label">DURATION</p>
                         <p>4 Years</p>
                     </div>
-                    <div class="info-box navy">
+                    <div class="info-box navy" style="background-color: #2e3267;">
                         <p class="label">DURATION</p>
                         <p>4 Years</p>
                     </div>
@@ -1420,105 +1390,45 @@
 
             <h2 class="text-center my-5 py-5">About Program</h2>
 
-            <section class="course-description">
-
-                <p style="letter-spacing: 2px; word-spacing: 5px;">
-                    Welcome to the University of North West Himalayas (UNwH), Dehradun — where innovation meets
-                    tradition.
-                    Nestled in the serene foothills of the Himalayas, UNwH is committed to nurturing talent and shaping
-                    the future of tomorrow's leaders. Our academic programs are designed to challenge the intellect,
-                    build character, and instill a lifelong passion for learning. With state-of-the-art infrastructure,
-                    experienced faculty, and a strong focus on holistic development, we empower young minds to create
-                    meaningful impact in an ever-changing world.
-                </p>
-
-                <p>
-                    Welcome to the University of North West Himalayas (UNwH), Dehradun — where innovation meets
-                    tradition.
-                    Nestled in the serene foothills of the Himalayas, UNwH is committed to nurturing talent and shaping
-                    the future of tomorrow's leaders. Our academic programs are designed to challenge the intellect,
-                    build character, and instill a lifelong passion for learning. With state-of-the-art infrastructure,
-                    experienced faculty, and a strong focus on holistic development, we empower young minds to create
-                    meaningful impact in an ever-changing world.
-                </p>
-
-                <p>
-                    Welcome to the University of North West Himalayas (UNwH), Dehradun — where innovation meets
-                    tradition.
-                    Nestled in the serene foothills of the Himalayas, UNwH is committed to nurturing talent and shaping
-                    the future of tomorrow's leaders. Our academic programs are designed to challenge the intellect,
-                    build character, and instill a lifelong passion for learning. With state-of-the-art infrastructure,
-                    experienced faculty, and a strong focus on holistic development, we empower young minds to create
-                    meaningful impact in an ever-changing world.
-                </p>
-
-                <p>
-                    Welcome to the University of North West Himalayas (UNwH), Dehradun — where innovation meets
-                    tradition.
-                    Nestled in the serene foothills of the Himalayas, UNwH is committed to nurturing talent and shaping
-                    the future of tomorrow's leaders. Our academic programs are designed to challenge the intellect,
-                    build character, and instill a lifelong passion for learning. With state-of-the-art infrastructure,
-                    experienced faculty, and a strong focus on holistic development, we empower young minds to create
-                    meaningful impact in an ever-changing world.
-                </p>
-            </section>
-
-            <!-- another section -->
-
-            <section class="leadership-section">
-                <div class="container">
-
-                    <div class="leadership-card reverse">
-                        <div class="leadership-image">
-                            <img src="assets/images/thumbs/class.png" alt="Career UNWH">
-                        </div>
-                        <div class="leadership-content">
-                            <h2>Career</h2>
-
-                            <ul>
-                                <li>📌 <strong>Core Focus:</strong> Design, construction, and maintenance of
-                                    infrastructure like roads, bridges, dams, buildings, and water systems.</li>
-                                <li>📌 <strong>Strong Foundation:</strong> Based on principles of Mathematics, Physics,
-                                    and Material Science for structural precision and sustainability.</li>
-                                <li>📌 <strong>Practical Skills:</strong> Hands-on experience through projects and
-                                    internships to apply theoretical knowledge.</li>
-                                <li>📌 <strong>Industry Connections:</strong> Collaborations with leading companies for
-                                    real-world exposure and job opportunities.</li>
-                                <li>📌 <strong>Entrepreneurial Spirit:</strong> Encouraging innovative ideas and
-                                    fostering entrepreneurial mindset among students.</li>
-                                <li>📌 <strong>Global Perspective:</strong> Exposure to international standards and best
-                                    practices in engineering education.</li>
-                            </ul>
-
-                        </div>
-                    </div>
 
 
+            <section class="about-section d-flex flex-wrap gap-4">
+                <div class="course-description">
+                    <p style="letter-spacing: 2px; word-spacing: 5px;">
+                        Welcome to the University of North West Himalayas (UNwH), Dehradun — where innovation meets
+                        tradition.
+                        Nestled in the serene foothills of the Himalayas, UNwH is committed to nurturing talent and
+                        shaping the future of tomorrow's leaders.
+                        Our academic programs are designed to challenge the intellect, build character, and instill a
+                        lifelong passion for learning.
+                        With state-of-the-art infrastructure, experienced faculty, and a strong focus on holistic
+                        development, we empower young minds to create meaningful impact in an ever-changing world.
+                    </p>
+
+                    <p>
+                        Welcome to the University of North West Himalayas (UNwH), Dehradun — where innovation meets
+                        tradition.
+                        Nestled in the serene foothills of the Himalayas, UNwH is committed to nurturing talent and
+                        shaping
+                        the future of tomorrow's leaders. Our academic programs are designed to challenge the intellect,
+                        build character, and instill a lifelong passion for learning. With state-of-the-art
+                        infrastructure,
+                        experienced faculty, and a strong focus on holistic development, we empower young minds to
+                        create
+                        meaningful impact in an ever-changing world.
+                    </p>
+                </div>
+
+                <div class="leadership-image">
+                    <img src="assets/images/thumbs/class.png" alt="Career at UNwH">
                 </div>
             </section>
 
+
+
+
+
         </div>
-        <div class="main-wrapper pb-40">
-            <!-- Tabs -->
-
-
-            <!-- Content -->
-            <div class="tab-content bg-white">
-
-                <!-- Backgrounds -->
-                <div class="bg-image active" style="background-image: url('assets/images/thumbs/1.jpg');"></div>
-
-
-                <!-- Text -->
-                <div class="content-box" id="contentBox">
-                    <h2>Academic Facilities</h2>
-                    <p>Located in the serene beauty of Dehradun, our campus offers a peaceful and inspiring learning
-                        environment.
-                        The natural surroundings enhance focus, creativity, and overall well-being.</p>
-                </div>
-            </div>
-        </div>
-
 
 
         <section class="py-10 container">
@@ -1552,49 +1462,89 @@
                 <div class="outcomes-grid">
                     <div class="outcome-box">
                         <h4><span>PO1</span>Apply Comprehensive Subject Knowledge</h4>
-                        <p>Demonstrate a deep understanding of core and advanced concepts within their chosen discipline, enabling them to address complex academic and professional challenges with confidence and competence.</p>
+                        <p>Demonstrate a deep understanding of core and advanced concepts within their chosen
+                            discipline, enabling them to address complex academic and professional challenges with
+                            confidence and competence.</p>
                     </div>
 
                     <div class="outcome-box">
                         <h4><span>PO2</span>Critical Thinking & Problem Solving</h4>
-                        <p>Analyze information objectively, interpret data accurately, and apply logical reasoning to develop innovative and sustainable solutions to real-world problems.</p>
+                        <p>Analyze information objectively, interpret data accurately, and apply logical reasoning to
+                            develop innovative and sustainable solutions to real-world problems.</p>
                     </div>
 
                     <div class="outcome-box">
                         <h4><span>PO3</span>Communicate with Clarity and Impact</h4>
-                        <p>Express ideas, technical information, and research findings effectively across written, oral, and digital platforms, tailoring communication to suit diverse audiences and professional settings.</p>
+                        <p>Express ideas, technical information, and research findings effectively across written, oral,
+                            and digital platforms, tailoring communication to suit diverse audiences and professional
+                            settings.</p>
                     </div>
 
                     <div class="outcome-box">
                         <h4><span>PO4</span>Utilize Modern Tools and Technologies</h4>
-                        <p>Employ discipline-specific tools, techniques, and digital technologies with precision and ethical responsibility to enhance productivity and quality in academic and workplace environments.</p>
+                        <p>Employ discipline-specific tools, techniques, and digital technologies with precision and
+                            ethical responsibility to enhance productivity and quality in academic and workplace
+                            environments.</p>
                     </div>
 
                     <div class="outcome-box">
                         <h4><span>PO5</span>Collaborate and Lead in a Team Environment</h4>
-                        <p>Work productively in multidisciplinary and multicultural teams, demonstrating strong interpersonal skills, leadership qualities, and the ability to manage group dynamics to achieve common goals.</p>
+                        <p>Work productively in multidisciplinary and multicultural teams, demonstrating strong
+                            interpersonal skills, leadership qualities, and the ability to manage group dynamics to
+                            achieve common goals.</p>
                     </div>
 
                     <div class="outcome-box">
                         <h4><span>PO6</span>Exhibit Ethical and Professional Integrity</h4>
-                        <p>Integrate ethical reasoning and a sense of social responsibility into decision-making processes, maintaining integrity and accountability in both personal and professional spheres.</p>
+                        <p>Integrate ethical reasoning and a sense of social responsibility into decision-making
+                            processes, maintaining integrity and accountability in both personal and professional
+                            spheres.</p>
                     </div>
                     <div class="outcome-box">
                         <h4><span>PO7</span>Pursue Lifelong Learning and Innovation</h4>
-                        <p>Develop a mindset of continuous learning and adaptability, staying abreast of advancements in their field and contributing to innovation and entrepreneurial initiatives.</p>
+                        <p>Develop a mindset of continuous learning and adaptability, staying abreast of advancements in
+                            their field and contributing to innovation and entrepreneurial initiatives.</p>
                     </div>
                     <div class="outcome-box">
                         <h4><span>PO8</span>Appreciate Global and Cultural Contexts</h4>
-                        <p>Understand and appreciate the impact of global trends and cultural diversity in shaping knowledge systems and professional practices, fostering inclusivity and global citizenship.</p>
+                        <p>Understand and appreciate the impact of global trends and cultural diversity in shaping
+                            knowledge systems and professional practices, fostering inclusivity and global citizenship.
+                        </p>
                     </div>
                 </div>
             </section>
         </section>
 
+        <div class="container">
+            <div class="d-flex justify-content-center gap-16 align-items-center">
+                <button style="background-color: #FFFFFF;
+  border: 1px solid #222222;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #222222;
+  cursor: pointer;
+  display: inline-block;
+font-size: 16px;
+  padding: 13px 23px;
+position: relative;
+  text-align: center;
+  width: auto;"><a style="color: black;" href="https://admission.unwhdoon.com/FreshApplication/register.aspx">Apply Now </a></button>
+                <button style="background-color: #FFFFFF;
+  border: 1px solid #222222;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #222222;
+  cursor: pointer;
+  display: inline-block;
+font-size: 16px;
+  padding: 13px 23px;
+position: relative;
+  text-align: center;
+  width: auto;"><a style="color: black;" href="fees-Structure-2025-26.html">Fees </a></button>
+            </div>
+        </div>
 
     </section>
-
-
 
 
 
