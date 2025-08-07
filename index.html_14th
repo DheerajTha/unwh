@@ -146,7 +146,7 @@
             <li><a href="#">B.Lib</a></li>
             <li><a href="#">M.Lib</a></li>
 
-            <li class="mobile-dropdown-header"> Yogic Sciences </li>
+            <li class="mobile-dropdown-header"> Yogic Science </li>
             <li><a href="#">Certificate Yogic Science</a></li>
             <li><a href="#">Diploma In Yogic Science with Naturopathy</a></li>
             <li><a href="#">B.A Yoga Hons</a></li>
@@ -168,11 +168,11 @@
             Schools <i class="ph ph-caret-down"></i>
           </div>
           <ul class="mobile-dropdown-menu">
-            <li><a href="school-commerce-business-studies.html">Commerce & Business Studies</a></li>
-            <li><a href="school-computer-science-engineering.html">Computer Science & Engineering</a></li>
+            <li><a href="school-of-commerce-management-studies.html">Commerce & Management Studies</a></li>
+            <li><a href="school-of-engineering-technology.html"> Engineering & Technology</a></li>
             <li><a href="school-hotel-hospitality-management.html">Hotel & Hospitality Management</a></li>
-            <li><a href="school-yogic-science.html">Yogic Sciences</a></li>
-            <li><a href="school-applied-social-sciences.html">Applied Social Sciences & Humanities</a></li>
+            <li><a href="school-yogic-science.html">Yogic Science</a></li>
+            <li><a href="school-of-science-humanities.html">School of Science & Humanities</a></li>
             <li><a href="school-skill-development.html">Skill Development & Vocational Studies</a></li>   
             <li><a href="school-earth-science.html">Earth Science</a></li>
           </ul>
@@ -608,7 +608,7 @@
                       </ul>
                     </div>
                     <div class="mega-column">
-                      <h3 class="section-title">Yogic Sciences</h3>
+                      <h3 class="section-title">Yogic Science</h3>
                       <ul class="mega-submenu">
                         <li><a href="#">Certificate Yogic Science</a></li>
                         <li><a href="#">Diploma In Yogic Science with Naturopathy</a></li>
@@ -635,20 +635,20 @@
                 <a href="javascript:void(0)" class="nav-menu__link">Schools</a>
                 <ul class="nav-submenu scroll-sm">
                   <li class="nav-submenu__item">
-                    <a href="school-commerce-business-studies.html" class="nav-submenu__link hover-bg-neutral-30">Commerce & Business Studies</a>
+                    <a href="school-of-commerce-management-studies.html" class="nav-submenu__link hover-bg-neutral-30">Commerce & Management Studies</a>
                   </li>
                   <li class="nav-submenu__item">
-                    <a href="school-computer-science-engineering.html" class="nav-submenu__link hover-bg-neutral-30">Computer Science & Engineering</a>
+                    <a href="school-of-engineering-technology.html" class="nav-submenu__link hover-bg-neutral-30"> Engineering & Technology</a>
                   </li>
                   <li class="nav-submenu__item">
                     <a href="school-hotel-hospitality-management.html" class="nav-submenu__link hover-bg-neutral-30">Hotel & Hospitality Management</a>
                   </li>
                   <li class="nav-submenu__item">
-                    <a href="school-yogic-science.html" class="nav-submenu__link hover-bg-neutral-30">Yogic Sciences</a>
+                    <a href="school-yogic-science.html" class="nav-submenu__link hover-bg-neutral-30">Yogic Science</a>
                   </li>
 
                   <li class="nav-submenu__item">
-                    <a href="school-applied-social-sciences.html" class="nav-submenu__link hover-bg-neutral-30">Applied Social Sciences & Humanities</a>
+                    <a href="school-of-science-humanities.html" class="nav-submenu__link hover-bg-neutral-30">School of Science & Humanities</a>
                   </li>
 
                   <li class="nav-submenu__item">
@@ -1183,9 +1183,9 @@
         <div class="custom-card">
           <div class="custom-box">
             <div class="custom-content">
-              <img src="assets/images/thumbs/Course-1.png" alt="Commerce & Business Studies" class="card-image" />
+              <img src="assets/images/thumbs/Course-1.png" alt="Commerce & Management Studies" class="card-image" />
               <h2>01</h2>
-              <h3>School of Commerce & Business Studies</h3>
+              <h3>School of Commerce & Management Studies</h3>
               <div class="scrollable-content">
                 <div class="program-container">
                   <div class="department">
@@ -1217,9 +1217,9 @@
         <div class="custom-card">
           <div class="custom-box">
             <div class="custom-content">
-              <img src="assets/images/thumbs/Course-2.png" alt="Commerce & Business Studies" class="card-image" />
+              <img src="assets/images/thumbs/Course-2.png" alt="Commerce & Management Studies" class="card-image" />
               <h2>02</h2>
-              <h3>School of Computer Science & Engineering</h3>
+              <h3>School of Engineering & Technology</h3>
               <div class="scrollable-content">
                 <div class="program-container">
                   <div class="department">
@@ -1246,7 +1246,7 @@
         <div class="custom-card">
           <div class="custom-box">
             <div class="custom-content">
-              <img src="assets/images/thumbs/Course-3.png" alt="Commerce & Business Studies" class="card-image" />
+              <img src="assets/images/thumbs/Course-3.png" alt="Commerce & Management Studies" class="card-image" />
               <h2>03</h2>
               <h3> School of Hotel & Hospitality Management </h3>
               <div class="scrollable-content">
@@ -1279,9 +1279,9 @@
         <div class="custom-card">
           <div class="custom-box">
             <div class="custom-content">
-              <img src="assets/images/thumbs/Course-4.png" alt="Commerce & Business Studies" class="card-image" />
+              <img src="assets/images/thumbs/Course-4.png" alt="Commerce & Management Studies" class="card-image" />
               <h2>04</h2>
-              <h3> School of Yogic Sciences </h3>
+              <h3> School of Yogic Science </h3>
               <div class="scrollable-content">
                 <div class="program-container">
                   <div class="department">
@@ -1305,9 +1305,9 @@
         <div class="custom-card">
           <div class="custom-box">
             <div class="custom-content">
-              <img src="assets/images/thumbs/Course-5.png" alt="Commerce & Business Studies" class="card-image" />
+              <img src="assets/images/thumbs/Course-5.png" alt="Commerce & Management Studies" class="card-image" />
               <h2>05</h2>
-              <h3> School of Applied Social Sciences & Humanities</h3>
+              <h3> School of School of Science & Humanities</h3>
               <div class="scrollable-content">
                 <div class="program-container">
                   <div class="department">
@@ -1392,7 +1392,7 @@
         <div class="custom-card">
           <div class="custom-box">
             <div class="custom-content">
-              <img src="assets/images/thumbs/Course-6.png" alt="Commerce & Business Studies" class="card-image" />
+              <img src="assets/images/thumbs/Course-6.png" alt="Commerce & Management Studies" class="card-image" />
               <h2>06</h2>
               <h3> School of Skill Development & Vocational Studies </h3>
               <div class="scrollable-content">
@@ -1430,7 +1430,7 @@
         <div class="custom-card">
           <div class="custom-box">
             <div class="custom-content">
-              <img src="assets/images/thumbs/Course-7.png" alt="Commerce & Business Studies" class="card-image" />
+              <img src="assets/images/thumbs/Course-7.png" alt="Commerce & Management Studies" class="card-image" />
               <h2>07</h2>
               <h3> School of Earth Science </h3>
               <div class="scrollable-content">
